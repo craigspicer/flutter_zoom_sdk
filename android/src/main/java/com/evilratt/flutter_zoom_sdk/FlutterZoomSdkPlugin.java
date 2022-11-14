@@ -231,7 +231,7 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
         };
 
         if (!zoomSDK.isLoggedIn()) {
-            zoomSDK.loginWithZoom(options.get("userId"), options.get("userPassword"));
+            zoomSDK.tryAutoLoginZoom();
             zoomSDK.addAuthenticationListener(authenticationListener);
         }
 
@@ -256,7 +256,6 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
         }
 
         zoomSDK.getInMeetingService().addListener(new InMeetingServiceListener() {
-
             @Override
             public void onMeetingNeedPasswordOrDisplayName(boolean b, boolean b1, InMeetingEventHandler inMeetingEventHandler) {
 
