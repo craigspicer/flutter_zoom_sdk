@@ -33,6 +33,7 @@
  @brief Query if user's video is spotlighted. Once the user's video is spotlighted, it will show only the specified video in the meeting instead of active user's.  
  @param userId The ID of user in meeting.
  @return YES means spotlighted, otherwise not.
+ @warning The function is only for Zoom UI.
  */
 - (BOOL)isUserSpotlighted:(NSUInteger)userId;
 
@@ -41,22 +42,10 @@
  @param on YES means to spotlight user's video; NO means that spotlight user's video will be canceled.
  @param userId The ID of user whose video will be spotlighted in the meeting.
  @return YES means that the method is called successfully, otherwise not.
- @warning Only meeting host/cohost can run the function, and user spotlighted should not be the host himself.
+ @warning Only meeting host can run the function, and user spotlighted should not be the host himself.
+ @warning The function is only for Zoom UI.
  */
 - (BOOL)spotlightVideo:(BOOL)on withUser:(NSUInteger)userId;
-
-/*!
- @brief Un-spotlight all the user.
- @return Yes means follow, otherwise not.
- @warning Only meeting host/cohost can run the function, and user spotlighted should not be the host himself.
- */
-- (BOOL)unSpotlightAllVideos;
-
-/*!
- @brief get spotlight user list.
- @return userId array.
- */
-- (NSArray <NSNumber *>* _Nullable)getSpotLightedVideoUserList;
 
 /*!
  @brief Query if the user's video is pinned. 
@@ -134,6 +123,6 @@
  @brief get follow host video order array currently.
  @return userId array.
  */
-- (NSArray <NSNumber *>* _Nullable)getVideoOrderList;
+- (NSArray <NSNumber *>*)getVideoOrderList;
 
 @end

@@ -134,17 +134,16 @@
 - (void)setMobileRTCCustomLocalizableName:(NSString * _Nullable)localizableName;
 
 /*!
- @brief Get the root navigation controller of MobileRTC client.
+ @brief Get the root navigation controller of MobileRTC client.  
+ @warning This method is for internal use, the user generally won't call the method. 
  @return The root navigation controller.
  */
 - (UINavigationController * _Nullable)mobileRTCRootController;
 
 /*!
- @brief Set the MobileRTC client root navigation controller.
- @param navController The root navigation controller for pushing MobileRTC meeting UI.
- @warning This method is optional, call the method if the window's rootViewController of the application is the UINavigationController, prefer to set the root view controller.<UINavigationController>.
- @warning If not set the root view controller. Zoom meeting will displayed on the  WINDOW which level same as app window, create by SDK.
- @warning In that case, if you want to disaplay customized UI of you app above Zoom meeting view, should get meeting view(call "- (UIView * _Nullable)meetingView;) and then add your customized view to the meeting view.
+ @brief Set the MobileRTC client root navigation controller.   
+ @warning This method is optional, call the method if the window's rootViewController of the application is the UINavigationController, or just ignore it.
+ @param navController The root navigation controller for pushing MobileRTC meeting UI. 
  */
 - (void)setMobileRTCRootController:(UINavigationController * _Nullable)navController;
 

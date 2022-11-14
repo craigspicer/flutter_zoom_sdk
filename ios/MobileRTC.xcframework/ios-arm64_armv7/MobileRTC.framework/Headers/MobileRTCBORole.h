@@ -98,57 +98,23 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 @end
 
-/*!
- *    //////////////////////////// Creator ////////////////////////////
- *    1. Main Functions:
- *        1) create|delete|rename BO
- *        2) assign|remove user to BO
- *       3) set BO option
- *    2. Remarks:
- *       1) These editing can only be done before BO is started
- *
- *    //////////////////////////// Admin ////////////////////////////
- *   1. Main Functions:
- *        1) after BO is started, assign new user to BO,
- *        2) after BO is started, switch user from BO-A to BO-B
- *       3) stop BO
- *        4) start BO
- *
- *    //////////////////////////// Assistant ////////////////////////////
- *    1. Main Functions:
- *        1) join BO with BO id
- *        2) leave BO
- *
- *   //////////////////////////// Attendee ////////////////////////////
- *   1. Main Functions:
- *        1) join BO
- *       2) leave BO
- *       3) request help
- *
- *    //////////////////////////// DataHelper ////////////////////////////
- *    1. Main Functions:
- *        1) get unassigned user list
- *        2) get BO list
- *       3) get BO object
- *
- *
- *    host in master conference     : creator + admin + assistant + dataHelper
- *    host in BO conference         : admin + assistant + dataHelper
- *    CoHost in master conference   : [attendee] or [creator + admin + assistant + dataHelper]
- *    CoHost in BO conference       : [attendee] or [admin + assistant + dataHelper]
- *    attendee in master conference : attendee + [assistant + dataHelper]
- *   attendee in BO conference     : attendee + [assistant + dataHelper]
- *
- *   Import Remarks:
- *   1. attendee in master conference/attendee in BO conference
- *       1) if BOOption.IsParticipantCanChooseBO is true, attendee has objects:  [attendee + assistant + dataHelper]
- *      2) if BOOption.IsParticipantCanChooseBO is false, attendee has object:  [attendee]
- *   2. CoHost in master conference
- *       1) if CoHost is desktop client, and host is desktop client, the CoHost has objects: [creator + admin + assistant + dataHelper]
- *      2) if CoHost is desktop client, and host is mobile client, the CoHost has object: [attendee]
- *      3) if CoHost is mobile client, the CoHost has object: [attendee]
+/*
+*    host in master conf     : creator + admin + assistant + dataHelper
+*    host in bo conf         : admin + assistant + dataHelper
+*    cohost in master conf   : attendee
+*    cohost in bo conf       : assistant + dataHelper
+*    attendee in master conf : attendee
+*    attendee in bo conf     : attendee
 */
 
+/*
+*    1. Function:
+*        1) add/delete/rename bo meeting
+*        2) assgin/remove user to bo meeting
+*    2. Remarks:
+*        1) only host in master meeting, can get this role
+*        2) host changed, createor will assign to new host
+*/
 @interface MobileRTCBOCreator : NSObject
 
 /*!
@@ -208,6 +174,16 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 - (MobileRTCBOOption * _Nullable)getBOOption;
 @end
 
+/*
+*    1. Function:
+*        1) after bo started, assgin user to bo meeting,
+*        2) after bo started, switch user from BO-A to BO-B
+*        3) stop bo meeting
+*        4) start bo meeting
+*    2. Remarks:
+*        1) host in master meeting or bo meeting, can get this role
+*        2) can start bo meeting after bo meeting created by creator.
+*/
 @interface MobileRTCBOAdmin : NSObject
 /*!
 @brief start bo meeting which assigned.
@@ -272,6 +248,13 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 - (BOOL)inviteBOUserReturnToMainSession:(NSString * _Nonnull)boUserId;
 @end
 
+/*
+*    1. Function:
+*        1) join bo meeting with bo id
+*        2) leave bo meeting
+*    2. Remarks:
+*        1) host in master meeting or bo meeting, co-host in bo meeting, can get this role
+*/
 @interface MobileRTCBOAssistant : NSObject
 
 /*!
@@ -289,6 +272,17 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 @end
 
+
+/*
+*   1. Function:
+*       1) only can join bo
+*       2) leave bo
+*       3) request help
+*    2. Remarks:
+*       1) if you are attendee, and are assigned to BO, you will get this role
+*       2) if you are Co-Host, and are assigned to BO, you will get this role
+*
+*/
 @interface MobileRTCBOAttendee : NSObject
 
 /*!
@@ -329,6 +323,14 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 @end
 
+/*
+*    1. Function:
+*        1) get unassigned user list
+*        2) get bo list
+*    2. Remarks:
+*        1) when host in master meeting or bo meeting, you will get this role
+*        2) when CoHost in bo conf, you will get this role
+*/
 @interface MobileRTCBOData : NSObject
 
 /*!

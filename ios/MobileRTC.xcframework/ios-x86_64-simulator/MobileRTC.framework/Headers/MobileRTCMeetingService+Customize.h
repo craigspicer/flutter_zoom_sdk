@@ -142,12 +142,4 @@
  */
 - (BOOL)dialInCall:(nullable NSString *)countryNumber;
 
-/*!
- @brief Allowing the developer to customize the URL of create/edit the polling
- @param pollingURL customized URL.
- @param bCreate When bCreate is true, it changes the URL of creating a polling. Otherwise, it changes the URL of editing a polling.
- @return YES means the method is called successfully, otherwise not.
- */
-- (BOOL)setCustomizedPollingUrl:(nullable NSString *)pollingURL bCreate:(BOOL)bCreate;
-
 @end

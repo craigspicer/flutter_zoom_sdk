@@ -16,7 +16,6 @@
 #import "MobileRTCVideoCapabilityItem.h"
 
 @class MobileRTCInterpretationLanguage;
-@class MobileRTCMeetingParameter;
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
  @protocol MobileRTCMeetingServiceDelegate
@@ -37,12 +36,6 @@
  @param state The meeting status changes.
  */
 - (void)onMeetingStateChange:(MobileRTCMeetingState)state;
-
-/*!
- @brief Meeting parameter notification callback.
- @param meetingParam meetingParam Meeting parameter.
- */
-- (void)onMeetingParameterNotification:(MobileRTCMeetingParameter *_Nullable)meetingParam;
 
 /*!
  @brief Notify the user that the requirement to join meeting is confirmed.
@@ -67,17 +60,16 @@
 - (void)onCheckCMRPrivilege:(MobileRTCCMRError)result;
 
 /*!
- @brief Cloud recording status notify callback.
+ @brief Recording status notify callback.
  @param status recording status.
  */
 - (void)onRecordingStatus:(MobileRTCRecordingStatus)status;
 
 /*!
  @brief Local recording status notify callback.
- @param userId Specify the user ID whose status changes.
  @param status recording status.
  */
-- (void)onLocalRecordingStatus:(NSInteger)userId status:(MobileRTCRecordingStatus)status;
+- (void)onLocalRecordingStatus:(MobileRTCRecordingStatus)status;
 
 /*!
  @brief Meeting is ended by some reasons.
@@ -261,11 +253,8 @@
 
 /*!
  @brief Callback event that user receives the Closed Caption.
- @param message the message of closed caption
- @param speakerID the speakerID of the closed caption
- @param msgTime the time of the close caption
  */
-- (void)onClosedCaptionReceived:(NSString * _Nonnull)message speakerId:(NSUInteger)speakerID msgTime:(NSDate *_Nullable)msgTime;
+- (void)onClosedCaptionReceived:(NSString * _Nonnull)message;
 
 /*!
  @brief Callback event that waiting room status changes. 
@@ -375,12 +364,6 @@
 - (void)onSpotlightVideoChange:(BOOL)on;
 
 /*!
- @brief Callback event that the video spotlight user list changes. Spotlight user means that the view will show only the specified user and won't change even other speaks.
- @param spotlightedUserList spot light user list.
- */
-- (void)onSpotlightVideoUserChange:(NSArray <NSNumber *>* _Nonnull)spotlightedUserList;
-
-/*!
  @brief Notify user that preview video is stopped by SDK. Usually the video will show the user himself when there is no other user joins.
  @waring The method MobileRTCPreviewVideoView will stop render, and App will adjust UI. Remove MobileRTCPreviewVideoView instance if it is necessary.
  */
@@ -415,13 +398,7 @@
  @brief Callback event of the video order changes.
  @param orderArr The video order array contains the user ID of listed users.
  */
-- (void)onHostVideoOrderUpdated:(NSArray <NSNumber *>* _Nullable)orderArr;
-
-/*!
- @brief Callback event of the local video order changes.
- @param localOrderArr The lcoal video order list contains the user ID of listed users.
- */
-- (void)onLocalVideoOrderUpdated:(NSArray <NSNumber *>* _Nullable)localOrderArr;
+- (void)onVideoOrderUpdated:(NSArray <NSNumber *>* _Nullable)orderArr;
 
 /*!
  @brief Notification the status of following host's video order changed.
@@ -474,23 +451,11 @@
 - (void)onSinkMeetingUserLowerHand:(NSUInteger)userID;
 
 /*!
- @brief Callback event of host or cohost lower all hands.
- */
-- (void)onSinkLowerAllHands;
-
-/*!
  @brief The function will be invoked once user change the screen name.
- @param userID Specify the user ID whose user name changes.
+ @param userID Specify the user ID whose status changes.
  @param userName New screen name displayed.
  */
-- (void)onSinkUserNameChanged:(NSUInteger)userID userName:(NSString *_Nonnull)userName DEPRECATED_ATTRIBUTE;
-
-/*!
- @brief The function will be invoked once user change the screen name.
- @param userNameChangedArr Specify the user IDs whose user name changes.
- @warning The old interface virtual void '-(void)onSinkUserNameChanged:userName:' will be marked as deprecated, and will use this new callbacks. This is because in a webinar, when the host renamed an attendee, only the attendee could receive the old callback, and the host/cohost/panlist is not able to receive it, which leads to the developer not being able to update the UI.
- */
-- (void)onSinkUserNameChanged:(NSArray <NSNumber *>* _Nullable)userNameChangedArr;
+- (void)onSinkUserNameChanged:(NSUInteger)userID userName:(NSString *_Nonnull)userName;
 
 /*!
  @brief Notify user that meeting host changes.
@@ -502,14 +467,7 @@
  @brief Callback event that co-host changes.
  @param cohostId The user ID of co-host.
  */
-- (void)onMeetingCoHostChange:(NSUInteger)cohostId DEPRECATED_ATTRIBUTE;
-
-/*!
- @brief Callback event that co-host changes.
- @param userID The user ID of co-host.
- @param isCoHost indicate the user(userID) be assigned to cohost or be remove cohost.
- */
-- (void)onMeetingCoHostChange:(NSUInteger)userID isCoHost:(BOOL)isCoHost;
+- (void)onMeetingCoHostChange:(NSUInteger)cohostId;
 
 /*!
  @brief Callback event that user claims the host.
@@ -815,10 +773,9 @@
 /*!
 @brief Sink the event of receive the live transcription msg.
 @param msg the received live transcription msg.
-@param speakerId the speaker id of the received live transcription msg.
 @param type the live transcription operation type, For more details, see MobileRTCLiveTranscriptionOperationType.
 */
-- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type;
+- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg type:(MobileRTCLiveTranscriptionOperationType)type;
 
 /*!
 @brief Sink the event of request for start the live transcription. Only The HOST can retrieve this callback. You can aprrove request call start live transcription, or decline as do nothing.

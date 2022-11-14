@@ -30,16 +30,6 @@
         "formattedType" : "MultiArray (Float32)",
         "shortDescription" : "",
         "shape" : "[]",
-        "name" : "embedding",
-        "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32)",
-        "shortDescription" : "",
-        "shape" : "[]",
         "name" : "pose",
         "type" : "MultiArray"
       }
@@ -58,14 +48,14 @@
       "macCatalyst" : "11.0"
     },
     "neuralNetworkLayerTypeHistogram" : {
-      "Concat" : 2,
-      "ActivationLinear" : 64,
-      "Flatten" : 5,
-      "ActivationSigmoidHard" : 32,
+      "Concat" : 1,
+      "ActivationLinear" : 60,
+      "Flatten" : 3,
+      "ActivationSigmoidHard" : 30,
       "Add" : 10,
-      "Convolution" : 48,
+      "Convolution" : 45,
       "ActivationSigmoid" : 1,
-      "InnerProduct" : 4
+      "InnerProduct" : 6
     },
     "modelType" : {
       "name" : "MLModelType_neuralNetwork"

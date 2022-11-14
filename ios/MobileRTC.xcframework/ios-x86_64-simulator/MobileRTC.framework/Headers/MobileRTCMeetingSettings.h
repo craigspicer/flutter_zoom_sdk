@@ -455,16 +455,4 @@
 @warning The function only for Zoom UI.
 */
 - (MobileRTCEmojiReactionSkinTone)reactionSkinTone;
-
-/*!
-@brief Disable the action of clear WebView's cache.
-@param disabled Specify to disable the clear action or not.
-*/
-- (void)disableClearWebKitCache:(BOOL)disabled;
-
-/*!
-@brief Query if the action of clear WebView's cache be disabled.
- @return Action of clear WebView's cache is disabled or not.
-*/
-- (BOOL)isDisabledClearWebKitCache;
 @end

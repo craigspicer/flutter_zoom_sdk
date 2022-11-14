@@ -137,37 +137,6 @@
 @property (nullable, nonatomic, retain, readwrite) NSString * privacyPolicyUrl;
 @end
 
-@interface MobileRTCMeetingParameter : NSObject
-/*!
- @brief Meeting type.
- */
-@property (nonatomic, assign) MobileRTCMeetingType meetingType;
-/*!
- @brief View only or not. YES indicates to view only.
- */
-@property (nonatomic, assign) BOOL isViewOnly;
-/*!
- @brief Auto local recording or not. YES indicates to auto local recording.
- */
-@property (nonatomic, assign) BOOL isAutoRecordingLocal;
-/*!
- @brief Auto cloud recording or not. YES indicates to auto cloud recording.
- */
-@property (nonatomic, assign) BOOL isAutoRecordingCloud;
-/*!
- @brief Meeting number.
- */
-@property (nonatomic, assign) unsigned long long meetingNumber;
-/*!
- @brief Meeting topic.
- */
-@property (nonatomic, retain) NSString * _Nullable meetingTopic;
-/*!
- @brief Meeting host.
- */
-@property (nonatomic, retain) NSString * _Nullable meetingHost;
-@end
-
 @protocol MobileRTCMeetingServiceDelegate;
 
 /*!

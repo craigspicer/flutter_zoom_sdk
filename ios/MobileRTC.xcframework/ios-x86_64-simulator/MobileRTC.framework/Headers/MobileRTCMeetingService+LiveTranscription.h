@@ -45,8 +45,8 @@
 - (BOOL)canAssignOthersToSendCC;
 
 /*!
- @brief Query if this meeting support the live transcription feature.
- @return YES means that the live transcription feature is supported.
+ @brief Query if it is enabled to support live transcription feature.
+ @return YES means that the live transcription feature is enabled.
  */
 - (BOOL)isLiveTranscriptionFeatureEnabled;
 

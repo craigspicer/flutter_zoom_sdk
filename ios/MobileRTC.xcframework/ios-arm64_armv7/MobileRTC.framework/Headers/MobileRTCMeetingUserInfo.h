@@ -50,7 +50,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioType) {
 @property (nonatomic, assign) BOOL  isMuted;
 /*!
  @brief Query if the current user is speaking.
- @warning webinar attenddee can not get the property.
  */
 @property (nonatomic, assign) BOOL  isTalking;
 /*!
@@ -213,17 +212,5 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
  @brief the type of role of the user specified by the current information.
  */
 @property (nonatomic, assign) MobileRTCUserRole  userRole;
-/*!
- @brief The user raised his hand.
- */
-@property (nonatomic, assign) BOOL             handRaised;
-/*!
- @brief Attendee can talk or not.
- */
-@property (nonatomic, assign) BOOL             isAttendeeCanTalk;
-/*!
- @brief User's audio status in the webinar meeting.
- */
-@property (nonatomic, retain) MobileRTCAudioStatus* _Nonnull audioStatus;
 
 @end
