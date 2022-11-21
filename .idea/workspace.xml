@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46fbe4a6-7fcc-444e-a6ad-7911874f5f4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/evilratt/flutter_zoom_sdk/StatusStreamHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/evilratt/flutter_zoom_sdk/StatusStreamHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
