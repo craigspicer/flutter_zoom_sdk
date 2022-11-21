@@ -17,8 +17,10 @@ import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 
+import us.zoom.sdk.ChatMessageDeleteType;
 import us.zoom.sdk.FreeMeetingNeedUpgradeType;
 import us.zoom.sdk.InMeetingAudioController;
+import us.zoom.sdk.InMeetingChatController;
 import us.zoom.sdk.InMeetingChatMessage;
 import us.zoom.sdk.InMeetingEventHandler;
 import us.zoom.sdk.InMeetingServiceListener;
@@ -33,6 +35,7 @@ import us.zoom.sdk.MeetingStatus;
 import us.zoom.sdk.MeetingViewsOptions;
 import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.StartMeetingParams4NormalUser;
+import us.zoom.sdk.VideoQuality;
 import us.zoom.sdk.ZoomAuthenticationError;
 import us.zoom.sdk.ZoomError;
 import us.zoom.sdk.ZoomSDK;
@@ -314,6 +317,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onMeetingCoHostChange(long l, boolean b) {
+
+            }
+
+            @Override
             public void onActiveVideoUserChanged(long l) {
 
             }
@@ -324,7 +332,7 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
-            public void onVideoOrderUpdated(List<Long> list) {
+            public void onHostVideoOrderUpdated(List<Long> list) {
 
             }
 
@@ -339,12 +347,22 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onSpotlightVideoChanged(List<Long> list) {
+
+            }
+
+            @Override
             public void onUserVideoStatusChanged(long l, VideoStatus videoStatus) {
 
             }
 
             @Override
             public void onUserNetworkQualityChanged(long l) {
+
+            }
+
+            @Override
+            public void onSinkMeetingVideoQualityChanged(VideoQuality videoQuality, long l) {
 
             }
 
@@ -389,6 +407,16 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onChatMsgDeleteNotification(String s, ChatMessageDeleteType chatMessageDeleteType) {
+
+            }
+
+            @Override
+            public void onShareMeetingChatStatusChanged(boolean b) {
+
+            }
+
+            @Override
             public void onSilentModeChanged(boolean b) {
 
             }
@@ -414,7 +442,17 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onSinkPanelistChatPrivilegeChanged(InMeetingChatController.MobileRTCWebinarPanelistChatPrivilege mobileRTCWebinarPanelistChatPrivilege) {
+
+            }
+
+            @Override
             public void onUserNameChanged(long l, String s) {
+
+            }
+
+            @Override
+            public void onUserNamesChanged(List<Long> list) {
 
             }
 
@@ -439,7 +477,7 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
-            public void onClosedCaptionReceived(String s) {
+            public void onClosedCaptionReceived(String s, long l) {
 
             }
 
@@ -449,12 +487,27 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
-            public void onLocalRecordingStatus(RecordingStatus recordingStatus) {
+            public void onLocalRecordingStatus(long l, RecordingStatus recordingStatus) {
 
             }
 
             @Override
             public void onInvalidReclaimHostkey() {
+
+            }
+
+            @Override
+            public void onPermissionRequested(String[] strings) {
+
+            }
+
+            @Override
+            public void onAllHandsLowered() {
+
+            }
+
+            @Override
+            public void onLocalVideoOrderUpdated(List<Long> list) {
 
             }
         });
