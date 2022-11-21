@@ -347,11 +347,6 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
-            public void onSpotlightVideoChanged(List<Long> list) {
-
-            }
-
-            @Override
             public void onUserVideoStatusChanged(long l, VideoStatus videoStatus) {
 
             }
@@ -412,11 +407,6 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
-            public void onShareMeetingChatStatusChanged(boolean b) {
-
-            }
-
-            @Override
             public void onSilentModeChanged(boolean b) {
 
             }
@@ -438,11 +428,6 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
 
             @Override
             public void onSinkAllowAttendeeChatNotification(int i) {
-
-            }
-
-            @Override
-            public void onSinkPanelistChatPrivilegeChanged(InMeetingChatController.MobileRTCWebinarPanelistChatPrivilege mobileRTCWebinarPanelistChatPrivilege) {
 
             }
 
