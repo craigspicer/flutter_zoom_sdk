@@ -33,7 +33,6 @@ public class StatusStreamHandler implements EventChannel.StreamHandler, MeetingS
     @Override
     public void onCancel(Object arguments) {
         this.meetingService.removeListener(this);
-
     }
 
     private List<String> getMeetingStatusMessage(MeetingStatus meetingStatus) {
