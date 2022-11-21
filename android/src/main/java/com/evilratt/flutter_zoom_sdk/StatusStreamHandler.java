@@ -27,10 +27,7 @@ public class StatusStreamHandler implements EventChannel.StreamHandler, MeetingS
     @Override
     public void onListen(Object arguments, final EventChannel.EventSink events) {
         this.events = events;
-
-        if (this.meetingService != null) {
-            this.meetingService.addListener(this);
-        }
+        this.meetingService.addListener(this);
     }
 
     @Override
@@ -88,11 +85,13 @@ public class StatusStreamHandler implements EventChannel.StreamHandler, MeetingS
 
     @Override
     public void onMeetingStatusChanged(MeetingStatus meetingStatus, int errorCode, int internalErrorCode) {
-        if (meetingStatus == meetingStatus.MEETING_STATUS_FAILED && errorCode == MeetingError.MEETING_ERROR_CLIENT_INCOMPATIBLE) {
-            events.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "Version of ZoomSDK is too low"));
-            return;
+        if (events != null) {
+            if (meetingStatus == meetingStatus.MEETING_STATUS_FAILED && errorCode == MeetingError.MEETING_ERROR_CLIENT_INCOMPATIBLE) {
+                events.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "Version of ZoomSDK is too low"));
+                return;
+            }
+            events.success(getMeetingStatusMessage(meetingStatus));
         }
-        events.success(getMeetingStatusMessage(meetingStatus));
     }
 
     @Override
