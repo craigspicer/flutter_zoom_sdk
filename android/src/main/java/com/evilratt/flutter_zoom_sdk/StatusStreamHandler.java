@@ -16,7 +16,7 @@ import us.zoom.sdk.MeetingStatus;
 /**
  * This class implements the handler for the Zoom meeting event in the flutter event channel
  */
-public class StatusStreamHandler implements EventChannel.StreamHandler {
+public class StatusStreamHandler implements EventChannel.StreamHandler, MeetingServiceListener {
     private final MeetingService meetingService;
     private EventChannel.EventSink events;
 
@@ -26,13 +26,13 @@ public class StatusStreamHandler implements EventChannel.StreamHandler {
 
     @Override
     public void onListen(Object arguments, final EventChannel.EventSink events) {
-//        this.events = events;
-//        this.meetingService.addListener(this);
+        this.events = events;
+        this.meetingService.addListener(this);
     }
 
     @Override
     public void onCancel(Object arguments) {
-//        this.meetingService.removeListener(this);
+        this.meetingService.removeListener(this);
 
     }
 
@@ -83,19 +83,19 @@ public class StatusStreamHandler implements EventChannel.StreamHandler {
         return Arrays.asList(message);
     }
 
-//    @Override
-//    public void onMeetingStatusChanged(MeetingStatus meetingStatus, int errorCode, int internalErrorCode) {
-//        if (events != null) {
-//            if (meetingStatus == meetingStatus.MEETING_STATUS_FAILED && errorCode == MeetingError.MEETING_ERROR_CLIENT_INCOMPATIBLE) {
-//                events.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "Version of ZoomSDK is too low"));
-//                return;
-//            }
-//            events.success(getMeetingStatusMessage(meetingStatus));
-//        }
-//    }
-//
-//    @Override
-//    public void onMeetingParameterNotification(MeetingParameter meetingParameter) {
-//
-//    }
+    @Override
+    public void onMeetingStatusChanged(MeetingStatus meetingStatus, int errorCode, int internalErrorCode) {
+        if (events != null) {
+            if (meetingStatus == meetingStatus.MEETING_STATUS_FAILED && errorCode == MeetingError.MEETING_ERROR_CLIENT_INCOMPATIBLE) {
+                events.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "Version of ZoomSDK is too low"));
+                return;
+            }
+            events.success(getMeetingStatusMessage(meetingStatus));
+        }
+    }
+
+    @Override
+    public void onMeetingParameterNotification(MeetingParameter meetingParameter) {
+
+    }
 }
