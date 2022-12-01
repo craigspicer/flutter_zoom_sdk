@@ -8,7 +8,6 @@
 
 #import <MobileRTC/MobileRTC.h>
 #import "MobileRTCConstants.h"
-#import "MobileRTCLiveTranscriptionLanguage.h"
 
 @interface MobileRTCMeetingService (LiveTranscription)
 
@@ -46,15 +45,6 @@
 - (BOOL)canAssignOthersToSendCC;
 
 /*!
- @brief Hosts only API to set meeting language for the entire meeting
- */
-- (BOOL)enableMeetingManualCaption:(BOOL)bEnable;
-/*!
- @brief Determine whether it is enabled to manual input CC for meeting.
- */
-- (BOOL)isMeetingManualCaptionEnabled;
-
-/*!
  @brief Query if this meeting support the live transcription feature.
  @return YES means that the live transcription feature is supported.
  */
@@ -73,13 +63,13 @@
 - (BOOL)canStartLiveTranscription;
 
 /*!
- @brief Start live transcription. If the meeting enable multi language transcription,all user can start live transcription otherwise only host can start.
+ @brief Start live transcription.
  @return If the function succeeds, the return value is YES. Otherwise failed.
  */
 - (BOOL)startLiveTranscription;
 
 /*!
- @brief Stop live transcription. If the meeting enable multi language transcription,all user can stop live transcription,otherwise only host can stop.
+ @brief Stop live transcription.
  @return If the function succeeds, the return value is YES. Otherwise failed.
  */
 - (BOOL)stopLiveTranscription;
@@ -103,54 +93,5 @@
  @return If the function succeeds, the return value is YES. Otherwise failed.
  */
 - (BOOL)requestToStartLiveTranscription:(BOOL)requestAnonymous;
-
-/*!
- @brief Determine whether the multi language transcription feature is enabled.
- @return returns YES if multi-language transcription enabled. Otherwise failed.
- */
-- (BOOL)isMultiLanguageTranscriptionEnabled;
-
-/**
- @brief Determine whether the translated captions feature is enabled.
- @return YES means enabled, otherwise not.
- */
-- (BOOL)isTextLiveTranslationEnabled;
-
-/*!
- @brief Get the list of all available spoken languages in meeting.
- @return If the function succeeds, the return value is the list of the available spoken languages in meeting. Otherwise failed, the return value is NULL.
- */
-- (NSArray<MobileRTCLiveTranscriptionLanguage*>*)getAvailableMeetingSpokenLanguages;
-
-/*!
- @brief set spoken language of the current user.
- @param languageID: the speak language id.
- @return If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
- */
-- (BOOL)setMeetingSpokenLanguage:(NSInteger)languageID;
-
-/*!
- @brief Get the spoken language of the current user.
- */
-- (MobileRTCLiveTranscriptionLanguage *)getMeetingSpokenLanguage;
-
-/*!
- @brief Get the list of all available translation languages in meeting.
- @return If the function succeeds, the return value is the list of all available translation languages in meeting. Otherwise failed, the return value is NULL.
- */
-- (NSArray<MobileRTCLiveTranscriptionLanguage*>*)getAvailableTranslationLanguages;
-
-/*!
- @brief set the translation language of the current user.
- @param languageID: the translation language id. If the language ID is set to -1, live translation will be disabled,then you can reveive closed caption when host set meeting manual caption is true.
- @return If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
- */
-- (BOOL)setTranslationLanguage:(NSInteger)languageID;
-
-/*!
-@brief Get the translation language of the current user.
- */
-- (MobileRTCLiveTranscriptionLanguage *)getTranslationLanguage;
-
 @end
 

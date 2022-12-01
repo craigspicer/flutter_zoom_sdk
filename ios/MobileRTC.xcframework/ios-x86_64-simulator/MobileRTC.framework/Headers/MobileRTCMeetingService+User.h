@@ -170,17 +170,4 @@
  @return YES means that the method is called successfully, otherwise not.
  */
 - (BOOL)canBeCoHost:(NSUInteger)userID;
-
-/*!
-@brief Determine whether the user has started a live stream.
-@return YES indicates that the specified user has started a raw live stream, otherwise NO.
- */
-- (BOOL)isRawLiveStreaming:(NSUInteger)userID;
-
-/*!
-@brief Determine whether the user has raw live stream privilege.
-@return YES indicates that the specified user has raw live stream privilege, otherwise false NO.
- */
-- (BOOL)hasRawLiveStreamPrivilege:(NSUInteger)userID;
-
 @end

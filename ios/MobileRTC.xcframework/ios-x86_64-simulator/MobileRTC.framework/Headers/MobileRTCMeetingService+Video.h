@@ -27,13 +27,7 @@
  @param mute YES means to mute video of the current user, otherwise not.
  @return The result of operation.
  */
-- (MobileRTCSDKError)muteMyVideo:(BOOL)mute;
-
-/*!
- @brief Rotate my video.
- @return the result of it.
- */
-- (BOOL)rotateMyVideo:(UIDeviceOrientation)rotation;
+- (MobileRTCVideoError)muteMyVideo:(BOOL)mute;
 
 /*!
  @brief Query if user's video is spotlighted. Once the user's video is spotlighted, it will show only the specified video in the meeting instead of active user's.  

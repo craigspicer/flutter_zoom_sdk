@@ -12,16 +12,6 @@
         "shape" : "[]",
         "name" : "output",
         "type" : "MultiArray"
-      },
-      {
-        "hasShapeFlexibility" : "0",
-        "isOptional" : "0",
-        "dataType" : "Float32",
-        "formattedType" : "MultiArray (Float32)",
-        "shortDescription" : "MultiArray of shape (1, 1, 1, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
-        "shape" : "[]",
-        "name" : "human_prob",
-        "type" : "MultiArray"
       }
     ],
     "modelParameters" : [
@@ -38,17 +28,12 @@
       "macCatalyst" : "11.0"
     },
     "neuralNetworkLayerTypeHistogram" : {
-      "Concat" : 2,
-      "PaddingConstant" : 6,
-      "ActivationReLU" : 40,
-      "Flatten" : 3,
-      "Add" : 9,
-      "PoolingAverage" : 3,
-      "Deconvolution" : 1,
       "Crop" : 1,
-      "Convolution" : 52,
-      "ActivationSigmoid" : 2,
-      "InnerProduct" : 1
+      "Convolution" : 51,
+      "ActivationSigmoid" : 1,
+      "Deconvolution" : 1,
+      "ActivationReLU" : 39,
+      "Add" : 9
     },
     "modelType" : {
       "name" : "MLModelType_neuralNetwork"

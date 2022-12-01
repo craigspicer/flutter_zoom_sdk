@@ -9,7 +9,6 @@
 #import <MobileRTC/MobileRTC.h>
 #import <MobileRTC/MobileRTCMeetingUserInfo.h>
 #import <MobileRTC/MobileRTCMeetingChat.h>
-#import <MobileRTC/MobileRTCRawLiveStreamInfo.h>
 
 /*!
  @brief Set to provide interfaces for meeting events
@@ -188,59 +187,6 @@
  @warning The function is available only for host. 
  */
 - (BOOL)stopLiveStream;
-
-/*
- @brief Query Whether the meeting supports raw live streams.
- @return YES if supported, NO if not supported.
- */
-- (BOOL)isRawLiveStreamSupported;
-
-/*
- @brief Whether the current user is able to start raw live streaming.
- @return If the current user is able to start raw live streaming, the return value is MobileRTCSDKError_Success.
- Otherwise it fails. To get extended error information, see [MobileRTCSDKError] enum.
- */
-- (MobileRTCSDKError)canStartRawLiveStream;
-
-/*
- @brief Send a request to enable the SDK to start a raw live stream.
- @return If the function succeeds, the return value is MobileRTCSDKError_Success and the SDK will send the request.
- Otherwise it fail and the request will not be sent. To get extended error information, see [MobileRTCSDKError] enum.
- */
-- (MobileRTCSDKError)requestRawLiveStream:(nonnull NSString *)broadcastURL;
-
-/*!
- @brief Start a rawData live stream.
- @param broadcastURL Everyone who uses this link can watch the live broadcast.
- @return If the function succeeds, it will return the MobileRTCSDKError_Success, otherwise failed.
- */
-- (MobileRTCSDKError)startRawLiveStream:(nonnull NSString *)broadcastURL;
-
-/*!
- @brief Stop a rawData live stream.
- @return If the function succeeds, it will return the MobileRTCSDKError_Success, otherwise failed.
- */
-- (MobileRTCSDKError)stopRawLiveStream;
-
-/*!
- @brief Remove the raw live stream privilege.
- @param userId Specify the ID of the user whose privilege will be removed.
- @return If the function succeeds, the return value is SDKErr_Success. Otherwise it fails. To get extended error information, see [MobileRTCSDKError] enum.
- */
-- (MobileRTCSDKError)removeRawLiveStreamPrivilege:(NSUInteger)userId;
-
-/*
- @brief Get a list of current active raw live streams.
- @return If the function succeeds, the return value is a pointer to the NSArray object.
- */
-- (NSArray<MobileRTCRawLiveStreamInfo *> * _Nullable)getRawLiveStreamingInfoList;
-
-/*
- @brief Get the list of users’ IDs who have raw live stream privileges.
- @return If the function succeeds, the return value is a pointer to the NSArray object.
- */
-- (NSArray <NSNumber *> * _Nullable)getRawLiveStreamPrivilegeUserList;
-
 
 #pragma mark Display/Hide Meeting UI
 /*!

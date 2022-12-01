@@ -5,104 +5,116 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46fbe4a6-7fcc-444e-a6ad-7911874f5f4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/unzip_zoom_sdk.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/unzip_zoom_sdk.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTC.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCAnnotationService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCAudioRawData.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCAudioRawDataHelper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCAuthService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCBORole.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCCallCountryCode.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCConstants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCDirectShareService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCInviteHelper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingActionItem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingChat.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Audio.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+BO.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+VirtualBackground.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService+Webinar.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCPreProcessRawData.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCQAItem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCRemoteControlService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCRenderer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCReturnToMainSessionHandler.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCRoomDevice.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCSMSService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCVideoCapabilityItem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCVideoRawData.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCVideoSender.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCVideoSourceHelper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCVideoView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/MobileRTC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/Modules/module.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_ipad.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_hori_iphone.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_ipad.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/bgr_vert_iphone.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/flm.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTC.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCAnnotationService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioRawData.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioRawDataHelper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioSender.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCAudioSourceHelper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCAuthService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCBORole.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCCallCountryCode.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCConstants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCDirectShareService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCInviteHelper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCLiveTranscriptionLanguage.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingActionItem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingChat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Audio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Avatar.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+BO.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+RawArchiving.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+VirtualBackground.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService+Webinar.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCPreProcessRawData.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCQAItem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCRawLiveStreamInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCRemoteControlService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCRenderer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCReturnToMainSessionHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCRoomDevice.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCSMSService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCShareSender.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCShareSourceHelper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoCapabilityItem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoRawData.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoSender.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoSourceHelper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCVideoView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/MobileRTC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/Modules/module.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/bgr_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/flm.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hd.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-arm64/MobileRTC.framework/hlm.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTC.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCBORole.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCBORole.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioSender.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCAudioSourceHelper.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCConstants.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCConstants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCLiveTranscriptionLanguage.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingDelegate.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+AppShare.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Avatar.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Chat.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Customize.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+InMeeting.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Interpretation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+LiveTranscription.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+RawArchiving.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Reaction.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+User.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService+Video.h" afterDir="false" />
@@ -110,68 +122,89 @@
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingService.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingSettings.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCMeetingUserInfo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRawLiveStreamInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareSender.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCShareSourceHelper.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Headers/MobileRTCWaitingRoomService.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/MobileRTC" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/MobileRTC" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/_CodeSignature/CodeResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_ipad.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_hori_iphone.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_ipad.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model.espresso.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model.espresso.shape" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model.espresso.weights" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/model/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_vert_iphone.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/analytics/coremldata.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/analytics/coremldata.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/coremldata.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/coremldata.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/model.espresso.net" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/model.espresso.net" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/model.espresso.shape" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/model.espresso.shape" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/model.espresso.weights" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/flm.mlmodelc/model.espresso.weights" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/coremldata.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/coremldata.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.net" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.net" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.shape" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.shape" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/coremldata.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/coremldata.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.net" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.net" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.shape" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.shape" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hd.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/analytics/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/model.espresso.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/model.espresso.shape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/model.espresso.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/model/coremldata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTC.xcframework/ios-x86_64-simulator/MobileRTC.framework/hlm.mlmodelc/neural_network_optionals/coremldata.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/Assets.car" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ZMFuncTableViewCell.nib" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/de.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/de.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/en.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/en.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/es.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/es.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/fr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/fr.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/id.lproj/Localizable.strings" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/it.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/it.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ja.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ja.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ko.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ko.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/localization.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/localization.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/nl.lproj/Localizable.strings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/pl.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/pl.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/pt-PT.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/pt-PT.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ru.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/ru.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/tr.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/tr.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/vi.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/vi.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/Assets.car" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/ReadMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/_CodeSignature/CodeDirectory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/_CodeSignature/CodeRequirements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/_CodeSignature/CodeRequirements-1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/_CodeSignature/CodeResources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zdcRes.bundle/_CodeSignature/CodeSignature" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zh-Hans.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zh-Hans.lproj/Localizable.strings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zh-Hant.lproj/Localizable.strings" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/zh-Hant.lproj/Localizable.strings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/❤️.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/🎉.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👍.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👍🏻.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👍🏼.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👍🏽.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👍🏾.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👍🏿.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👏.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👏🏻.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👏🏼.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👏🏽.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👏🏾.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/👏🏿.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/😂.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCResources.bundle/.json" beforePathEscaped="$PROJECT_DIR$/ios/MobileRTCResources.bundle/😮.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_armv7/MobileRTCScreenShare.framework/Headers/MobileRTCScreenShareService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_armv7/MobileRTCScreenShare.framework/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_armv7/MobileRTCScreenShare.framework/MobileRTCScreenShare" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64/MobileRTCScreenShare.framework/Headers/MobileRTCScreenShareService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64/MobileRTCScreenShare.framework/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64/MobileRTCScreenShare.framework/MobileRTCScreenShare" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_i386_x86_64-simulator/MobileRTCScreenShare.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_i386_x86_64-simulator/MobileRTCScreenShare.framework/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_i386_x86_64-simulator/MobileRTCScreenShare.framework/MobileRTCScreenShare" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_i386_x86_64-simulator/MobileRTCScreenShare.framework/MobileRTCScreenShare" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_i386_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeDirectory" beforeDir="false" afterPath="$PROJECT_DIR$/ios/MobileRTCScreenShare.xcframework/ios-arm64_i386_x86_64-simulator/MobileRTCScreenShare.framework/_CodeSignature/CodeDirectory" afterDir="false" />

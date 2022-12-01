@@ -32,32 +32,12 @@
 - (BOOL)dePromptPanelist2Attendee:(NSUInteger)userID;
 
 /*!
- @brief Set the chat privilege of the panelist.
- @param privilege The chat privilege of the panelist
- @return YES means sucessfull, otherwise not.
- @warning Only meeting host/co-host can run the function.
- @warning Only webinar meeting can run the function.
- */
-- (BOOL)changePanelistChatPrivilege:(MobileRTCPanelistChatPrivilegeType)privilege;
-
-/*!
- @brief Get the chat privilege of the panelist.
- @return The chat privilege of the panelist.
- */
-- (MobileRTCPanelistChatPrivilegeType)getPanelistChatPrivilege;
-/*!
  @brief Allow attendee to chat.
  @return YES means that the method is called successfully, otherwise not.
  @warning Only meeting host/co-host can run the function.
  @warning only webinar meeting can run the function.
  */
 - (BOOL)allowAttendeeChat:(MobileRTCChatAllowAttendeeChat)privilegeType;
-
-/*!
- @brief get webinar attendee chat privilege type.
- @return The chat privilege type for the  webinar attendee.
- */
-- (MobileRTCChatAllowAttendeeChat)getWebinarAttendeeChatPrivilege;
 
 /*!
  @brief Query if attendee is allowed to talk in Webinar Meeting.

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MobileRTC.h</key>
 		<data>
-		c2Wn94DB7dQXQd7TyB+ehonUqyw=
+		sOp3yRL6KeW4UGV7t03E+kGG6SQ=
 		</data>
 		<key>Headers/MobileRTCAnnotationService.h</key>
 		<data>
@@ -19,14 +19,6 @@
 		<key>Headers/MobileRTCAudioRawDataHelper.h</key>
 		<data>
 		WAO0eHtvFR326Xnywh0CT5ikHJ0=
-		</data>
-		<key>Headers/MobileRTCAudioSender.h</key>
-		<data>
-		mrk03HaGG7C6c5p2ce+u5UeB8ho=
-		</data>
-		<key>Headers/MobileRTCAudioSourceHelper.h</key>
-		<data>
-		p8aWtolYzFJFHIh54UNU80CITaU=
 		</data>
 		<key>Headers/MobileRTCAuthService.h</key>
 		<data>
@@ -42,7 +34,7 @@
 		</data>
 		<key>Headers/MobileRTCConstants.h</key>
 		<data>
-		tpozK7mjIb0dzLap+RgmmLD2qCA=
+		mIghjJBaSxUl6Jm00Td6BfxY2Bc=
 		</data>
 		<key>Headers/MobileRTCDirectShareService.h</key>
 		<data>
@@ -51,10 +43,6 @@
 		<key>Headers/MobileRTCInviteHelper.h</key>
 		<data>
 		DIfFV8HOl6Fjpu3m8C1zhGhKNSo=
-		</data>
-		<key>Headers/MobileRTCLiveTranscriptionLanguage.h</key>
-		<data>
-		1J/JS4lfrR5DvC1z3AfR+pVagh8=
 		</data>
 		<key>Headers/MobileRTCMeetingActionItem.h</key>
 		<data>
@@ -66,19 +54,15 @@
 		</data>
 		<key>Headers/MobileRTCMeetingDelegate.h</key>
 		<data>
-		fweRacV3F1TGunEeDnaufG3Tq24=
+		VWdgxDp4X/II24wMuWS/PYs8YHU=
 		</data>
 		<key>Headers/MobileRTCMeetingService+AppShare.h</key>
 		<data>
-		vwUktCmll2rTBenr59x2pur3Jxw=
+		9Mc0J+q84jHsQFAMNLIx8b4eA08=
 		</data>
 		<key>Headers/MobileRTCMeetingService+Audio.h</key>
 		<data>
 		4CysBto2cQwQ8ZlmBiaW5pIV4XA=
-		</data>
-		<key>Headers/MobileRTCMeetingService+Avatar.h</key>
-		<data>
-		tpOW1vTdWjHhpfoP7fD8he9IuCo=
 		</data>
 		<key>Headers/MobileRTCMeetingService+BO.h</key>
 		<data>
@@ -86,39 +70,35 @@
 		</data>
 		<key>Headers/MobileRTCMeetingService+Chat.h</key>
 		<data>
-		mJS+0r2QIyONahG/j50ApXd93jA=
+		B9FtCImtVPuxGZ/0jFWN1/AIhRA=
 		</data>
 		<key>Headers/MobileRTCMeetingService+Customize.h</key>
 		<data>
-		l8KC0cxcEha616w4uhWafslRz5M=
+		a3TmXTPT44AeqfErzVfS9DWn7/4=
 		</data>
 		<key>Headers/MobileRTCMeetingService+InMeeting.h</key>
 		<data>
-		jBHNSNqsYc9ZGNfnx78KWwDN0RY=
+		elcV3PFQYw7dqtylXpew2YjOJx4=
 		</data>
 		<key>Headers/MobileRTCMeetingService+Interpretation.h</key>
 		<data>
-		jtMulUc1pa+o9U/nlPJnGtSx/Sw=
+		aTvU1qI6RLE8luMOICnyNR0c7LI=
 		</data>
 		<key>Headers/MobileRTCMeetingService+LiveTranscription.h</key>
 		<data>
-		UeKjls9yJ1GF8fO2YvxjuF5tHXQ=
-		</data>
-		<key>Headers/MobileRTCMeetingService+RawArchiving.h</key>
-		<data>
-		P2dZWlat99KK/Pm23oBUy5IePw0=
+		hhXUGDCIFawb2a4YBYeh+hi85n4=
 		</data>
 		<key>Headers/MobileRTCMeetingService+Reaction.h</key>
 		<data>
-		u/49XJAyxS+tJSHiJeCr0tY2NJQ=
+		W9RRxTXvWPw01/wodtQbxe9ABDI=
 		</data>
 		<key>Headers/MobileRTCMeetingService+User.h</key>
 		<data>
-		Z7zqLTyQEXvd/3HHKngHd5WwZD4=
+		UaSSCzoU48R1FvwmM2ttAQ19xPk=
 		</data>
 		<key>Headers/MobileRTCMeetingService+Video.h</key>
 		<data>
-		UMMvQXDkIltL6MFbDqijoZ386Jo=
+		zFieCI4qmW6M73Tp1rpVaWsa9WI=
 		</data>
 		<key>Headers/MobileRTCMeetingService+VirtualBackground.h</key>
 		<data>
@@ -126,19 +106,19 @@
 		</data>
 		<key>Headers/MobileRTCMeetingService+Webinar.h</key>
 		<data>
-		qF7PhfJ5yoRFZGKmEPOj0omac0A=
+		08dnAGr6tfByV/e4HaUUtTSU8PA=
 		</data>
 		<key>Headers/MobileRTCMeetingService.h</key>
 		<data>
-		P/5mtKF1IFZ2N0HgjLbHJuiPn1s=
+		yMb1DzkdENOT/m6/AeTuWj4TM9o=
 		</data>
 		<key>Headers/MobileRTCMeetingSettings.h</key>
 		<data>
-		SMw73BE9aSsaKNwW0wZzypbahSw=
+		/TXFWNtv2+0zd06mi/+Q1DJEobU=
 		</data>
 		<key>Headers/MobileRTCMeetingUserInfo.h</key>
 		<data>
-		bhjUe8o2NCtzTCztzbeXHnurQgQ=
+		dnhbndDp4zKaL1bHZUIOWeg6yGI=
 		</data>
 		<key>Headers/MobileRTCPreProcessRawData.h</key>
 		<data>
@@ -148,10 +128,6 @@
 		<data>
 		HDfGa5uflNsxBO234/XaXO2+7kU=
 		</data>
-		<key>Headers/MobileRTCRawLiveStreamInfo.h</key>
-		<data>
-		59sfjrzg7wNIP2MVsJOwoyBjZL0=
-		</data>
 		<key>Headers/MobileRTCRemoteControlService.h</key>
 		<data>
 		Ol4zfngeHnlj8c5aXXD713sYtFU=
@@ -159,10 +135,6 @@
 		<key>Headers/MobileRTCRenderer.h</key>
 		<data>
 		KYQ2thFD6cYbspXV2njGhvxYS94=
-		</data>
-		<key>Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h</key>
-		<data>
-		7ZY7dYsfkmco9XLI/rlc3fNvK8w=
 		</data>
 		<key>Headers/MobileRTCReturnToMainSessionHandler.h</key>
 		<data>
@@ -175,14 +147,6 @@
 		<key>Headers/MobileRTCSMSService.h</key>
 		<data>
 		kjXbvfVYzaEFw8T3VT16oIEJ/7M=
-		</data>
-		<key>Headers/MobileRTCShareSender.h</key>
-		<data>
-		cpgQt2HCnYFiIEKYoC1CTmxtOyA=
-		</data>
-		<key>Headers/MobileRTCShareSourceHelper.h</key>
-		<data>
-		6YTj8XqhpddlXslZwa7SBLbeOTo=
 		</data>
 		<key>Headers/MobileRTCVideoCapabilityItem.h</key>
 		<data>
@@ -206,11 +170,11 @@
 		</data>
 		<key>Headers/MobileRTCWaitingRoomService.h</key>
 		<data>
-		nhBfJFIBob8qu9bl0ubEw/vwXd0=
+		O9K+qXLkksUX/E5updh8KKiluWk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9l1FEXINy4MKX8KRISC4gsWULS4=
+		ayFDjsBr7P/iB1rZGRdN9HsYGpk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -218,27 +182,27 @@
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
 		<data>
-		BUTnzBs4jstDj5Zks3E0bqEZT6U=
+		L6/R9nx0FiihBIVNRkWVo8fM3qw=
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/coremldata.bin</key>
 		<data>
-		E0+pxPvmankZyUIFmLGgxaX6Cpk=
+		Yu0kHbMBTNKwrBHhwJJKRToDWp8=
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/metadata.json</key>
 		<data>
-		VfWVCjXt5gjguw4ruVNB0+HDqSI=
+		1nFo2SmYUH8Cutyj2b6LEuK4Lcg=
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/model.espresso.net</key>
 		<data>
-		9vbLiCAt03UgqeYWqR+8uOQRrs0=
+		KltmjsCFDTnxfYP9ub9xHOEo9WM=
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/model.espresso.shape</key>
 		<data>
-		Aa9cVGAoXDQ8djzIn2fdNGnn71c=
+		CDPgQ22BkNxxpR8T9FSFHc2gYvM=
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/model.espresso.weights</key>
 		<data>
-		jM4GPU4K+DMRUOKF5DTB0UDrq6s=
+		SqwSF5Y9trzOKp6mZV/mSHUelhQ=
 		</data>
 		<key>bgr_iOS_hori.mlmodelc/model/coremldata.bin</key>
 		<data>
@@ -250,27 +214,27 @@
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
 		<data>
-		emEwHkatmIn/WWYikjZlAf15X2U=
+		Mh8NC9q83rJfu6vwZ2pnxY7so3o=
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/coremldata.bin</key>
 		<data>
-		516NNiuITg6/epAHPeo3RseM+oo=
+		SNITMrGwwrmPOtUEK2/QEL96kIY=
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/metadata.json</key>
 		<data>
-		ib+fpL0TJewhVrFWXdzQY3laNZI=
+		+WGx3lRCtGyOH0DALSwHaQ98RPw=
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/model.espresso.net</key>
 		<data>
-		lIufG+1Yw/HZAy6Q8DmJUK3ViR4=
+		KltmjsCFDTnxfYP9ub9xHOEo9WM=
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/model.espresso.shape</key>
 		<data>
-		57vxdEkvP/pfp8C97KhIqV0ESPU=
+		fbxwz30ag3xe2QLf/TdslzkkLY4=
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/model.espresso.weights</key>
 		<data>
-		EVvkIEKXFjNJlI3ZJ0ap7fPWtjY=
+		w/RqnEi0UgC+Wfwa/fak9hEiAMY=
 		</data>
 		<key>bgr_iOS_vert.mlmodelc/model/coremldata.bin</key>
 		<data>
@@ -312,70 +276,6 @@
 		<data>
 		uA3l0Th1hUHF8FJlrRRKufqG0ds=
 		</data>
-		<key>hd.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		aumPJXFpvJSCGM3zIHgv9dDN9TU=
-		</data>
-		<key>hd.mlmodelc/coremldata.bin</key>
-		<data>
-		hZb3z9BC3vAxatudB3vnBvZS1Rc=
-		</data>
-		<key>hd.mlmodelc/metadata.json</key>
-		<data>
-		17YlOO7vSao/NLJVakU+L9cxefI=
-		</data>
-		<key>hd.mlmodelc/model.espresso.net</key>
-		<data>
-		AXWM9umOqiLraE9zWj9uJ6b2dZA=
-		</data>
-		<key>hd.mlmodelc/model.espresso.shape</key>
-		<data>
-		e/IrNHPx8G/AbvrfchVM3Lup/zc=
-		</data>
-		<key>hd.mlmodelc/model.espresso.weights</key>
-		<data>
-		fkaopE7MdJUWvsQYzdu+dMJYHyk=
-		</data>
-		<key>hd.mlmodelc/model/coremldata.bin</key>
-		<data>
-		q8k/YfbvF3j0NI9FXZaH9Ej37kM=
-		</data>
-		<key>hd.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>hlm.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		wMHGNQKE2JH6Bt8+L5Y/jaR0qOY=
-		</data>
-		<key>hlm.mlmodelc/coremldata.bin</key>
-		<data>
-		GdAMtjHgYlkJyxKjEBinYXPURQo=
-		</data>
-		<key>hlm.mlmodelc/metadata.json</key>
-		<data>
-		mgpbLCnzec1+7boPjiqnqEkOqEU=
-		</data>
-		<key>hlm.mlmodelc/model.espresso.net</key>
-		<data>
-		8xbkIxC0+tYgh0P/PCa8Rm5dKv0=
-		</data>
-		<key>hlm.mlmodelc/model.espresso.shape</key>
-		<data>
-		CQONDhnQ6/EcuvWDDC0RDPBuoZE=
-		</data>
-		<key>hlm.mlmodelc/model.espresso.weights</key>
-		<data>
-		kP/NLnW42dcnrs0op9fQX9F85T4=
-		</data>
-		<key>hlm.mlmodelc/model/coremldata.bin</key>
-		<data>
-		BEG0IgK9a2yPWFPbHavHZGeEUT8=
-		</data>
-		<key>hlm.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -383,11 +283,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c2Wn94DB7dQXQd7TyB+ehonUqyw=
+			sOp3yRL6KeW4UGV7t03E+kGG6SQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			FdY4TzwZdc020ZKp1p7ZW9XwnE4xlJn4zsUoITtoJXY=
+			ZwQdERx3bqoCxIAouTxVyxo21hk/zv3c6tm47c/Vbsw=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCAnnotationService.h</key>
@@ -421,28 +321,6 @@
 			<key>hash2</key>
 			<data>
 			wWgEX+J9nK4h/Wqhb1w0pv+aGOx3MipqFPkwa8k2XkU=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCAudioSender.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mrk03HaGG7C6c5p2ce+u5UeB8ho=
-			</data>
-			<key>hash2</key>
-			<data>
-			zr5cQHRGw1vJR+BiOBIWh0GTt9oVFZ4Q20erxIgs6gU=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCAudioSourceHelper.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			p8aWtolYzFJFHIh54UNU80CITaU=
-			</data>
-			<key>hash2</key>
-			<data>
-			3/kV4IK517SXH52QZmdPJpkPPErPvYAgwD2Ap6xlZ90=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCAuthService.h</key>
@@ -482,11 +360,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tpozK7mjIb0dzLap+RgmmLD2qCA=
+			mIghjJBaSxUl6Jm00Td6BfxY2Bc=
 			</data>
 			<key>hash2</key>
 			<data>
-			O2WhPT/TAZouJ0xm2gRE380Hyk+0O47vFW97KLU9SkU=
+			132+F5kTKUy5Ebyd+HWIo10aNj2XKzpmzqawblHfzvw=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCDirectShareService.h</key>
@@ -509,17 +387,6 @@
 			<key>hash2</key>
 			<data>
 			0GUuSua3rN9K2OZx56Kh2FVOyoGMN6kyIGawo7uodus=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCLiveTranscriptionLanguage.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1J/JS4lfrR5DvC1z3AfR+pVagh8=
-			</data>
-			<key>hash2</key>
-			<data>
-			gBWUBQel3f/GDNOw4W9VrO3wzFdZiF6KrhrxVpKZR98=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingActionItem.h</key>
@@ -548,22 +415,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fweRacV3F1TGunEeDnaufG3Tq24=
+			VWdgxDp4X/II24wMuWS/PYs8YHU=
 			</data>
 			<key>hash2</key>
 			<data>
-			VrBfDvmzS5b44163eJyCfThD+dCspTTYzHOGzQtSd4o=
+			ta5lh3LqyEcD+rHTGZehok+WO0n4oAGLMkKxX7tIbn0=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+AppShare.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vwUktCmll2rTBenr59x2pur3Jxw=
+			9Mc0J+q84jHsQFAMNLIx8b4eA08=
 			</data>
 			<key>hash2</key>
 			<data>
-			VeSRbw5ze/OeihluA10Rr+qT7EhJ2AVtsLXWVA/qkoo=
+			QP4UDlSpbFbT59/KnQBmGVrn6VHR6EYfI2TIkwm+lRQ=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+Audio.h</key>
@@ -575,17 +442,6 @@
 			<key>hash2</key>
 			<data>
 			jZ2BZNPZRc1L4JSbynDfzMFxhItYS5/QrbiBD3xFPB8=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCMeetingService+Avatar.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			tpOW1vTdWjHhpfoP7fD8he9IuCo=
-			</data>
-			<key>hash2</key>
-			<data>
-			ed4gq43BUzEFPaqIg/T164cvJpyM001k5Tu6VafFyN8=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+BO.h</key>
@@ -603,99 +459,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mJS+0r2QIyONahG/j50ApXd93jA=
+			B9FtCImtVPuxGZ/0jFWN1/AIhRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			l7Hrbm1c8EG7qq0kNZlWIkjsX2WB1fXLyuBKLcgjOak=
+			LLUCmqtFFXiLrntG6lRQWmpbeqvhoZMNkOPTKK+9C/E=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+Customize.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l8KC0cxcEha616w4uhWafslRz5M=
+			a3TmXTPT44AeqfErzVfS9DWn7/4=
 			</data>
 			<key>hash2</key>
 			<data>
-			r0NzsmCsnOHtvo2yHFf6Vi2tcQwgk5pgfDHsg2pTcbc=
+			70HsInR+eMCQ/qCXFanx8TuvstcDXQZ1UVJP4H4hWlE=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+InMeeting.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jBHNSNqsYc9ZGNfnx78KWwDN0RY=
+			elcV3PFQYw7dqtylXpew2YjOJx4=
 			</data>
 			<key>hash2</key>
 			<data>
-			QweTstwfZ1Dr7d/ieOqWocZH4BK8w7kQrtHSRoy1LOo=
+			wOZr0MKBKuPaGIpbpPsu0ryjKOeHAaZ0sfjKIBJfVUE=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+Interpretation.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jtMulUc1pa+o9U/nlPJnGtSx/Sw=
+			aTvU1qI6RLE8luMOICnyNR0c7LI=
 			</data>
 			<key>hash2</key>
 			<data>
-			X1aWTxeX6wW2Wu9bd1SktRiaD56RMwMvl0lffshli5w=
+			HXf8lQO0VByyZ263FJP8U99nfC0ydJVtRVnkJX4mo0g=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+LiveTranscription.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UeKjls9yJ1GF8fO2YvxjuF5tHXQ=
+			hhXUGDCIFawb2a4YBYeh+hi85n4=
 			</data>
 			<key>hash2</key>
 			<data>
-			EBR0EAHb2z8tvTGcJL/01/Mf5x3uUB1G97Xp2eiP05c=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCMeetingService+RawArchiving.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			P2dZWlat99KK/Pm23oBUy5IePw0=
-			</data>
-			<key>hash2</key>
-			<data>
-			kU6gEpfVSgm66EUCdNM9jduosignIfRCFnADR9nu5+8=
+			equYeTKT3ZFCN9t7ycnneJO4RLcNMODnJ29nnxveq2A=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+Reaction.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u/49XJAyxS+tJSHiJeCr0tY2NJQ=
+			W9RRxTXvWPw01/wodtQbxe9ABDI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z9t5WTvvrzPl1qvM5JBBPaoq+P+glYgF1pYd6PFqUKg=
+			BlWwOvsOpavFY5NRtUxJ3CYqMh0CgOpmnKmxZSz34Lo=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+User.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Z7zqLTyQEXvd/3HHKngHd5WwZD4=
+			UaSSCzoU48R1FvwmM2ttAQ19xPk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VvP4eJpiai5R47t6xOMXC4okCmmdbvaArVE/W6TxbUE=
+			3ZDrsDEgQE95ZBl+YrbGa3vv9VVtGwJN0ucPUyMgL5E=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+Video.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UMMvQXDkIltL6MFbDqijoZ386Jo=
+			zFieCI4qmW6M73Tp1rpVaWsa9WI=
 			</data>
 			<key>hash2</key>
 			<data>
-			yIgOGExn74pS23V9QYXRsJWjZSkPD4D5Vjy7EJOVK9I=
+			OStNaG9UpPCBB7fSfdI4doP9sYqMitUx+9IfI7NQ4Gg=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService+VirtualBackground.h</key>
@@ -713,44 +558,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qF7PhfJ5yoRFZGKmEPOj0omac0A=
+			08dnAGr6tfByV/e4HaUUtTSU8PA=
 			</data>
 			<key>hash2</key>
 			<data>
-			L9dVCw0n6fcLyETBi5DQFmXBkoh8oyqVFMXEfjQHybY=
+			x7D4Q29LSStJ8wpcAT8YLlyfPDs1O+zEVc8/2u8AByo=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			P/5mtKF1IFZ2N0HgjLbHJuiPn1s=
+			yMb1DzkdENOT/m6/AeTuWj4TM9o=
 			</data>
 			<key>hash2</key>
 			<data>
-			RMz4kWKrRfTe8sULUe8NxlKg3zdn7b4Cbwb/+4YJat8=
+			pelO12olJusodHr5Mf9D4M0QDQFyoSaHYNvoxR9wm14=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SMw73BE9aSsaKNwW0wZzypbahSw=
+			/TXFWNtv2+0zd06mi/+Q1DJEobU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZDRrFIZRWO/fo+/gy8nlblK6T/slkTkCydBfY3ozYww=
+			snejj2hYRbg9Zo59QQSBD+ccD+M7Mi/mJgkwp/HPTxM=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCMeetingUserInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bhjUe8o2NCtzTCztzbeXHnurQgQ=
+			dnhbndDp4zKaL1bHZUIOWeg6yGI=
 			</data>
 			<key>hash2</key>
 			<data>
-			8N2bvmNNah9gOn2r8wgVQ5ed3p6jDxX93rJfZKFie9o=
+			P3W3keELQ33ujfdhIScMee4H7CHPEihT7TziO18Glkw=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCPreProcessRawData.h</key>
@@ -775,17 +620,6 @@
 			xPJu3su18mCBLrC6kQC5ZDM2tfpYQrU7bpn8yQTNNt0=
 			</data>
 		</dict>
-		<key>Headers/MobileRTCRawLiveStreamInfo.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			59sfjrzg7wNIP2MVsJOwoyBjZL0=
-			</data>
-			<key>hash2</key>
-			<data>
-			cUTcmPzwpZYcdeWcc67zNDeNsjyXS9yv3RQ6Z7M07Ig=
-			</data>
-		</dict>
 		<key>Headers/MobileRTCRemoteControlService.h</key>
 		<dict>
 			<key>hash</key>
@@ -806,17 +640,6 @@
 			<key>hash2</key>
 			<data>
 			ggsDrvTnnE4C9McNcRbUGWioUX7wXsravm1260hFe0I=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCRequestRawLiveStreamPrivilegeHandler.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7ZY7dYsfkmco9XLI/rlc3fNvK8w=
-			</data>
-			<key>hash2</key>
-			<data>
-			bp2YaRjnbXzrsKe+8iCPfaaakXWwIVsRaHAwnhgur+k=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCReturnToMainSessionHandler.h</key>
@@ -850,28 +673,6 @@
 			<key>hash2</key>
 			<data>
 			X4JDHL47L9nSEWc9bC/BWxL8jRgatDp4lY/+2VU8XKQ=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCShareSender.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cpgQt2HCnYFiIEKYoC1CTmxtOyA=
-			</data>
-			<key>hash2</key>
-			<data>
-			43tamGmu0FTSacGLf+fRXHhjJUcx+E0bXn+6kuu6p0w=
-			</data>
-		</dict>
-		<key>Headers/MobileRTCShareSourceHelper.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6YTj8XqhpddlXslZwa7SBLbeOTo=
-			</data>
-			<key>hash2</key>
-			<data>
-			o28cxyNe9oEwt++xe0h4dLqpyb9RNxAlrjEVwPjKxkc=
 			</data>
 		</dict>
 		<key>Headers/MobileRTCVideoCapabilityItem.h</key>
@@ -933,11 +734,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nhBfJFIBob8qu9bl0ubEw/vwXd0=
+			O9K+qXLkksUX/E5updh8KKiluWk=
 			</data>
 			<key>hash2</key>
 			<data>
-			vFWkelPh4WkPlu7cuZZH4i3soCW+1z983UOF1YZVgxE=
+			q/bodTfGmqh04RirKESBPexIETIP+scAlE0ZGjUPiyQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -955,66 +756,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BUTnzBs4jstDj5Zks3E0bqEZT6U=
+			L6/R9nx0FiihBIVNRkWVo8fM3qw=
 			</data>
 			<key>hash2</key>
 			<data>
-			NfvKOtdJmYoSsyIsNiurzC02K9FHdpUU2pIguNV7tp0=
+			NCJ47YF/KTa9rntYAChSfwV8FRKQB7fG6UTZKQUIEEo=
 			</data>
 		</dict>
 		<key>bgr_iOS_hori.mlmodelc/coremldata.bin</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E0+pxPvmankZyUIFmLGgxaX6Cpk=
+			Yu0kHbMBTNKwrBHhwJJKRToDWp8=
 			</data>
 			<key>hash2</key>
 			<data>
-			1/g23q409z5Pa8kwdS5bDL/BKaSKmDc+jhj4hObpzeo=
+			B2FrVFbQ3xPHVt02s1h76Y6XqtZ1rCrLEPhttm+xy2w=
 			</data>
 		</dict>
 		<key>bgr_iOS_hori.mlmodelc/metadata.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VfWVCjXt5gjguw4ruVNB0+HDqSI=
+			1nFo2SmYUH8Cutyj2b6LEuK4Lcg=
 			</data>
 			<key>hash2</key>
 			<data>
-			rvhvOGprRZQ+7TeytF8/cc/FGLAxn1L0wBTmj3thQww=
+			LiF29St321C/SUM2oaq3eeEuM4A6D7cisXHd/drmp/A=
 			</data>
 		</dict>
 		<key>bgr_iOS_hori.mlmodelc/model.espresso.net</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9vbLiCAt03UgqeYWqR+8uOQRrs0=
+			KltmjsCFDTnxfYP9ub9xHOEo9WM=
 			</data>
 			<key>hash2</key>
 			<data>
-			4mJ7y9sX8Sit67mq2O0DFKZlsmrvOopg20jtLG/y84E=
+			6OrM7uDipMVylmZFGCPUA0Yuja8R2265GGPc6Xr4ZUk=
 			</data>
 		</dict>
 		<key>bgr_iOS_hori.mlmodelc/model.espresso.shape</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Aa9cVGAoXDQ8djzIn2fdNGnn71c=
+			CDPgQ22BkNxxpR8T9FSFHc2gYvM=
 			</data>
 			<key>hash2</key>
 			<data>
-			9UEtXuGE1NzzAQcCWsJIuWD2n0LJtLDqFl7N21HAofc=
+			ltMJaqFrt3ms00w3OBnlut9bk2jaFlD4Djmiw6hUmkc=
 			</data>
 		</dict>
 		<key>bgr_iOS_hori.mlmodelc/model.espresso.weights</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jM4GPU4K+DMRUOKF5DTB0UDrq6s=
+			SqwSF5Y9trzOKp6mZV/mSHUelhQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			BRXihAtUMtc8v/Cn1AqX2YREAGUQ92aB1KYy4SYCpNc=
+			LMjRZa6fzNrJbgGPVTVBa5TNozDMlzSLgfwEj7xZ+dQ=
 			</data>
 		</dict>
 		<key>bgr_iOS_hori.mlmodelc/model/coremldata.bin</key>
@@ -1043,66 +844,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			emEwHkatmIn/WWYikjZlAf15X2U=
+			Mh8NC9q83rJfu6vwZ2pnxY7so3o=
 			</data>
 			<key>hash2</key>
 			<data>
-			uSoHfMTgeKL4pPLtKzAnh16tZ76+3Y7gpal10YKzJH0=
+			XlfxhRhLlXBIIIka7tsvlHJ3qZdP98tABQ7PwbEZbdo=
 			</data>
 		</dict>
 		<key>bgr_iOS_vert.mlmodelc/coremldata.bin</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			516NNiuITg6/epAHPeo3RseM+oo=
+			SNITMrGwwrmPOtUEK2/QEL96kIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			GCNDvQ7h1hUfw3bL5Nyv8uZCYwlWnn+8yNeZSHbi5D8=
+			MuCiDhT8O95x/T1lRBg1uhQwiZ0aAV9VxeHopvfBV+w=
 			</data>
 		</dict>
 		<key>bgr_iOS_vert.mlmodelc/metadata.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ib+fpL0TJewhVrFWXdzQY3laNZI=
+			+WGx3lRCtGyOH0DALSwHaQ98RPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			U2B9zQIsPWD2U2E3JT2WJdUYZ3CHt4b526h6Ayz3kTs=
+			7iw0SkQS/VVDcJ83W/poFdLtX70q/eOAbpGlafmvIHM=
 			</data>
 		</dict>
 		<key>bgr_iOS_vert.mlmodelc/model.espresso.net</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lIufG+1Yw/HZAy6Q8DmJUK3ViR4=
+			KltmjsCFDTnxfYP9ub9xHOEo9WM=
 			</data>
 			<key>hash2</key>
 			<data>
-			M85xAuCx/6s93oCdGn8c+nVAs/qZvnEfSMupI6WfYQw=
+			6OrM7uDipMVylmZFGCPUA0Yuja8R2265GGPc6Xr4ZUk=
 			</data>
 		</dict>
 		<key>bgr_iOS_vert.mlmodelc/model.espresso.shape</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			57vxdEkvP/pfp8C97KhIqV0ESPU=
+			fbxwz30ag3xe2QLf/TdslzkkLY4=
 			</data>
 			<key>hash2</key>
 			<data>
-			wj/MscKZHrSV0yOcnW39c2xR74toCBJ/bV1BVylPqs0=
+			sp0X4XK9ajuqpF4xlLFkelxjf9sWUsKrKfq5ersIMFA=
 			</data>
 		</dict>
 		<key>bgr_iOS_vert.mlmodelc/model.espresso.weights</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EVvkIEKXFjNJlI3ZJ0ap7fPWtjY=
+			w/RqnEi0UgC+Wfwa/fak9hEiAMY=
 			</data>
 			<key>hash2</key>
 			<data>
-			YK487v+Jzh/i29IHzw4envUp/5H0ZzlCKflJa/5OiO4=
+			fmjGXWLZAq+bVaqxyLZkc0a4fzMqPDUCN1n2ko8RUZ0=
 			</data>
 		</dict>
 		<key>bgr_iOS_vert.mlmodelc/model/coremldata.bin</key>
@@ -1205,182 +1006,6 @@
 			</data>
 		</dict>
 		<key>flm.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uA3l0Th1hUHF8FJlrRRKufqG0ds=
-			</data>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			aumPJXFpvJSCGM3zIHgv9dDN9TU=
-			</data>
-			<key>hash2</key>
-			<data>
-			WRJDEc+8zR2SBG/dBmSg1MBXRZs7h6wGRudD9bu6OS0=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hZb3z9BC3vAxatudB3vnBvZS1Rc=
-			</data>
-			<key>hash2</key>
-			<data>
-			ixOqKFQtNsQpibLcfBDcFn4p+m0geR+lDHiRlndXXro=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			17YlOO7vSao/NLJVakU+L9cxefI=
-			</data>
-			<key>hash2</key>
-			<data>
-			NB8/HmfNdkV+k/UYRA1BR4FQiBBazQOmnABmVmuL4Ec=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/model.espresso.net</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AXWM9umOqiLraE9zWj9uJ6b2dZA=
-			</data>
-			<key>hash2</key>
-			<data>
-			MldzfTjoNLZOJe7msnmTSuq9crBh3b1wnBuWMY/HSwM=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/model.espresso.shape</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			e/IrNHPx8G/AbvrfchVM3Lup/zc=
-			</data>
-			<key>hash2</key>
-			<data>
-			Tg2J95yZLw7vQgyPt5nZys+bdwOejzteQ32A4v5BeDI=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fkaopE7MdJUWvsQYzdu+dMJYHyk=
-			</data>
-			<key>hash2</key>
-			<data>
-			qFuWXsCUus7/oZyyeLqY5KT637H6QGXBNa96za7avng=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			q8k/YfbvF3j0NI9FXZaH9Ej37kM=
-			</data>
-			<key>hash2</key>
-			<data>
-			MMsqEQDoPqbulvwcFImwbsSS4gdqQRc8T6SGepzpk8Y=
-			</data>
-		</dict>
-		<key>hd.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uA3l0Th1hUHF8FJlrRRKufqG0ds=
-			</data>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wMHGNQKE2JH6Bt8+L5Y/jaR0qOY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Eh9w385k5OQysOwkUdgvXpw8Y/cdRKQZweWmz/jpc4c=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GdAMtjHgYlkJyxKjEBinYXPURQo=
-			</data>
-			<key>hash2</key>
-			<data>
-			JKuusZZnAKPiqu+UJbfB31jaDI7oTIOpKkyLhdpT0ik=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mgpbLCnzec1+7boPjiqnqEkOqEU=
-			</data>
-			<key>hash2</key>
-			<data>
-			UBxzF5U/Xr4Gfz6k66OTUaJI9e6XkhwtdNcGwnk1YBk=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/model.espresso.net</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8xbkIxC0+tYgh0P/PCa8Rm5dKv0=
-			</data>
-			<key>hash2</key>
-			<data>
-			8aZ3A8SVPVQRZ5L85vBPg0fUhEdZfc68DuYc7h+b1Bg=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/model.espresso.shape</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CQONDhnQ6/EcuvWDDC0RDPBuoZE=
-			</data>
-			<key>hash2</key>
-			<data>
-			FSqcd1vdcasI5uhg7bUs+NL5MCQlHs2QlRalvtadHTU=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kP/NLnW42dcnrs0op9fQX9F85T4=
-			</data>
-			<key>hash2</key>
-			<data>
-			pJ6cPpyWEKhudtJzgHJq27E/zeZWUIYHr7sQr9trKqk=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BEG0IgK9a2yPWFPbHavHZGeEUT8=
-			</data>
-			<key>hash2</key>
-			<data>
-			msAt7rHyGNIrWOW8yTrKkbahl/v/TjlgY6oIT1S57pM=
-			</data>
-		</dict>
-		<key>hlm.mlmodelc/neural_network_optionals/coremldata.bin</key>
 		<dict>
 			<key>hash</key>
 			<data>

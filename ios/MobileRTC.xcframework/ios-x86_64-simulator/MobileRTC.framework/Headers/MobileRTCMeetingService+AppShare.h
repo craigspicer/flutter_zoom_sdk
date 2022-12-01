@@ -81,22 +81,4 @@
  */
 - (NSString *_Nullable)getWhiteboardLegalNoticesExplained;
 
-/*!
- @brief Set share device audio.
- @param enableAudio YES means to share device audio.
- */
-- (void)setShareAudio:(BOOL)enableAudio;
-
-/*!
- @brief share device audio state.
- @return YES means share device audio enabled
- */
-- (BOOL)isSharedAudio;
-/*!
- @brief Share device screen
- @return YES mesns to share device screen
- @warning When the onSinkMeetingActiveShare callback return. developer nned to judge that share screen state.
- */
-- (BOOL)isDeviceSharing;
-
 @end

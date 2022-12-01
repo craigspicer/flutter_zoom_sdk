@@ -12,17 +12,11 @@
 #import "MobileRTCBORole.h"
 #import "MobileRTCReturnToMainSessionHandler.h"
 #import "MobileRTCPreProcessRawData.h"
-#import "MobileRTCAudioSender.h"
 #import "MobileRTCVideoSender.h"
-#import "MobileRTCShareSender.h"
 #import "MobileRTCVideoCapabilityItem.h"
-#import "MobileRTCLiveTranscriptionLanguage.h"
-#import "MobileRTCRawLiveStreamInfo.h"
-#import "MobileRTCRequestRawLiveStreamPrivilegeHandler.h"
 
 @class MobileRTCInterpretationLanguage;
 @class MobileRTCMeetingParameter;
-@class MobileRTCSignInterpreterLanguage;
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
  @protocol MobileRTCMeetingServiceDelegate
@@ -261,36 +255,6 @@
 - (void)onLiveStreamStatusChange:(MobileRTCLiveStreamStatus)liveStreamStatus;
 
 /*!
- @brief Callback event when the current user’s raw live streaming privilege has changed.
- @param hasPrivilege Specify whether or not the user has privilege
- */
-- (void)onRawLiveStreamPrivilegeChanged:(BOOL)hasPrivilege;
-
-/*!
- @brief Callback event when the current user's request times out.
- */
-- (void)onRawLiveStreamPrivilegeRequestTimeout;
-
-/*!
- @brief Callback event when another user's raw live streaming privilege changes.
- @param userid he user's ID whose privilege changed.
- @param hasPrivilege Specify whether or not the user has privilege.
- */
-- (void)onUserRawLiveStreamPrivilegeChanged:(NSUInteger)userId hasPrivilege:(bool)hasPrivilege;
-
-/*!
- @brief Callback event when a user requests raw live streaming privilege.
- @param handler handler A pointer to the MobileRTCRequestRawLiveStreamPrivilegeHandler. For more details, see  [MobileRTCRequestRawLiveStreamPrivilegeHandler].
- */
-- (void)onRawLiveStreamPrivilegeRequested:(MobileRTCRequestRawLiveStreamPrivilegeHandler*_Nullable)handler;
-
-/*!
- @brief Callback event when users start or stop raw live streaming.
- @param liveStreamList A list of users with an active raw live stream.
- */
-- (void)onUserRawLiveStreamingStatusChanged:(NSArray<MobileRTCRawLiveStreamInfo *>*_Nullable)liveStreamList;
-
-/*!
  @brief Callback event that ZAK expired.
  */
 - (void)onZoomIdentityExpired;
@@ -303,7 +267,7 @@
 - (void)onClickShareScreen:(UIViewController * _Nonnull)parentVC;
 
 /*!
- @brief Callback event that user receives the Closed Caption. If the meeting support multi language transcription and host set meeting manual caption is true, attendees must set translation language id to -1 to receive closed caption messages.
+ @brief Callback event that user receives the Closed Caption.
  @param message the message of closed caption
  @param speakerID the speakerID of the closed caption
  @param msgTime the time of the close caption
@@ -321,13 +285,6 @@
 @warning only normal meeting(non webinar meeting) can get the callback.
 */
 - (void)onSinkAttendeeChatPriviledgeChanged:(MobileRTCMeetingChatPriviledgeType)currentPrivilege;
-
-/*!
-@brief The function will be invoked when the chat privilege of panelist changes.
-@param privilege The chat privilege of the current panelist.
-@warning only webinar meeting can get the callback.
-*/
-- (void)onSinkPanelistChatPrivilegeChanged:(MobileRTCPanelistChatPrivilegeType)privilege;
 
 /*!
 @brief Callback when subscribe fail.
@@ -550,6 +507,12 @@
 
 /*!
  @brief Callback event that co-host changes.
+ @param cohostId The user ID of co-host.
+ */
+- (void)onMeetingCoHostChange:(NSUInteger)cohostId DEPRECATED_ATTRIBUTE;
+
+/*!
+ @brief Callback event that co-host changes.
  @param userID The user ID of co-host.
  @param isCoHost indicate the user(userID) be assigned to cohost or be remove cohost.
  */
@@ -661,55 +624,7 @@
 */
 - (void)onAvailableLanguageListUpdated:(NSArray <MobileRTCInterpretationLanguage *> *_Nullable)availableLanguageList;
 
-/*!
- @brief Callback to indicate that the list of available languages that interpreters can hear has changed.When the list of available languages that interpreters can hear in a meeting is changed, all interpreters in the meeting can get this event.
- @param interpreterAvailableListenLanList The list of available languages that interpreters can hear.
-*/
-- (void)onInterpreterLanguagesUpdated:(NSArray <MobileRTCInterpretationLanguage *> *_Nullable)availableLanguages;
-
 @end
-
-@protocol MobileRTCSignInterpretationServiceDelegate <MobileRTCMeetingServiceDelegate>
-/**
- @brief Sign interpretation staus change callback. This function is used to inform the user sign interpretation has been started or stopped, and all users in meeting can get the event.
- @param status Specify current sign interpretation status.
- */
-- (void)onSignInterpretationStatusChange:(MobileRTCSignInterpretationStatus)status;
-
-/**
- @brief Sign interpreter list changed callback. when some interpreter leave meeting or preset interpreter join meeting, or host add or remove interpreter, and only host can get the event.
- */
-- (void)onSignInterpreterListChanged;
-
-/**
- @brief Sign interpreters role changed callback. when myself role changed(participant <-> interpreter), and only myself in meeting can get the event.
- */
-- (void)onSignInterpreterRoleChanged;
-
-/**
- @brief Sign interpreter languages changed callback. when a sign interpreter's languages changed, and only the sign interpreter self can get the event.
- */
-- (void)onSignInterpreterLanguageChanged;
-
-/**
- @brief Available sign languages changed callback. when sign available languages in meeting are changed, all users in meeting can get the event.
- @param availableSignLanguageList Specify the sign available languages list.For more details, see {@link ZoomSDKSignInterpretationLanguageInfo} object.
- */
-- (void)onAvailableSignLanguageListUpdated:(NSArray<MobileRTCSignInterpreterLanguage *> *_Nullable)availableSignLanguageList;
-
-/**
- @brief Callback event of the requirement to unmute the audio from the host.
- @param handler A pointer to the ZoomSDKSignInterpterToTalkHander. For more details, see {@link ZoomSDKSignInterpterToTalkHander} object.
- */
-- (void)onRequestSignInterpreterToTalk;
-
-/**
- @brief Callback event of the host disallow sign interpreter to talk.
- */
-- (void)onDisallowSignInterpreterToTalk;
-
-@end
-
 
 #pragma mark - MobileRTCWebinarServiceDelegate
 /*!
@@ -913,14 +828,6 @@
 - (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type;
 
 /*!
- @brief translation message error callback.
- @param speakingLanguage: an object of the speak message language.
- @param translationLanguage: an object of the message language you want to translate.
- */
-- (void)onLiveTranscriptionMsgError:(MobileRTCLiveTranscriptionLanguage * _Nullable)speakLanguage
-                 transcriptLanguage:(MobileRTCLiveTranscriptionLanguage * _Nullable)transcriptLanguage;
-
-/*!
 @brief Sink the event of request for start the live transcription. Only The HOST can retrieve this callback. You can aprrove request call start live transcription, or decline as do nothing.
 @param requesterUserId the userid of the request from. If bAnonymous is TRUE, requesterUserId has no meanings.
 @param bAnonymous TRUE means the request is anonymous.
@@ -929,29 +836,6 @@
 
 @end
 
-/*!
-@brief The function will be invoked when using 3D avatar.
-*/
-@protocol MobileRTC3DAvatarDelegate <MobileRTCMeetingServiceDelegate>
-@optional
-/*!
-@brief Callback event of notification that the thumbnails of all 3D avatar items have been download.
-*/
-- (void)on3DAvatarItemThumbnailsDownloaded;
-
-/*!
-@brief Callback event notifying that the selected 3d avatar item is downloading.
-@param index The index of the selected 3d avatar item.
-*/
-- (void)on3DAvatarItemDataDownloading:(int)index;
-
-/*!
-@brief Callback event notifying that whether or not the selected 3d avatar item has been downloaded successfully.
-@param index The index of the selected 3d avatar item.
-@param success Yes indicates the selected 3d avatar item has been downloaded successfully.
-*/
-- (void)on3DAvatarItemDataDownloaded:(bool)success andIndex:(int)index;
-@end
 #pragma mark - MobileRTCCustomizedUIMeetingDelegate
 /*!
  @protocol MobileRTCCustomizedUIMeetingDelegate
@@ -1035,36 +919,6 @@
 - (void)onMobileRTCOneWayAudioAudioRawData:(MobileRTCAudioRawData *_Nonnull)rawData userId:(NSUInteger)userId;
 @end
 
-#pragma mark - MobileRTCAudioSourceDelegate
-/*!
-@protocol MobileRTCAudioSourceDelegate
-@brief This class is used to send your own audio rawdata.
-@discussion The MobileRTCAudioSourceDelegate protocol is required in the custom meeting UI view.
-*/
-@protocol MobileRTCAudioSourceDelegate <NSObject>
-
-@optional
-
-/**
- @brief Callback for virtual audio source to do some initialization.
- @param rawdataSender It is a pointer of audio sender object.
- */
-- (void)onDeviceInitialize:(MobileRTCAudioSender *_Nonnull)rawdataSender;
-/**
- @brief Callback for virtual audio source can send raw data with 'rawdataSender'.
- */
-- (void)onStartSendData;
-/**
- @brief Callback for virtual audio source should stop send raw data.
- */
-- (void)onStopSendData;
-/**
- @brief Callback for virtual audio source is uninitialized.
- */
-- (void)onDeviceUninitialize;
-
-@end
-
 #pragma mark - MobileRTCPreProcessorDelegate
 /*!
 @protocol MobileRTCPreProcessorDelegate
@@ -1121,27 +975,6 @@
 @brief This callback is used to uninitialize send data.
 */
 - (void)onUninitialized;
-
-@end
-
-#pragma mark - MobileRTCVideoSourceDelegate
-/*!
-@protocol MobileRTCVideoSourceDelegate
-@brief This class is used to send your own share rawdata.
-*/
-@protocol MobileRTCShareSourceDelegate <NSObject>
-
-@optional
-/**
- * @brief Notify to start send share source.
- * @param sender The object of MobileRTCShareSender to send share source.
- */
-- (void)onStartSend:(MobileRTCShareSender *_Nonnull)sender;
-
-/**
- * @brief Notify to stop send share source.
- */
-- (void)onStopSend;
 
 @end
 
@@ -1263,13 +1096,6 @@
 @param status current status of BO.
 */
 - (void)onBOStatusChanged:(MobileRTCBOStatus)status;
-
-/*!
- @brief Whenever the host switches you to another BO while you are assigned but haven't joined the BO, you will receive this event.
- @param newBOName The new BO name.
- @param newBOID The new BO ID.
- */
-- (void)onBOSwitchRequestReceived:(NSString *_Nullable)newBOName newBOID:(NSString *_Nullable)newBOID;
 @end
 
 #pragma mark - MobileRTCReactionServiceDelegate
@@ -1283,12 +1109,6 @@
  * @param skinTone The send emoji racetion skinstone.
  */
 - (void)onEmojiReactionReceived:(NSUInteger)userId reactionType:(MobileRTCEmojiReactionType)type reactionSkinTone:(MobileRTCEmojiReactionSkinTone)skinTone;
-
-/**
- * @brief Emoji reaction callback. This callback notifies the user when an emoji is received in the webinar.
- * @param type Specify the type of the received reaction.
- */
-- (void)onEmojiReactionReceivedInWebinar:(MobileRTCEmojiReactionType)type;
 
 @end
 

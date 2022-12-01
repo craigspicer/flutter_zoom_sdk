@@ -110,7 +110,7 @@
  @warning The option is available only on iPad if you want to use Kubi device. 
  @warning The function only for Zoom UI.
  */
-@property (assign, nonatomic) BOOL enableKubi DEPRECATED_ATTRIBUTE;
+@property (assign, nonatomic) BOOL enableKubi;
 
 /*!
  @brief Change thumbnail video layout while viewing a share in the meeting.
@@ -191,17 +191,6 @@
  @brief Enable Custom In-Meeting UI in meeting.
  */
 @property (assign, nonatomic) BOOL enableCustomMeeting;
-
-/*!
- @brief hide feedback button on cloud whiteboard.
- */
-@property (assign, nonatomic) BOOL hideFeedbackButtonOnCloudWhiteboard;
-
-/*!
- @brief hide share button on cloud whiteboard.
- */
-@property (assign, nonatomic) BOOL hideShareButtonOnCloudWhiteboard;
-
 /*!
  @brief Query if the user joins meeting with audio device. 
  @return YES means the audio device is automatically connected, otherwise not. 
@@ -290,13 +279,6 @@
  @warning The function only for Zoom UI.
  */
 - (void)disableGalleryView:(BOOL)disabled;
-
-/*!
- @brief Enable or disable the new Zoom Whiteboard feature (different from Classic Whiteboard). This feature enabled by default.
- @param disabled YES means disabled, otherwise not.
- @warning The function only for Zoom UI.
- */
-- (void)disableCloudWhiteboard:(BOOL)disabled;
 
 /*!
  @brief Query if it is disabled to call in.
