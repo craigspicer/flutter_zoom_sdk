@@ -19,6 +19,7 @@ import io.flutter.plugin.common.MethodChannel;
 
 import us.zoom.sdk.ChatMessageDeleteType;
 import us.zoom.sdk.FreeMeetingNeedUpgradeType;
+import us.zoom.sdk.IRequestLocalRecordingPrivilegeHandler;
 import us.zoom.sdk.InMeetingAudioController;
 import us.zoom.sdk.InMeetingChatController;
 import us.zoom.sdk.InMeetingChatMessage;
@@ -30,6 +31,7 @@ import us.zoom.sdk.InMeetingNotificationHandle;
 import us.zoom.sdk.InMeetingService;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
+import us.zoom.sdk.LocalRecordingRequestPrivilegeStatus;
 import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.MeetingStatus;
 import us.zoom.sdk.MeetingViewsOptions;
