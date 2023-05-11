@@ -387,6 +387,12 @@
 */
 - (void)onMeetingLockStatus:(BOOL)isLock;
 
+/*!
+ @brief Callback event that the request local recording privilege changes.
+ @param status Value of request local recording privilege status {@link  LocalRecordingRequestPrivilegeStatus}
+ */
+- (void)onRequestLocalRecordingPriviligeChanged:(MobileRTCLocalRecordingRequestPrivilegeStatus)status;
+
 @end
 
 #pragma mark - MobileRTCAudioServiceDelegate

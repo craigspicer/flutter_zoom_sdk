@@ -459,6 +459,34 @@
  */
 - (NSString *_Nullable)getLiveTranscriptLegalNoticesExplained;
 
+
+/*!
+ @brief Check whether the current meeting allows participants to send local recording privilege requests. It can only be used in regular meetings, not in webinar or breakout room.
+ @return YES: allow, NO: disallow
+*/
+- (BOOL)isParticipantRequestLocalRecordingAllowed;
+
+/*!
+ @brief Allow participant to request local recording.
+ @param allow YES: allow, NO: disallow
+ @return error {@link MobileRTCSDKError}
+ */
+- (MobileRTCSDKError)allowParticipantsToRequestLocalRecording:(BOOL)allow;
+
+/*!
+ @brief Check whether the current meeting auto-grants participants’ local recording privilege requests. It can only be used in regular meetings (not webinar or breakout room).
+ @return YES: allow, NO: disallow
+*/
+- (BOOL)isAutoAllowLocalRecordingRequest;
+
+/*!
+ @brief Allow participants to request local recording.
+ @param allow YES: allow, NO: disallow
+ @return error {@link MobileRTCSDKError}
+*/
+
+- (MobileRTCSDKError)autoAllowLocalRecordingRequest:(BOOL)allow;
+
 /**
  * Whether the current user is able to suspend all participant activities
  * @return YES means user can  suspend participant activities,

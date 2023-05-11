@@ -82,6 +82,14 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
  @param data The WaitingRoom Customize Data Info.
  */
 - (void)onCustomWaitingRoomDataUpdated:(MobileRTCCustomWaitingRoomData *_Nullable)data;
+
+/**
+ * @brief Callback of that waiting room user name changed.
+ * @param userID The ID of user whose user name has changed.
+ * @param userName The new name of user.
+ */
+- (void)onWaitingRoomUserNameChanged:(NSInteger)userID userName:(nonnull NSString *)userName;
+
 @end
 
 @interface MobileRTCWaitingRoomService : NSObject
@@ -158,5 +166,32 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
  @return If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
  */
 - (MobileRTCSDKError)requestCustomWaitingRoomData;
+
+/**
+ * @brief Determine if host or cohost is enabled to rename user in the waiting room.
+ * @return True indicates to enable to turn on.
+ */
+- (BOOL)canRenameUser;
+
+/**
+ * @brief Change user's screen name in the waiting room.
+ * @param userID Tnto waiting room byhe ID of user who is put i host/co-host.
+ * @param userName The new user name.
+ * @return If the function succeeds, it will return MobileRTCSDKError. Otherwise failed.
+ */
+- (MobileRTCSDKError)renameUser:(NSInteger)userID newUserName:(nonnull NSString * )userName;
+
+/**
+ * @brief Determine if host or cohost is enabled to expel user in the waiting room.
+ * @return True indicates to enable to turn on.
+ */
+- (BOOL)canExpelUser;
+
+/**
+ * @brief Remove the specified user from waiting room.
+ * @param userID The ID of user who is put into waiting room by host/co-host.
+ * @return If the function succeeds, it will return MobileRTCSDKError. Otherwise failed.
+ */
+- (MobileRTCSDKError)expelUser:(NSInteger)userID;
 
 @end

@@ -25,7 +25,7 @@
 - (BOOL)canDisableCaptions;
 
 /*!
- @return Enable or disable captions.
+ @brief Enable or disable captions.
  @param bEnable YES means that captions are enabled.  NO means that captions are disabled.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success.  Otherwise the function  returns a calling error. For more details, see \link MobileRTCSDKError \endlink enum.
  */

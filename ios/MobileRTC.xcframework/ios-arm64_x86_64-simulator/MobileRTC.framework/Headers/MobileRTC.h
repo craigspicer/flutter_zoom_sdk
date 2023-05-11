@@ -43,6 +43,7 @@
 #import <MobileRTC/MobileRTCAudioSourceHelper.h>
 #import <MobileRTC/MobileRTCSMSService.h>
 #import <MobileRTC/MobileRTCDirectShareService.h>
+#import <MobileRTC/MobileRTCReminderHelper.h>
 
 /*!
  @brief MobileRTCSDKInitContext.
@@ -218,6 +219,12 @@
 @return The MobileRTC direct share service.
 */
 - (MobileRTCDirectShareService * _Nullable)getDirectShareService;
+
+/*!
+@brief Get the default MobileRTC reminder helper.
+@return The MobileRTC reminder helper.
+*/
+- (MobileRTCReminderHelper * _Nullable)getReminderHelper;
 
 /*!
 @brief Get the video source helper.@see MobileRTCVideoSourceHelper

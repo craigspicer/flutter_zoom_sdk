@@ -83,7 +83,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCLoginFailReason) {
     ///login is successful.
     MobileRTCLoginFailReason_Success,
     ///Email login disabled.
-    MobileRTCLoginFailReason_EmailLoginDiable,
+    MobileRTCLoginFailReason_EmailLoginDisable,
     ///User not exist.
     MobileRTCLoginFailReason_UserNotExist,
     ///Password is wrong.
@@ -735,11 +735,18 @@ typedef NS_ENUM(NSUInteger, MobileRTCVideoResolution) {
 };
 
 /*!
- @brief MobileRTCVideoResolution An enumeration of video raw data format.
+ @brief MobileRTCVideoRawDataFormat An enumeration of video raw data format.
  */
 typedef NS_ENUM(NSUInteger, MobileRTCVideoRawDataFormat) {
     MobileRTCVideoRawDataFormatI420            = 1,
-    MobileRTCVideoRawDataFormatI420_Limit,
+} DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCFrameDataFormat instead");
+
+/*!
+ @brief MobileRTCFrameDataFormat An enumeration of raw data frame format.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCFrameDataFormat) {
+    MobileRTCFrameDataFormat_I420            = 1,
+    MobileRTCFrameDataFormat_I420_Limit,
 };
 
 /*!
@@ -1122,4 +1129,67 @@ typedef NS_ENUM(NSInteger, MobileRTCAttendeeViewMode){
     MobileRTCAttendeeViewMode_Sharing_Standard,
     MobileRTCAttendeeViewMode_Sharing_SidebysideSpeaker,
     MobileRTCAttendeeViewMode_Sharing_SidebysideGallery
+};
+
+typedef NS_ENUM(NSUInteger, MobileRTCLocalRecordingRequestPrivilegeStatus) {
+    MobileRTCLocalRecordingRequestPrivilege_None,
+    ///allow participant to send request privilege.
+    MobileRTCLocalRecordingRequestPrivilege_AllowRequest,
+    ///host auto allow all privilege request.
+    MobileRTCLocalRecordingRequestPrivilege_AutoGrant,
+    ///host auto deny all privilege request
+    MobileRTCLocalRecordingRequestPrivilege_AutoDeny,
+};
+
+typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
+    /// Disclaimer type of login.
+    MobileRTCReminderType_Login,
+    /// Disclaimer type of start or join meeting.
+    MobileRTCReminderType_StartOrJoinMeeting,
+    /// Disclaimer type of record reminder.
+    MobileRTCReminderType_RecordReminder,
+    /// Disclaimer type of record disclaimer.
+    MobileRTCReminderType_RecordDisclaimer,
+    /// Disclaimer type of live stream disclaimer.
+    MobileRTCReminderType_LiveStreamDisclaimer,
+    /// Disclaimer type of archive disclaimer.
+    MobileRTCReminderType_ArchiveDisclaimer,
+    /// Disclaimer type of join webinar as panelist.
+    MobileRTCReminderType_WebinarAsPanelistJoin,
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCInviteMeetingStatus) {
+    /// Meeting invitation accepted .
+    MobileRTCInviteMeetingStatus_Accepted,
+    /// Meeting invitation declined .
+    MobileRTCInviteMeetingStatus_Declined,
+    /// Meeting invitation canceled.
+    MobileRTCInviteMeetingStatus_Canceled,
+    /// Meeting invitation timeout
+    MobileRTCInviteMeetingStatus_Timeout
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCPresenceStatus) {
+    /// Presence status none
+    MobileRTCPresenceStatus_None,
+    /// Presence status available
+    MobileRTCPresenceStatus_Available,
+    /// Presence status unavailable
+    MobileRTCPresenceStatus_UnAvailable,
+    /// Presence status in meeting
+    MobileRTCPresenceStatus_InMeeting,
+    /// Presence status busy
+    MobileRTCPresenceStatus_Busy,
+    /// Presence status do not disturb
+    MobileRTCPresenceStatus_DoNotDisturb,
+    /// Presence status away
+    MobileRTCPresenceStatus_Away,
+    /// Presence status phone call
+    MobileRTCPresenceStatus_PhoneCall,
+    /// Presence status presenting
+    MobileRTCPresenceStatus_Presenting,
+    /// Presence status calendar
+    MobileRTCPresenceStatus_Calendar,
+    /// Presence status out of office
+    MobileRTCPresenceStatus_OutOfOffice
 };

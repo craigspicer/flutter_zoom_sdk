@@ -196,6 +196,11 @@
 @property (assign, nonatomic) BOOL hideShareButtonOnCloudWhiteboard;
 
 /*!
+ @brief About button’s visibility on the cloud whiteboard. Default is displaying.
+ */
+@property (assign, nonatomic) BOOL hideAboutButtonOnCloudWhiteboard;
+
+/*!
  @brief Query if the user joins meeting with audio device. 
  @return YES means the audio device is automatically connected, otherwise not. 
  */
@@ -430,6 +435,18 @@
 @param username registration username.
 */
 - (void)prePopulateWebinarRegistrationInfo:(nonnull NSString *)email username:(nonnull NSString *)username;
+
+/*!
+@brief Set the webinar register information dialog to hide or display.
+@param hide Yes means hide the dialog. Otherwise, do not hide the dialog.
+*/
+- (void)setHideRegisterWebinarInfoWindow:(BOOL)hide;
+
+/*!
+@brief Get the webinar register information dialog to hide or display.
+@return boolean value of the setting value.
+*/
+- (BOOL)hideRegisterWebinarInfoWindow;
 
 /*!
 @brief Set to disable confidential watermark.

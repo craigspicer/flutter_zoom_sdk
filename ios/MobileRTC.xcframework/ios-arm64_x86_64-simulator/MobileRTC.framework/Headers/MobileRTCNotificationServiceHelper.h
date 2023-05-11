@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
 #import "MobileRTCInMeetingDeviceInfo.h"
+#import "MobileRTCPresenceHelper.h"
 
 
 @protocol MobileRTCNotificationServiceHelperDelegate <NSObject>
@@ -40,12 +41,23 @@
 - (BOOL)isTransferMeetingEnabled;
 
 /*!
+ @brief Determine whether the presence feature is enabled.
+ */
+- (BOOL)isPresenceFeatureEnabled;
+/*!
  @brief Try to transfer meeting to current device.
  @param index Specifies the index, see [MobileRTCInMeetingDeviceInfo].
  @return If the function succeeds, the return value is MobileRTCSDKError_Success.
  Otherwise failed. To get extended error information, see [MobileRTCSDKError] enum.
  */
 - (MobileRTCSDKError)transferMeeting:(NSInteger)index;
+
+
+/*!
+ @brief Get presence interface helper.
+ @return If the function succeeds, the return value is a instance of MobileRTCPresenceHelper, Otherwise, the function returns NULL.
+ */
+- (MobileRTCPresenceHelper *_Nullable)getPresenceHelper;
 
 @end
 
