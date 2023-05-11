@@ -231,6 +231,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             public void onZoomAuthIdentityExpired() {
 
             }
+
+            @Override
+            public void onNotificationServiceStatus(SDKNotificationServiceStatus sdkNotificationServiceStatus) {
+
+            }
         };
 
         if (!zoomSDK.isLoggedIn()) {
@@ -347,6 +352,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onSpotlightVideoChanged(List<Long> list) {
+
+            }
+
+            @Override
             public void onUserVideoStatusChanged(long l, VideoStatus videoStatus) {
 
             }
@@ -407,6 +417,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onShareMeetingChatStatusChanged(boolean b) {
+
+            }
+
+            @Override
             public void onSilentModeChanged(boolean b) {
 
             }
@@ -428,6 +443,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
 
             @Override
             public void onSinkAllowAttendeeChatNotification(int i) {
+
+            }
+
+            @Override
+            public void onSinkPanelistChatPrivilegeChanged(InMeetingChatController.MobileRTCWebinarPanelistChatPrivilege mobileRTCWebinarPanelistChatPrivilege) {
 
             }
 
@@ -493,6 +513,46 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
 
             @Override
             public void onLocalVideoOrderUpdated(List<Long> list) {
+
+            }
+
+            @Override
+            public void onLocalRecordingPrivilegeRequested(IRequestLocalRecordingPrivilegeHandler iRequestLocalRecordingPrivilegeHandler) {
+
+            }
+
+            @Override
+            public void onSuspendParticipantsActivities() {
+
+            }
+
+            @Override
+            public void onAllowParticipantsStartVideoNotification(boolean b) {
+
+            }
+
+            @Override
+            public void onAllowParticipantsRenameNotification(boolean b) {
+
+            }
+
+            @Override
+            public void onAllowParticipantsUnmuteSelfNotification(boolean b) {
+
+            }
+
+            @Override
+            public void onAllowParticipantsShareWhiteBoardNotification(boolean b) {
+
+            }
+
+            @Override
+            public void onMeetingLockStatus(boolean b) {
+
+            }
+
+            @Override
+            public void onRequestLocalRecordingPriviligeChanged(LocalRecordingRequestPrivilegeStatus localRecordingRequestPrivilegeStatus) {
 
             }
         });
