@@ -671,6 +671,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             public void onZoomAuthIdentityExpired() {
 
             }
+
+            @Override
+            public void onNotificationServiceStatus(SDKNotificationServiceStatus sdkNotificationServiceStatus) {
+
+            }
         };
 
         if (!zoomSDK.isLoggedIn()) {
