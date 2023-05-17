@@ -332,7 +332,7 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin, FlutterStreamHa
   
         public func onSinkJoinWebinarNeedUserNameAndEmail(completion: (_ username: String, _ email: String, _ cancel: Bool) -> Bool) {
             completion(arguments["userId"]!!, arguments["userEmail"]!!, false);
-            UIViewController.dismissKeyboard;
+//            UIViewController.dismissKeyboard;
         }
   
         public func onSinkQAConnectStarted() {
