@@ -163,7 +163,7 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin, FlutterStreamHa
                 meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
                 meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
                 meetingSettings?.meetingTitleHidden = parseBoolean(data:arguments["disableTitlebar"]!, defaultValue: false)
-//                meetingSettings?.prePopulateWebinarRegistrationInfo(arguments["userEmail"]!!, username:arguments["userId"]!!);
+                meetingSettings?.prePopulateWebinarRegistrationInfo(arguments["userEmail"]!!, username:arguments["userId"]!!);
                 let viewopts = parseBoolean(data:arguments["viewOptions"]!, defaultValue: false)
                 if viewopts {
                     meetingSettings?.meetingTitleHidden = true
@@ -332,7 +332,7 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin, FlutterStreamHa
   
         public func onSinkJoinWebinarNeedUserNameAndEmail(completion: (_ username: String, _ email: String, _ cancel: Bool) -> Bool) {
             completion(arguments["userId"]!!, arguments["userEmail"]!!, false);
-//            UIViewController.dismissKeyboard;
+            UIViewController.dismissKeyboard(<#T##self: UIViewController##UIViewController#>)
         }
   
         public func onSinkQAConnectStarted() {
