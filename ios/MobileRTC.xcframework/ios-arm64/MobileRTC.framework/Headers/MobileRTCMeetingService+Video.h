@@ -162,4 +162,62 @@
  */
 - (BOOL)isStopIncomingVideoSupported;
 
+/*!
+ @brief Enable my video auto-framing.
+ @param mode the auto-framing mode.
+ @param param the auto-framing parameter.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)enableVideoAutoFraming:(MobileRTCAutoFramingParameter * _Nullable)setting forMode:(MobileRTCAutoFramingMode)mode;
+
+/*!
+ @brief Stop video auto-framing.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)disableVideoAutoFraming;
+
+/*!
+ @brief Determine whether auto-framing is enabled.
+ @return YES indicates enabled. NO not.
+ */
+- (BOOL)isVideoAutoFramingEnabled;
+
+/*!
+ @brief Get current mode of auto-framing.
+ @return the current auto-framing mode.
+ */
+- (MobileRTCAutoFramingMode)getVideoAutoFramingMode;
+
+/*!
+ @brief Set the mode of auto-framing when auto-framing is enabled.
+ @param mode the auto-framing mode.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)setVideoAutoFramingMode:(MobileRTCAutoFramingMode)mode;
+
+/*!
+ @brief Set the mode of auto-framing when auto-framing is enabled.
+ @param ratio the zoom in ratio of auto-framing, valid range of ratio:
+        a. mode is "MobileRTCAutoFramingMode_CenterCoordinates", 1~10.
+        b. mode is "MobileRTCAutoFramingMode_FaceRecognition", 0.1~10
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)setVideoAutoFramingRatio:(CGFloat)ratio;
+
+/*!
+ @brief Set the fail strategy of face recognition when auto-framing is enabled(mode is "MobileRTCAutoFramingMode_FaceRecognition").
+ @param  strategy the fail strategy of face recognition.
+ @return  If the function succeeds, the return value is MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)setFaceRecognitionFailStrategy:(MobileRTCFaceRecognitionFailStrategy)strategy;
+
+/*!
+ @brief Get the setting of auto-framing.
+ @param mode the auto-framing mode.
+ @return the auto-framing parameter of the specify mode or nil.
+ */
+- (MobileRTCAutoFramingParameter * _Nullable)getVideoAutoFramingSetting:(MobileRTCAutoFramingMode)mode;
+
+
+
 @end

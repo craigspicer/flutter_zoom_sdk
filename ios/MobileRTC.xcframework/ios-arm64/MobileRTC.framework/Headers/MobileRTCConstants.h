@@ -310,11 +310,11 @@ typedef NS_ENUM(NSUInteger, DialOutStatus) {
     DialOutStatus_ZoomCancelCallFail,
     ///The call is not answered.
     DialOutStatus_NoAnswer,
-    ///Disable the function of international outgoing call before the host joins the meeting.
+    ///Disable the international call-out function before the host joins the meeting.
     DialOutStatus_BlockNoHost,
     ///The call-out is blocked by the system due to high cost.
     DialOutStatus_BlockHighRate,
-    ///All the invitees invited by the call should press the button one(1) to join the meeting. In case that many invitees do not press the button that leads to time out, the call invitation for this meeting shall be banned.
+    ///All the users invited by the call should press one (1) to join the meeting. If many invitees do not press the button and instead are timed out, the call invitation for this meeting is blocked.
     DialOutStatus_BlockTooFrequent,
 };
 
@@ -790,7 +790,9 @@ typedef NS_ENUM(NSUInteger,MobileRTCRawDataError)
     MobileRTCRawData_Audio_Module_Not_Ready,
     MobileRTCRawData_Audio_Module_Error,
     MobileRTCRawData_No_Audio_Data,
-    MobileRTCRawData_Send_Too_Frequently
+    MobileRTCRawData_Send_Too_Frequently,
+    MobileRTCRawData_Can_Not_Change_Virtual_Device,
+    MobileRTCRawData_Not_Join_Audio
 };
 
 /*!
@@ -883,6 +885,16 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOControllerError) {
 };
 
 /*!
+ @brief PreAssign BO Data Status
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCBOPreAssignBODataStatus) {
+    MobileRTCBOPreAssignBODataStatus_None = 0,       ///<initial status, no request was sent
+    MobileRTCBOPreAssignBODataStatus_Downloading,    ///<download in progress
+    MobileRTCBOPreAssignBODataStatus_Download_Ok,    ///<download success
+    MobileRTCBOPreAssignBODataStatus_Download_Fail   ///<download fail
+};
+
+/*!
 @brief Direct sharing status.
 */
 typedef NS_ENUM(NSUInteger, MobileRTCDirectShareStatus) {
@@ -909,6 +921,18 @@ typedef NS_ENUM(NSUInteger, MobileRTCEmojiReactionType) {
     MobileRTCEmojiReactionType_Joy, /// joy
     MobileRTCEmojiReactionType_Openmouth, /// openmouth
     MobileRTCEmojiReactionType_Tada, /// tada
+};
+
+/*!
+@brief emoji feedback type.
+*/
+typedef NS_ENUM(NSUInteger, MobileRTCEmojiFeedbackType) {
+    MobileRTCEmojiFeedbackType_None,    /// none
+    MobileRTCEmojiFeedbackType_Yes,    /// yes
+    MobileRTCEmojiFeedbackType_No, /// no
+    MobileRTCEmojiFeedbackType_SpeedUp, /// Speed Up
+    MobileRTCEmojiFeedbackType_SlowDown, /// Slow Down
+    MobileRTCEmojiFeedbackType_Away  /// Away
 };
 
 /*!
@@ -1087,8 +1111,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCLiveTranscriptionOperationType) {
     MobileRTC_LiveTranscription_OperationType_Complete          = 4,
     /// Live transcription operation type is not suppported.
     MobileRTC_LiveTranscription_OperationType_NotSupported      = 5,
-    /// Live transcription operation type is no translation.
-    MobileRTC_LiveTranscription_OperationType_NoTranslation     = 6,
 };
 
 typedef NS_ENUM(NSInteger,MobileRTCSignInterpretationStatus)
@@ -1156,6 +1178,8 @@ typedef NS_ENUM(NSUInteger, MobileRTCReminderType) {
     MobileRTCReminderType_ArchiveDisclaimer,
     /// Disclaimer type of join webinar as panelist.
     MobileRTCReminderType_WebinarAsPanelistJoin,
+    /// Disclaimer type of .terms or service
+    MobileRTCReminderType_TermsOfService,
 };
 
 typedef NS_ENUM(NSInteger, MobileRTCInviteMeetingStatus) {
@@ -1192,4 +1216,17 @@ typedef NS_ENUM(NSInteger, MobileRTCPresenceStatus) {
     MobileRTCPresenceStatus_Calendar,
     /// Presence status out of office
     MobileRTCPresenceStatus_OutOfOffice
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCAutoFramingMode) {
+    MobileRTCAutoFramingMode_None,               ///<No use of the auto-framing.
+    MobileRTCAutoFramingMode_CenterCoordinates, ///<use the video frame’s center point as the center to zoom.
+    MobileRTCAutoFramingMode_FaceRecognition    ///<use the detected face in the video frame as the center to zoom in.
+};
+
+typedef NS_ENUM(NSInteger, MobileRTCFaceRecognitionFailStrategy) {
+    MobileRTCFaceRecognitionFailStrategy_None,                      ///<No use of the fail strategy
+    MobileRTCFaceRecognitionFailStrategy_Remain,                   ///<After face recognition fails, do nothing until face recognition succeed again.
+    MobileRTCFaceRecognitionFailStrategy_UsingCenterCoordinates, ///<After face recognition fails, use the video frame’s center point as the center for zoom in.
+    MobileRTCFaceRecognitionFailStrategy_UsingOriginalVideo      ///<After face recognition fails, use original video.
 };

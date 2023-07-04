@@ -26,6 +26,7 @@
 @class MobileRTCRequestLocalRecordingPrivilegeHandler;
 @class MobileRTCMeetingInviteActionItem;
 @class MobileRTCMeetingShareActionItem;
+@class MobileRTCLiveTranscriptionMessageInfo;
 
 #pragma mark - MobileRTCMeetingServiceDelegate
 /*!
@@ -391,7 +392,7 @@
  @brief Callback event that the request local recording privilege changes.
  @param status Value of request local recording privilege status {@link  LocalRecordingRequestPrivilegeStatus}
  */
-- (void)onRequestLocalRecordingPriviligeChanged:(MobileRTCLocalRecordingRequestPrivilegeStatus)status;
+- (void)onRequestLocalRecordingPrivilegeChanged:(MobileRTCLocalRecordingRequestPrivilegeStatus)status;
 
 @end
 
@@ -457,7 +458,7 @@
 
 
 /*!
- @brief A participant's video status has changed. To get their updated status, check {@link MobileRTCMeetingUserInfo.videoStatus} for the associated user.
+ @brief A participant's video status has changed. To get their updated status, check {@link MobileRTCMeetingUserInfo.videoStatus} for the associated user. Valid for both normal user and webinar attendee.
  @param userID The ID of the user whose video status has changed.
  */
 - (void)onSinkMeetingVideoStatusChange:(NSUInteger)userID;
@@ -557,13 +558,18 @@
 - (void)onInMeetingUserUpdated;
 
 /*!
- @brief A user joins the meeting.
+ @brief The user avatar path is updated in the meeting
+ */
+- (void)onInMeetingUserAvatarPathUpdated:(NSInteger)userID;
+
+/*!
+ @brief Callback event of notification of users who are in the meeting.
  @param userID The ID of the user who joins the meeting.
  */
 - (void)onSinkMeetingUserJoin:(NSUInteger)userID;
 
 /*!
- @brief A user leaves the meeting.
+ @brief Callback event of notification of user who leaves the meeting.
  @param userID The ID of the user who leaves the meeting.
  */
 - (void)onSinkMeetingUserLeft:(NSUInteger)userID;
@@ -970,7 +976,18 @@
  @param speakerId The speaker ID of the received live transcription message.
  @param type The live transcription operation type. For more details, see MobileRTCLiveTranscriptionOperationType.
 */
-- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type;
+- (void)onSinkLiveTranscriptionMsgReceived:(NSString *_Nonnull)msg speakerId:(NSUInteger)speakerId type:(MobileRTCLiveTranscriptionOperationType)type DEPRECATED_MSG_ATTRIBUTE("Use -onLiveTranscriptionMsgInfoReceived: instead");
+/*
+@brief live transcription message received callback.
+@param messageInfo The live transcription message, see \link MobileRTCLiveTranscriptionMessageInfo \endlink.
+*/
+- (void)onLiveTranscriptionMsgInfoReceived:(MobileRTCLiveTranscriptionMessageInfo*_Nullable)messageInfo;
+
+/*
+@brief original language message received callback.
+@param messageInfo The spoken language message, see \link MobileRTCLiveTranscriptionMessageInfo \endlink.
+ */
+- (void)onOriginalLanguageMsgReceived:(MobileRTCLiveTranscriptionMessageInfo*_Nullable)messageInfo;
 
 /*!
  @brief Translation message error callback.
@@ -1265,6 +1282,12 @@
 - (void)onHasDataHelperRightsNotification:(MobileRTCBOData * _Nonnull)dataHelper;
 
 /*!
+ @brief  The status of broadcasting voice to BO has been changed.
+ @param bStart YES for host begin broadcasting voice to BO, NO for host stop broadcasting voice to BO.
+ */
+- (void)onBroadcastBOVoiceStatus:(BOOL)bStart;
+
+/*!
  @brief A lost creator role notification.
 */
 - (void)onLostCreatorRightsNotification;
@@ -1341,6 +1364,19 @@
  */
 - (void)onEmojiReactionReceivedInWebinar:(MobileRTCEmojiReactionType)type;
 
+/*!
+ @brief Emoji feedback received callback. This function is used to inform the user once received the emoji feedback sent by others or user himself.
+ @param userId Specify the user ID of the emoji feedback sender.
+ @param type Specify the type of the received emoji feedback.
+ */
+- (void)onEmojiFeedbackReceived:(NSUInteger)userId feedbackType:(MobileRTCEmojiFeedbackType)type;
+
+/*!
+ @brief Emoji feedback canceled callback. This function is used to inform the user once the received emoji feedback sent by others or user himself was canceled.
+ @param userId Specify the user ID of the emoji feedback sender.
+ */
+- (void)onEmojiFeedbackCanceled:(NSUInteger)userId;
+
 @end
 
 
@@ -1357,6 +1393,11 @@
  @brief The unassigned user update.
 */
 - (void)onUnAssignedUserUpdated;
+
+/*!
+ @brief The BO list info updated.
+*/
+- (void)onBOListInfoUpdated;
 
 @end
 
@@ -1414,4 +1455,9 @@
 */
 - (void)onBOCreateSuccess:(NSString *_Nullable)BOID;
 
+/*!
+ @brief When the pre-assigned data download status changes, you will receive the event.
+ @param status download status, for more details, see [MobileRTCBOPreAssignBODataStatus]].
+*/
+- (void)onWebPreAssignBODataDownloadStatusChanged:(MobileRTCBOPreAssignBODataStatus)status;
 @end

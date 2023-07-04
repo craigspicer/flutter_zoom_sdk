@@ -10,6 +10,7 @@
 #import <MobileRTC/MobileRTCConstants.h>
 #import <MobileRTC/MobileRTCAuthService.h>
 #import <MobileRTC/MobileRTCMeetingService.h>
+#import <MobileRTC/MobileRTCAutoFramingParameter.h>
 #import <MobileRTC/MobileRTCMeetingService+AppShare.h>
 #import <MobileRTC/MobileRTCMeetingService+InMeeting.h>
 #import <MobileRTC/MobileRTCMeetingService+Customize.h>
@@ -25,6 +26,7 @@
 #import <MobileRTC/MobileRTCMeetingService+Reaction.h>
 #import <MobileRTC/MobileRTCMeetingService+LiveTranscription.h>
 #import <MobileRTC/MobileRTCMeetingService+RawArchiving.h>
+#import <MobileRTC/MobileRTCMeetingService+Phone.h>
 #import <MobileRTC/MobileRTCMeetingSettings.h>
 #import <MobileRTC/MobileRTCInviteHelper.h>
 #import <MobileRTC/MobileRTCRoomDevice.h>
@@ -275,6 +277,12 @@
  @warning It is necessary to call the method in AppDelegate "- (void)applicationWillTerminate:(UIApplication *)application".
  */
 - (void)appWillTerminate;
+
+/*!
+ @brief cleanup the SDK.
+ @warning user will clean up the SDK when no longer need the SDK instance, only can call this method after initialized.
+ */
+- (void)cleanup;
 
 /*!
 @brief Notify MobileRTC when the root UIViewController's traitCollection will change

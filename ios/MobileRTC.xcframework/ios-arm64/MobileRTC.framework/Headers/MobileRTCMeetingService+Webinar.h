@@ -15,7 +15,7 @@
  @brief Query if the user has the privilege to prompt or demote users in the webinar. 
  @return YES means that user owns the privilege, otherwise not.
  */
-- (BOOL)hasPromptAndDePromptPrivilige;
+- (BOOL)hasPromptAndDePromptPrivilege;
 
 /*!
  @brief Prompt Attendee to Panelist in Webinar.
@@ -440,4 +440,17 @@
  @return poll anonymous legal notices explained.
  */
 - (NSString *_Nullable)getPollAnonymousLegalNoticesExplained;
+
+/**
+ * @brief Get annotation over share legal notices prompt.
+ * @return annotation over share legal notices prompt.
+ */
+- (NSString *_Nullable)getWebinarRegistrationLegalNoticesPrompt;
+
+/**
+ * @brief Get annotation over share legal notices explained.
+ * @return annotation over share legal notices explained.
+ */
+- (MobileRTCWebinarRegistLegalNoticeContent *_Nullable)getWebinarRegistrationLegalNoticesExplained;
+
 @end

@@ -26,18 +26,6 @@
 @property (nullable, assign, nonatomic) id<MobileRTCAuthDelegate> delegate;
 
 /*!
- @brief APP Key got from zoom.us.
- @warning Keep the value as a secret. DO NOT publish it.
- */
-@property (nullable, retain, nonatomic) NSString *clientKey;
-
-/*!
- @brief APP secret got from zoom.us.
- @warning Keep the value as a secret. DO NOT publish it.
- */
-@property (nullable, retain, nonatomic) NSString *clientSecret;
-
-/*!
  @brief jwt auth token.
  @warning Keep the value as a secret. DO NOT publish it. If jwtToken is nil or empty,We will user your appKey and appSecret to Auth, We recommend using JWT Token,  and generate JWT Token on your web backend.
  */

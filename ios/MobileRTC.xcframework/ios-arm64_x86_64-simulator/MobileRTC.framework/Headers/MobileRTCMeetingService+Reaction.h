@@ -25,8 +25,20 @@ NS_ASSUME_NONNULL_BEGIN
  * @return If the function succeeds, it will return ZoomSDKError_succuss, otherwise not.
  * @warning MobileRTCEmojiReactionSkinTone doesn't work for MobileRTCEmojiReactionType_Heart type. To set MobileRTCEmojiReactionSkinTone, use -[MobileRTCMeetingSettings setReactionSkinTone] in MobileRTCMeetingSettings.h file
  */
-- (MobileRTCMeetError)sendEmojiReaction:(MobileRTCEmojiReactionType)type;
+- (MobileRTCSDKError)sendEmojiReaction:(MobileRTCEmojiReactionType)type;
 
+/**
+ * @brief Send the emoji feedback.
+ * @param type  Specify the emoji feedback type to be sent. See {@link MobileRTCEmojiFeedbackType}.
+ * @return If the function succeeds, it will return MobileRTCMeetError_Success, otherwise not.
+ */
+- (MobileRTCSDKError)sendEmojiFeedback:(MobileRTCEmojiFeedbackType)type;
+
+/**
+ * @brief Cancel the emoji feedback.
+ * @return If the function succeeds, it will return MobileRTCMeetError_Success, otherwise not.
+ */
+- (MobileRTCSDKError)cancelEmojiFeedback;
 @end
 
 NS_ASSUME_NONNULL_END

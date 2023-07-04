@@ -56,6 +56,12 @@
 - (BOOL)isInBOMeeting;
 
 /*!
+ @brief Query if the host is broadcasting voice to BO.
+ @return true means that the host is broadcasting, otherwise it's not broadcasting.
+ */
+- (BOOL)isBroadcastingVoiceToBO;
+
+/*!
 @brief Get current Breakout status.
 @return Enum for Breakout status. [MobileRTCBOStatus]
 */

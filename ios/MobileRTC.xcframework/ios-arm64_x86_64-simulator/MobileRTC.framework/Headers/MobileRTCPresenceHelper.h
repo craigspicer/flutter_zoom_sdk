@@ -203,6 +203,12 @@
 - (MobileRTCSDKError)inviteContact:(NSString *_Nonnull)contactID;
 
 /*!
+ @brief batch invite a list of specified contact to the current meeting.
+ @param contactIDList A list which contains contactsID of the specified user.
+ @return If the function succeeds, it will return MobileRTCSDKError_Success, otherwise not.
+ */
+- (MobileRTCSDKError)inviteContactList:(NSArray <NSString *> *_Nonnull)contactIDList;
+/*!
  @brief Send a request for contact detail information according to the contact id  list.
  @param contactIDList The contact id list.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
