@@ -3,12 +3,9 @@ class ZoomOptions {
   String? domain;
 
   /// Domain For Zoom Web
-  String? appKey;
+  String? jwtToken;
 
-  /// --JWT key for web / SDK key for iOS / Android
-  String? appSecret;
-
-  /// --JWT secret for web / SDK secret for iOS / Android
+  /// --JWT token
   String? language;
 
   /// --Language for web
@@ -93,8 +90,7 @@ class ZoomOptions {
 
   ZoomOptions(
       {required this.domain,
-      this.appKey,
-      this.appSecret,
+      this.jwtToken,
       this.language = "en-US",
       this.showMeetingHeader = true,
       this.disableInvite = false,

@@ -130,9 +130,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         meetingPasswordController.text.isNotEmpty) {
       ZoomOptions zoomOptions = ZoomOptions(
         domain: "zoom.us",
-        appKey: "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", //API KEY FROM ZOOM
-        appSecret:
-            "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", //API SECRET FROM ZOOM
+        jwtToken: "JWT TOKEN HERE",
       );
       var meetingOptions = ZoomMeetingOptions(
           userId: 'username',
@@ -219,14 +217,13 @@ class _MeetingWidgetState extends State<MeetingWidget> {
 
     ZoomOptions zoomOptions = ZoomOptions(
       domain: "zoom.us",
-      appKey:
-          "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", //API KEY FROM ZOOM -- SDK KEY
-      appSecret:
-          "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", //API SECRET FROM ZOOM -- SDK SECRET
+      jwtToken: "JWT TOKEN HERE",
     );
     var meetingOptions = ZoomMeetingOptions(
-        userId: 'evilrattdeveloper@gmail.com', //pass host email for zoom
-        userPassword: 'Dlinkmoderm0641', //pass host password for zoom
+        userId: 'evilrattdeveloper@gmail.com',
+        //pass host email for zoom
+        userPassword: 'Dlinkmoderm0641',
+        //pass host password for zoom
         disableDialIn: "false",
         disableDrive: "false",
         disableInvite: "false",
@@ -315,15 +312,15 @@ class _MeetingWidgetState extends State<MeetingWidget> {
 
     ZoomOptions zoomOptions = ZoomOptions(
       domain: "zoom.us",
-      appKey:
-          "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", //API KEY FROM ZOOM -- SDK KEY
-      appSecret:
-          "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", //API SECRET FROM ZOOM -- SDK SECRET
+      jwtToken: "JWT TOKEN HERE",
     );
     var meetingOptions = ZoomMeetingOptions(
-        userId: 'evilrattdeveloper@gmail.com', //pass host email for zoom
-        userPassword: 'Dlinkmoderm0641', //pass host password for zoom
-        meetingId: meetingIdController.text, //
+        userId: 'evilrattdeveloper@gmail.com',
+        //pass host email for zoom
+        userPassword: 'Dlinkmoderm0641',
+        //pass host password for zoom
+        meetingId: meetingIdController.text,
+        //
         disableDialIn: "false",
         disableDrive: "false",
         disableInvite: "false",
