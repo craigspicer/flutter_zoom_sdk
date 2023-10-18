@@ -686,6 +686,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             public void onNotificationServiceStatus(SDKNotificationServiceStatus sdkNotificationServiceStatus) {
 
             }
+
+            @Override
+            public void onNotificationServiceStatus(SDKNotificationServiceStatus sdkNotificationServiceStatus, SDKNotificationServiceError sdkNotificationServiceError) {
+
+            }
         };
 
         if (!zoomSDK.isLoggedIn()) {
