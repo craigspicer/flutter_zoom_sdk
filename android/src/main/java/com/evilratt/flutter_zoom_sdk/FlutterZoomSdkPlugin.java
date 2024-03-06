@@ -35,6 +35,7 @@ import us.zoom.sdk.LocalRecordingRequestPrivilegeStatus;
 import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.MeetingStatus;
 import us.zoom.sdk.MeetingViewsOptions;
+import us.zoom.sdk.MobileRTCFocusModeShareType;
 import us.zoom.sdk.SDKNotificationServiceError;
 import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.StartMeetingParams4NormalUser;
@@ -565,6 +566,46 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
 
             @Override
             public void onRequestLocalRecordingPrivilegeChanged(LocalRecordingRequestPrivilegeStatus localRecordingRequestPrivilegeStatus) {
+
+            }
+
+            @Override
+            public void onAICompanionActiveChangeNotice(boolean b) {
+
+            }
+
+            @Override
+            public void onParticipantProfilePictureStatusChange(boolean b) {
+
+            }
+
+            @Override
+            public void onCloudRecordingStorageFull(long l) {
+
+            }
+
+            @Override
+            public void onUVCCameraStatusChange(String s, UVCCameraStatus uvcCameraStatus) {
+
+            }
+
+            @Override
+            public void onFocusModeStateChanged(boolean b) {
+
+            }
+
+            @Override
+            public void onFocusModeShareTypeChanged(MobileRTCFocusModeShareType mobileRTCFocusModeShareType) {
+
+            }
+
+            @Override
+            public void onVideoAlphaChannelStatusChanged(boolean b) {
+
+            }
+
+            @Override
+            public void onAllowParticipantsRequestCloudRecording(boolean b) {
 
             }
         });

@@ -49,7 +49,7 @@ Future<void> checkAndDownloadSDK(String location) async {
 
   if (!exists) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/rotru7h0hzfb57nk4krsy/MobileRTC?rlkey=w2i5c45d1nuzlvo77iukg5ed6&dl=1'),
+        Uri.parse('https://www.dropbox.com/scl/fi/8yq7qsuqaqpp6177o0ivx/MobileRTC?rlkey=1finstsxtd1ggmxb1h2pw4wn1&dl=1'),
         iosSDKFile);
   }
 
@@ -59,7 +59,7 @@ Future<void> checkAndDownloadSDK(String location) async {
 
   if (!exists) {
     await downloadFile(
-        Uri.parse('https://www.dropbox.com/scl/fi/wkphhnuz9ezwt9pgx7o6n/MobileRTC?rlkey=01dsox5ghw5g0e1e95cn2vio3&dl=1'),
+        Uri.parse('https://www.dropbox.com/scl/fi/yxwwdnb2z28pbzualbrhm/MobileRTC?rlkey=sfyjop8khhutateo5raa3rnci&dl=1'),
         iosSimulateSDKFile);
   }
 
@@ -76,7 +76,7 @@ Future<void> checkAndDownloadSDK(String location) async {
   if (!exists) {
     await downloadFile(
         Uri.parse(
-            'https://www.dropbox.com/scl/fi/kyo35tu2ikktep4wwcjjd/mobilertc.aar?rlkey=s84h79nvmm57ng04i5qmywwss&dl=1'),
+            'https://www.dropbox.com/scl/fi/hc4udg8uordpsbl1ldih7/mobilertc.aar?rlkey=5xbjvblw7gkmhchtiy8131ebx&dl=1'),
         androidRTCLibFile);
   }
 }
