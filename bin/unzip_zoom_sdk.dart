@@ -63,14 +63,6 @@ Future<void> checkAndDownloadSDK(String location) async {
         iosSimulateSDKFile);
   }
 
-  var androidCommonLibFile = location + '/android/libs/commonlib.aar';
-  exists = await File(androidCommonLibFile).exists();
-  if (!exists) {
-    await downloadFile(
-        Uri.parse(
-            'https://www.dropbox.com/scl/fi/4tty42n51byo46dis9gys/commonlib.aar?rlkey=b6s30n4htpht13gv93w14tm87&dl=1'),
-        androidCommonLibFile);
-  }
   var androidRTCLibFile = location + '/android/libs/mobilertc.aar';
   exists = await File(androidRTCLibFile).exists();
   if (!exists) {
