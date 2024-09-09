@@ -23,7 +23,7 @@ typedef enum {
 }MobileRTCVideoAspect;
 
 /*!
- MobileRTCVideoView
+ @class MobileRTCVideoView
  @brief MobileRTCVideoView is designed for Render Attendee Video.
  */
 @interface MobileRTCVideoView : UIView
@@ -36,7 +36,7 @@ typedef enum {
 
 /*!
  @brief Designated for Render Attendee Video.
- @param userID user's video will be shown up.
+ @param userId user's video will be shown up.
  */
 - (BOOL)showAttendeeVideoWithUserID:(NSUInteger)userID;
 
@@ -53,7 +53,7 @@ typedef enum {
 @end
 
 /*!
- MobileRTCPreviewVideoView
+ @class MobileRTCPreviewVideoView
  @brief MobileRTCPreviewVideoView is designed for Preview Self Video.
  @warning App need reponse to onSinkMeetingPreviewStopped, SDK handle start & stop Preview.
  */
@@ -62,7 +62,7 @@ typedef enum {
 @end
 
 /*!
- MobileRTCActiveVideoView
+ @class MobileRTCActiveVideoView
  @brief MobileRTCActiveVideoView is designed for Render Active Video.
  */
 @interface MobileRTCActiveVideoView : MobileRTCVideoView
@@ -70,14 +70,14 @@ typedef enum {
 @end
 
 /*!
- MobileRTCActiveShareView
+ @class MobileRTCActiveShareView
  @brief MobileRTCActiveShareView is designed for Render Share Content.
  */
 @interface MobileRTCActiveShareView : MobileRTCVideoView
 
 /*!
  @brief Designated for Render Share Content.
- @param userID user's shared content will be shown up.
+ @param userId user's shared content will be shown up.
  */
 - (void)showActiveShareWithUserID:(NSUInteger)userID;
 
@@ -88,7 +88,7 @@ typedef enum {
 
 /*!
  @brief Designated for Render Share Content Scale Change.
- @param userID user's shared content scale change.
+ @param userId user's shared content scale change.
  */
 - (void)changeShareScaleWithUserID:(NSUInteger)userID;
 

@@ -53,7 +53,6 @@
     "availability" : {
       "macOS" : "10.13",
       "tvOS" : "11.0",
-      "visionOS" : "1.0",
       "watchOS" : "4.0",
       "iOS" : "11.0",
       "macCatalyst" : "11.0"
@@ -72,7 +71,7 @@
       "name" : "MLModelType_neuralNetwork"
     },
     "userDefinedMetadata" : {
-
+      "coremltoolsVersion" : "3.4"
     },
     "generatedClassName" : "flm",
     "inputSchema" : [

@@ -23,25 +23,12 @@
 - (void)customizeMeetingTitle:(NSString * _Nullable)title;
 
 /*!
- @brief Determine if host/cohose can change the meeting topic.
- @return If it can change the meeting topic, the return value is YES.otherwise not.
- */
-- (BOOL)canSetMeetingTopic;
-
-/*!
 @brief Set to customize the meeting topic which will be displayed in the meeting info view.
- @param meetingTopic The topic of the meeting.
+@param topic The topic of the meeting.
 @warning only meeting original host can call the function.
 @warning only in-meeting can call the function.
 */
-- (MobileRTCSDKError)setMeetingTopics:(NSString *_Nonnull)meetingTopic;
-/*!
-@brief Set to customize the meeting topic which will be displayed in the meeting info view.
- @param meetingTopic The topic of the meeting.
-@warning only meeting original host can call the function.
-@warning only in-meeting can call the function.
-*/
-- (BOOL)setMeetingTopic:(NSString *_Nonnull)meetingTopic DEPRECATED_MSG_ATTRIBUTE("Use setMeetingTopics  instead");
+- (BOOL)setMeetingTopic:(NSString *_Nonnull)meetingTopic;
 
 /*!
  @brief Query if it is able to Call Room device(H.323).
@@ -108,5 +95,12 @@
  @return YES means the method is called successfully, otherwise not.
  */
 - (BOOL)setCustomizedPollingUrl:(nullable NSString *)pollingURL bCreate:(BOOL)bCreate;
+
+/*!
+ @brief Allowing the developer to customize the URL of cloud whiteboard feedback.
+ @param feedbackUrl customized URL.
+ @return YES means the method is called successfully, otherwise not.
+ */
+- (BOOL)setCloudWhiteboardFeedbackUrl:(nullable NSString *)feedbackUrl;
 
 @end

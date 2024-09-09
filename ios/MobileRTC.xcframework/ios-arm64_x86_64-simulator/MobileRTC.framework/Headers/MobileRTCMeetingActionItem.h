@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 /*!
- MobileRTCMeetingInviteActionItem
- @brief Add custom invitation action items to the meeting.
+ @class MobileRTCMeetingInviteActionItem
+ @brief Add custom invitation action items to the meeting.  
  */
 typedef void (^MobileRTCMeetingInviteActionItemBlock)(void);
 
@@ -18,19 +18,19 @@ typedef void (^MobileRTCMeetingInviteActionItemBlock)(void);
 /*!
  @brief The title of the custom invitation items.
  */
-@property (nonatomic, retain, readwrite) NSString * _Nullable actionTitle;
+@property (nonatomic, retain, readwrite) NSString * _Nonnull actionTitle;
 /*!
  @brief Callback event of clicking the invitation item.
  */
-@property (nonatomic, copy, readwrite) MobileRTCMeetingInviteActionItemBlock _Nullable actionHandler;
+@property (nonatomic, copy, readwrite) MobileRTCMeetingInviteActionItemBlock _Nonnull actionHandler;
 
-+(id _Nonnull )itemWithTitle:(NSString * _Nullable )inTitle Action:(MobileRTCMeetingInviteActionItemBlock _Nullable )actionHandler;
++(id _Nonnull )itemWithTitle:(NSString * _Nonnull )inTitle Action:(MobileRTCMeetingInviteActionItemBlock _Nonnull )actionHandler;
 
 @end
 
 /*!
- MobileRTCMeetingShareActionItem
- @brief Add custom share action item to the meeting.
+ @class MobileRTCMeetingShareActionItem
+ @brief Add custom share action item to the meeting. 
  */
 @protocol MobileRTCMeetingShareActionItemDelegate <NSObject>
 @required

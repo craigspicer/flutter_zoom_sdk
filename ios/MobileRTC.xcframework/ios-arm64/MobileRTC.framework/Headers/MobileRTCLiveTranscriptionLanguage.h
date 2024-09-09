@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
 @brief localized language name of transcription language
 */
-@property(nonatomic, copy, readonly) NSString * _Nullable languageName;
+@property(nonatomic, copy, readonly) NSString *languageName;
 
 @end
 

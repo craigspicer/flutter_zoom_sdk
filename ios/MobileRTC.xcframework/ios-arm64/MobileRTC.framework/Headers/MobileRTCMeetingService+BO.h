@@ -8,7 +8,7 @@
 
 
 #import <MobileRTC/MobileRTC.h>
-#import <MobileRTC/MobileRTCBORole.h>
+#import "MobileRTCBORole.h"
 
 /*!
  @brief Creates Breakout Room meetings-related objects and fetches Breakout Room-related status information.
@@ -66,13 +66,6 @@
 @return Enum for Breakout status. [MobileRTCBOStatus]
 */
 - (MobileRTCBOStatus)getBOStatus;
-
-/*!
- @brief Get the name of the BO you are going to.
- @return The value is join bo name which you are going to.
- @note When you enter a BO or are switched to another BO by the host, maybe you need the BO name to display on transfer UI.
- */
-- (NSString * _Nullable)getJoiningBOName;
 
 @end
 

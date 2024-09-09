@@ -12,13 +12,11 @@
 @interface MobileRTCShareSourceHelper : NSObject
 
 /*!
-@brief Start sharing external source.
-@param shareDelegate The external source object pointer. Please See MobileRTCShareSourceDelegate
-@param audioDelegate .The external audio source object pointer.  Please See MobileRTCShareAudioSourceDelegate.
-@return return If the function succeeds, the return value is MobileRTCRawData_Success.
-@warning If audioDelegate is non-null, it indicates sharinge user-defined audio at the same time
+@brief This method is used to send your own share rawdata.
+@param delegate please See MobileRTCShareSourceDelegate.
+@warning Set nil for Switch to internal video source.
 */
-- (MobileRTCRawDataError)setExternalShareSource:(id<MobileRTCShareSourceDelegate> _Nullable)shareDelegate andAudioSource:(id <MobileRTCShareAudioSourceDelegate> _Nullable)audioDelegate;
+-(MobileRTCRawDataError)setExternalShareSource:(id<MobileRTCShareSourceDelegate>)delegate;
 
 @end
 

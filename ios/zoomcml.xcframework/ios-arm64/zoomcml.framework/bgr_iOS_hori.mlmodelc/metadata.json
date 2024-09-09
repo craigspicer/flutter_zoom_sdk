@@ -8,7 +8,7 @@
         "isOptional" : "0",
         "dataType" : "Float32",
         "formattedType" : "MultiArray (Float32)",
-        "shortDescription" : "MultiArray of shape (1, 1, 64, 24, 32). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shortDescription" : "MultiArray of shape (1, 1, 2, 144, 256). The first and second dimensions correspond to sequence and batch size, respectively",
         "shape" : "[]",
         "name" : "output",
         "type" : "MultiArray"
@@ -33,7 +33,6 @@
     "availability" : {
       "macOS" : "10.13",
       "tvOS" : "11.0",
-      "visionOS" : "1.0",
       "watchOS" : "4.0",
       "iOS" : "11.0",
       "macCatalyst" : "11.0"
@@ -45,7 +44,9 @@
       "Flatten" : 3,
       "Add" : 9,
       "PoolingAverage" : 3,
-      "Convolution" : 50,
+      "Deconvolution" : 1,
+      "Crop" : 1,
+      "Convolution" : 52,
       "ActivationSigmoid" : 2,
       "InnerProduct" : 1
     },
@@ -58,12 +59,12 @@
     "generatedClassName" : "bgr_iOS_hori",
     "inputSchema" : [
       {
-        "height" : "192",
+        "height" : "144",
         "colorspace" : "RGB",
         "isOptional" : "0",
         "width" : "256",
         "isColor" : "1",
-        "formattedType" : "Image (Color 256 × 192)",
+        "formattedType" : "Image (Color 256 × 144)",
         "hasSizeFlexibility" : "0",
         "type" : "Image",
         "shortDescription" : "",

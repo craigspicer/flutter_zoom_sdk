@@ -41,8 +41,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
 
 @property (nonatomic, retain) NSString * _Nullable logoPath;
 
-@property (nonatomic, retain) NSString * _Nullable imagePath;
-
 @property (nonatomic, retain) NSString * _Nullable videoPath;
 
 @property (nonatomic, assign) MobileRTCWaitingRoomLayoutType type;
@@ -52,14 +50,14 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
 @end
 
 /*!
- MobileRTCWaitingRoomServiceDelegate
+ @class MobileRTCWaitingRoomServiceDelegate
  @brief Meeting host enabled the waiting room feature, then the delegate will receive this notification  #only for custom UI#.
  */
 @protocol MobileRTCWaitingRoomServiceDelegate <NSObject>
 @optional
 
 /*!
- MobileRTCWaitingRoomServiceDelegate
+ @protocol MobileRTCWaitingRoomServiceDelegate
  @brief Meeting host enabled the waiting room feature, then the delegate will receive this notification  #only for custom UI#.
          onWaitingRoomUserJoin: will notify the host someone entery the waiting room.
          onWaitingRoomUserLeft: will notify the host someone left from waiting room.
@@ -99,7 +97,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
 /*!
  @brief Waiting Room service delegate.
  */
-@property (weak, nonatomic) id<MobileRTCWaitingRoomServiceDelegate> _Nullable delegate;
+@property (nullable, assign, nonatomic) id<MobileRTCWaitingRoomServiceDelegate> delegate;
 
 /*!
  @brief Is this meeting support Waiting Room feature.
@@ -113,12 +111,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
  */
 -(BOOL)isWaitingRoomOnEntryFlagOn;
 
-/*!
- Query if enableWaitingRoomOnEntry feature locked.
- 
- @return YES means enabled. NO not.
- */
--(BOOL)isWaitingRoomOnEntryLocked;
 /*!
  @brief enable or disable waiting room feature of this meeting.
  @return the result of this operation.
@@ -171,7 +163,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
 
 /*!
  @brief Get the WaitingRoom CustomizeData information in the waiting room.
- @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
+ @return If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
  */
 - (MobileRTCSDKError)requestCustomWaitingRoomData;
 
@@ -185,20 +177,20 @@ typedef NS_ENUM(NSUInteger, MobileRTCCustomWaitingRoomDataStatus) {
  * @brief Change user's screen name in the waiting room.
  * @param userID Tnto waiting room byhe ID of user who is put i host/co-host.
  * @param userName The new user name.
- * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise failed.
+ * @return If the function succeeds, it will return MobileRTCSDKError. Otherwise failed.
  */
 - (MobileRTCSDKError)renameUser:(NSInteger)userID newUserName:(nonnull NSString * )userName;
 
 /**
  * @brief Determine if host or cohost is enabled to expel user in the waiting room.
- * @return True indicates can expel user.
+ * @return True indicates to enable to turn on.
  */
 - (BOOL)canExpelUser;
 
 /**
  * @brief Remove the specified user from waiting room.
  * @param userID The ID of user who is put into waiting room by host/co-host.
- * @return If the function succeeds, it will return MobileRTCSDKError_Success. Otherwise failed.
+ * @return If the function succeeds, it will return MobileRTCSDKError. Otherwise failed.
  */
 - (MobileRTCSDKError)expelUser:(NSInteger)userID;
 

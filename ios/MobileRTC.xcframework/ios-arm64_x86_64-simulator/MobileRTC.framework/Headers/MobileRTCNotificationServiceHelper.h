@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <MobileRTC/MobileRTCConstants.h>
-#import <MobileRTC/MobileRTCInMeetingDeviceInfo.h>
-#import <MobileRTC/MobileRTCPresenceHelper.h>
+#import "MobileRTCInMeetingDeviceInfo.h"
+#import "MobileRTCPresenceHelper.h"
 
 
 @protocol MobileRTCNotificationServiceHelperDelegate <NSObject>

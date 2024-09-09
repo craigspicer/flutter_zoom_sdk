@@ -31,16 +31,6 @@
 @property (nonatomic, assign) CGSize size;
 
 /*!
- @brief The data pointer to a video's alpha data.
- */
-@property (nonatomic, assign) char *alphaBuffer;
-
-/*!
- @brief the alpha buffer data length
- */
-@property (nonatomic, assign) unsigned int alphaBufferLen;
-
-/*!
  @brief The video data's raw data format defined in {@link MobileRTCVideoRawDataFormat}.
  */
 @property (nonatomic, assign) MobileRTCFrameDataFormat format;

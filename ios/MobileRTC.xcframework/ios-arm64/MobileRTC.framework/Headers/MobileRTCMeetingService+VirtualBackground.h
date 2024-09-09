@@ -37,7 +37,7 @@
 /*!
  @brief The preview for inspect the virtual background effect.
  */
-@property (retain, nonatomic) UIView * _Nullable previewView;
+@property (retain, nonatomic) UIView    * _Nullable previewView;
 
 /*!
  @brief Start preview for inspect the virtual background effect.
@@ -64,25 +64,26 @@
  @brief get the virtual background list.
  @return Return Narray of the items which include the None item.
  */
-- (NSArray <MobileRTCVirtualBGImageInfo *>* _Nullable)getBGImageList;
+- (NSArray <MobileRTCVirtualBGImageInfo *>* _Nonnull)getBGImageList;
 
 /*!
  @brief add and use the image for virtual background.
  @return Add and use virtual background result.
  */
-- (MobileRTCMeetError)addBGImage:(UIImage *_Nullable)image;
+- (MobileRTCMeetError)addBGImage:(UIImage *_Nonnull)image;
 
 /*!
- @brief Remove image item form image list. Will use the previous one for virtual background.
+ @brief Remove image item form image list.
+ @brief Will use the previous one for virtual background.
  @return Remove result.
  */
-- (MobileRTCMeetError)removeBGImage:(MobileRTCVirtualBGImageInfo *_Nullable)bgImageInfo;
+- (MobileRTCMeetError)removeBGImage:(MobileRTCVirtualBGImageInfo *_Nonnull)bgImageInfo;
 
 /*!
  @brief use the specify image item for virtual background.
  @return The result of use image item.
  */
-- (MobileRTCMeetError)useBGImage:(MobileRTCVirtualBGImageInfo *_Nullable)bgImage;
+- (MobileRTCMeetError)useBGImage:(MobileRTCVirtualBGImageInfo *_Nonnull)bgImage;
 
 /*!
  @brief Disable the virtrual background, same as use a none image item.

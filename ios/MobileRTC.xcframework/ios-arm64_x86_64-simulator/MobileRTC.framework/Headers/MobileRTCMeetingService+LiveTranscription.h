@@ -7,13 +7,14 @@
 //
 
 #import <MobileRTC/MobileRTC.h>
-#import <MobileRTC/MobileRTCLiveTranscriptionLanguage.h>
+#import "MobileRTCConstants.h"
+#import "MobileRTCLiveTranscriptionLanguage.h"
 
 @interface MobileRTCLiveTranscriptionMessageInfo : NSObject
 /*!
 @brief message id of transcription message
 */
-@property (nonatomic, copy)NSString * _Nonnull messageID;
+@property (nonatomic, copy)NSString *messageID;
 /*!
 @brief speaker id of transcription message
 */
@@ -21,11 +22,11 @@
 /*!
 @brief speak name  of transcription message
 */
-@property (nonatomic, copy)NSString * _Nullable speakerName;
+@property (nonatomic, copy)NSString *speakerName;
 /*!
 @brief message content  of transcription message
 */
-@property (nonatomic, copy)NSString * _Nullable messageContent;
+@property (nonatomic, copy)NSString *messageContent;
 /*!
 @brief time stamp  of transcription message
 */
@@ -68,21 +69,21 @@
 
 /*!
  @brief Query if the user is can be assigned to send closed caption.
- @param userId the user id.
+ @param userid the user id.
  @return TRUE means that the user can be assigned to send closed caption.
  */
 - (BOOL)canBeAssignedToSendCC:(NSUInteger)userId;
 
 /*!
  @brief Assign the user privilege to send closed caption.
- @param userId the user id.
+ @param userid the user id.
  @return If the function succeeds, the return value is YES. Otherwise failed.
  */
 - (BOOL)assignCCPrivilege:(NSUInteger)userId;
 
 /*!
  @brief WithDraw the user privilege to send closed caption.
- @param userId the user id.
+ @param userid the user id.
  @return If the function succeeds, the return value is YES. Otherwise failed.
  */
 - (BOOL)withdrawCCPrivilege:(NSUInteger)userId;
@@ -110,7 +111,7 @@
 
 /*!
  @brief Query the current live transcription status.
- @return  the live transcription status.  For more details, see MobileRTCLiveTranscriptionStatus.
+ @return @return the live transcription status.  For more details, see MobileRTCLiveTranscriptionStatus.
  */
 - (MobileRTCLiveTranscriptionStatus)getLiveTranscriptionStatus;
 
@@ -181,37 +182,37 @@
  @brief Get the list of all available spoken languages in meeting.
  @return If the function succeeds, the return value is the list of the available spoken languages in meeting. Otherwise failed, the return value is NULL.
  */
-- (NSArray<MobileRTCLiveTranscriptionLanguage*>* _Nullable)getAvailableMeetingSpokenLanguages;
+- (NSArray<MobileRTCLiveTranscriptionLanguage*>*)getAvailableMeetingSpokenLanguages;
 
 /*!
  @brief set spoken language of the current user.
- @param languageID the speak language id.
- @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+ @param languageID: the speak language id.
+ @return If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
  */
 - (BOOL)setMeetingSpokenLanguage:(NSInteger)languageID;
 
 /*!
  @brief Get the spoken language of the current user.
  */
-- (MobileRTCLiveTranscriptionLanguage *_Nullable)getMeetingSpokenLanguage;
+- (MobileRTCLiveTranscriptionLanguage *)getMeetingSpokenLanguage;
 
 /*!
  @brief Get the list of all available translation languages in meeting.
  @return If the function succeeds, the return value is the list of all available translation languages in meeting. Otherwise failed, the return value is NULL.
  */
-- (NSArray<MobileRTCLiveTranscriptionLanguage*>* _Nullable)getAvailableTranslationLanguages;
+- (NSArray<MobileRTCLiveTranscriptionLanguage*>*)getAvailableTranslationLanguages;
 
 /*!
  @brief set the translation language of the current user.
- @param languageID the translation language id. If the language ID is set to -1, live translation will be disabled,then you can reveive closed caption when host set meeting manual caption is true.
- @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+ @param languageID: the translation language id. If the language ID is set to -1, live translation will be disabled,then you can reveive closed caption when host set meeting manual caption is true.
+ @return If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
  */
 - (BOOL)setTranslationLanguage:(NSInteger)languageID;
 
 /*!
 @brief Get the translation language of the current user.
  */
-- (MobileRTCLiveTranscriptionLanguage *_Nullable)getTranslationLanguage;
+- (MobileRTCLiveTranscriptionLanguage *)getTranslationLanguage;
 
 @end
 

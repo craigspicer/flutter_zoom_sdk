@@ -12,19 +12,19 @@
 /*!
  @brief Get the ID of the country where a user can dial in.The country ID. (e.g. US, CA, etc.)
  */
-@property (nonatomic, copy) NSString * _Nullable countryId;
+@property (nonatomic, retain) NSString *countryId;
 /*!
  @brief Get the country name.
  */
-@property (nonatomic, copy) NSString * _Nullable countryName;
+@property (nonatomic, retain) NSString *countryName;
 /*!
  @brief Get the country code.
  */
-@property (nonatomic, copy) NSString * _Nullable countryCode;
+@property (nonatomic, retain) NSString *countryCode;
 /*!
  @brief Get the country number.
  */
-@property (nonatomic, copy) NSString * _Nullable countryNumber;
+@property (nonatomic, retain) NSString *countryNumber;
 /*!
  @brief Whether free.
  */

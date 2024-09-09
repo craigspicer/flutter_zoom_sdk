@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MobileRTC/MobileRTCConstants.h>
+#import "MobileRTCConstants.h"
 
 /*!
  @brief Presence information interface.
@@ -124,14 +124,14 @@
 
 /*!
  @brief Contact presence changed callback.
- @param contactID The contact’s ID.
+ @param contactId The contact’s ID.
  @param status contact presence status.
  */
 - (void)onUserPresenceChanged:(NSString *_Nullable)contactID presenceStatus:(MobileRTCPresenceStatus)status;
 
 /*!
  @brief Starred contact list changed callback.
- @param contactIDList The ID list of change contacts.
+ @param contactList The ID list of change contacts.
  @param add Specifies whether the contact list is added.
 */
 - (void)onStarContactListChanged:(NSArray <NSString *> *_Nullable)contactIDList isAdd:(BOOL)add;
@@ -183,21 +183,21 @@
 
 /*!
  @brief Send a request to add the contact into a starred contact list.
- @param contactID The contact ID.
+ @param contactId The contact ID.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
 */
 - (MobileRTCSDKError)starContact:(NSString *_Nonnull)contactID;
 
 /*!
  @brief Send a request to remove a contact from the starred contact list.
- @param contactID The contact ID.
+ @param contactId The contact ID.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
 */
 - (MobileRTCSDKError)unStarContact:(NSString *_Nonnull)contactID;
 
 /*!
  @brief Send an invitation to a contact to join a meeting.
- @param contactID The contact ID.
+ @param contactId The contact ID.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see [MobileRTCSDKError].
 */
 - (MobileRTCSDKError)inviteContact:(NSString *_Nonnull)contactID;

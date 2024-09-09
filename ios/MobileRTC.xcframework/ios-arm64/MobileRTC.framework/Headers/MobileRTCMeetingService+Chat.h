@@ -8,6 +8,15 @@
 
 #import <MobileRTC/MobileRTC.h>
 
+typedef enum {
+    ///Chat to all participants in the meeting. 
+    MobileRTCChatGroup_All                   = 0,
+    ///Chat to panelists in the webinar.
+    MobileRTCChatGroup_Panelists             = 1,
+    ///Chat to waiting room user
+    MobileRTCChatGroup_WaitingRoomUsers       = 2,
+}MobileRTCChatGroup;
+
 @interface MobileRTCMeetingService (Chat)
 
 /*!
@@ -64,12 +73,20 @@
 - (nullable MobileRTCMeetingChat*)meetingChatByID:(nonnull NSString*)messageID;
 
 /*!
- @brief Send a chat message.
- @param msg The chat message.
+ @brief Send chat message to the specified user in the meeting.
+ @param userID The ID of user who receives message in the meeting.
+ @param content The message to be sent.
  @return The result of sending the message.
  */
-- (MobileRTCSendChatError)sendChatMsg:(nullable MobileRTCMeetingChat *)msg;
+- (MobileRTCSendChatError)sendChatToUser:(NSUInteger)userID WithContent:(nonnull NSString*)content;
 
+/*!
+ @brief Send message to group in the meeting.
+ @param group Group type in the meeting, see MobileRTCChatGroup.
+ @param content The message to be sent.
+ @return The result of sending the message.
+ */
+- (MobileRTCSendChatError)sendChatToGroup:(MobileRTCChatGroup)group WithContent:(nonnull NSString*)content;
 
 /*!
  @brief Delete chat message by message id.
@@ -109,41 +126,5 @@
  @return stop share chat legal notice content.
  */
 - (NSString *_Nullable)getShareMeetingChatStoppedLegalNoticeContent;
-
-#pragma mark - file transfer -
-/*!
-@brief Determine whether file transfer is enabled.
-@return True if file transfer is enabled, otherwise false.
-*/
-- (BOOL)isFileTransferEnabled;
-
-/*!
-@brief Send file to specify user in current meeting.
-@param filePath The absolute path of the file.
-@param userId Send the file to this user.
-@return If the function succeeds, the return value is MobileRTCSDKError_Success.
-@warning This interface is related to chat privilege. See @{MobileRTCMeetingChatPriviledgeType}.
-*/
-- (MobileRTCSDKError)transferFile:(NSString * _Nullable)filePath toUser:(NSUInteger)userId;
-
-/*!
-@brief Send file to all users in current meeting.
-@param filePath The local path of the file.
-@return If the function succeeds, the return value is MobileRTCSDKError_Success.
-@warning This interface is related to chat privilege. See @{MobileRTCMeetingChatPriviledgeType}.
-*/
-- (MobileRTCSDKError)transferFileToAll:(NSString * _Nullable)filePath;
-
-/*!
-@brief Get the list of allowed file types in transfer.
-@return The value of allowed file types in transfer, comma-separated if there are multiple values. Exe files are by default forbidden from being transferred.
-*/
-- (NSString *_Nullable)getTransferFileTypeAllowList;
-
-/*!
-@brief Get the maximum size for file transfer.
-@return The maximum number of bytes for file transfer.
-*/
-- (unsigned long long)getMaxTransferFileSize;
 
 @end

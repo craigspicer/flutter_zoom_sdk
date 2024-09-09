@@ -49,7 +49,7 @@
 */
 @interface MobileRTCDirectShareService : NSObject
 /*!
-MobileRTCDirectShareServiceDelegate
+@class MobileRTCDirectShareServiceDelegate
 @brief Direct sharing helper callback.
 */
 @property (assign, nonatomic) id<MobileRTCDirectShareServiceDelegate> _Nullable delegate;
