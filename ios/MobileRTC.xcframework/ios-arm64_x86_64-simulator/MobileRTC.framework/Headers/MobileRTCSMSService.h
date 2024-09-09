@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRTCMeetingDelegate.h"
+#import <MobileRTC/MobileRTCMeetingDelegate.h>
 
 /*!
  @brief for real name auth usage.
@@ -27,7 +27,7 @@
 
 /*!
  @brief countryCode, counry code in country code list.
- @param phoneNum, your phone number.
+ @param phoneNum your phone number.
  @warning if retrieve return NO, please get new retrieve handler 60s later. 'getResendSMSVerificationCodeHandler' in 'MobileRTCSMSService'
  */
 - (BOOL)retrieve:(NSString * _Nullable)countryCode andPhoneNumber:(NSString * _Nullable)phoneNum;
@@ -47,8 +47,8 @@
 
 /*!
  @brief countryCode, counry code in country code list.
- @param phoneNum, your phone number.
- @param verifyCode, your received verify code.
+ @param phoneNum your phone number.
+ @param verifyCode your received verify code.
  @warning if verify return NO, please get new verify handler 60s later. 'getReVerifySMSVerificationCodeHandler' in 'MobileRTCSMSService'
  */
 - (BOOL)verify:(NSString * _Nullable)countryCode phoneNumber:(NSString * _Nullable)phoneNum andVerifyCode:(NSString * _Nullable)verifyCode;
@@ -72,7 +72,7 @@
  @warning 6.you will receive callback 'onVerifySMSVerificationCodeResultNotification:' for the verify result.
  */
 @interface MobileRTCSMSService : NSObject
-@property (nullable, assign, nonatomic) id<MobileRTCSMSServiceDelegate> delegate;
+@property (weak, nonatomic) id<MobileRTCSMSServiceDelegate> _Nullable delegate;
 
 /*!
  @brief enable, pass YES for using the auth real name service. the call back function will called when need.(Judged by sdk logic)
@@ -100,8 +100,8 @@
 
 /*!
  @brief set default cellphone for signed account.
- @param countryCode, the user account's country code.
- @param phoneNum, default phoen number.
+ @param countryCode the user account's country code.
+ @param phoneNum default phoen number.
  @return yes, for set success.
  */
 - (BOOL)setDefaultCellPhoneInfo:(NSString * _Nullable)countryCode phoneNum:(NSString * _Nullable)phoneNum;

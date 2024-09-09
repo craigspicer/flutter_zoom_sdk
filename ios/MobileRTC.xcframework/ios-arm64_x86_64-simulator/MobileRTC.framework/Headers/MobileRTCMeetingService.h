@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRTCConstants.h"
-#import "MobileRTCMeetingDelegate.h"
+#import <MobileRTC/MobileRTCConstants.h>
+#import <MobileRTC/MobileRTCMeetingDelegate.h>
 
 /**
  * @brief Provides settings for starting a meeting, such as enabling screen sharing, microphone, and camera.
@@ -34,17 +34,17 @@
  * @brief Developer-specified string to track end user.
  * @note Provided in webhook event, not used internally by SDK.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * customerKey;
+@property (nullable, nonatomic, copy, readwrite) NSString * customerKey;
 
 /**
  *@brief Special ID for the personal link name in organization URL, like "yourcompany" in yourcompany.zoom.us.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * vanityID;
+@property (nullable, nonatomic, copy, readwrite) NSString * vanityID;
 
 /**
  * @brief Meeting number, in format like 123456789.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * meetingNumber;
+@property (nullable, nonatomic, copy, readwrite) NSString * meetingNumber;
 
 /**
  * @brief <Optional> Is my voice in the mixed audio raw data?
@@ -55,6 +55,16 @@
  * @brief <Optional>Set the invitation ID for automatic meeting invitation.
  */
 @property(nullable, nonatomic, copy) NSString *inviteContactID;
+
+/**
+ * @brief <Optional> Is audio raw data stereo? The default is mono.
+ */
+@property (nonatomic, assign, readwrite) BOOL isAudioRawDataStereo;
+
+/**
+ * @brief <Optional>  The sampling rate of the acquired raw audio data, The default is MobileRTCAudioRawdataSamplingRate_32K.
+ */
+@property (nonatomic, assign, readwrite) MobileRTCAudioRawdataSamplingRate audioRawSampleRate;
 
 @end
 
@@ -79,13 +89,13 @@
 /**
  * @brief The user's display name in the meeting.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * userName;
+@property (nullable, nonatomic, copy, readwrite) NSString * userName;
 
 /**
  * @brief The user's Zoom Access Key (ZAK) token.
  * @warning The ZAK cannot be null.
  */
-@property (nonnull, nonatomic, retain, readwrite) NSString * zak;
+@property (nonnull, nonatomic, copy, readwrite) NSString * zak;
 
 @end
 
@@ -108,47 +118,58 @@
  * @brief Developer-specified string to track end user.
  * @note Provided in webhook event, not used internally by SDK.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * customerKey;
+@property (nullable, nonatomic, copy, readwrite) NSString * customerKey;
 /**
  *  @brief Special ID for the personal link name in the organization URL, like "yourcompany" in yourcompany.zoom.us.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * vanityID;
+@property (nullable, nonatomic, copy, readwrite) NSString * vanityID;
 /**
  * @brief Meeting number, in format like 123456789.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * meetingNumber;
+@property (nullable, nonatomic, copy, readwrite) NSString * meetingNumber;
 /**
  * @brief User name.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * userName;
+@property (nullable, nonatomic, copy, readwrite) NSString * userName;
 /**
  * @brief Password.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * password;
+@property (nullable, nonatomic, copy, readwrite) NSString * password;
 /**
  * @brief WebinarToken.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * webinarToken;
+@property (nullable, nonatomic, copy, readwrite) NSString * webinarToken;
 
 /**
  * @brief The user's Zoom Access Key (ZAK) token.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * zak;
+@property (nullable, nonatomic, copy, readwrite) NSString * zak;
 
 /**
  * @brief Token that provides privileges when a user joins a meeting, for example, local recording permissions, streaming to raw, or archiving to raw.
  */
-@property(nullable, nonatomic, retain, readwrite) NSString *appPrivilegeToken;
+@property(nullable, nonatomic, copy, readwrite) NSString *appPrivilegeToken;
 
 /**
  * @brief Token to join a meeting.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * join_token;
+@property (nullable, nonatomic, copy, readwrite) NSString * join_token;
 
 /**
  * @brief <Optional> Is my voice in the mixed audio raw data?
  */
 @property (nonatomic, assign, readwrite) BOOL isMyVoiceInMix;
+
+/**
+ * @brief <Optional> Is audio raw data stereo? The default is mono.
+ */
+@property (nonatomic, assign, readwrite) BOOL isAudioRawDataStereo;
+
+/**
+ * @brief <Optional>  The sampling rate of the acquired raw audio data, The default is MobileRTCAudioRawdataSamplingRate_32K.
+ */
+@property (nonatomic, assign, readwrite) MobileRTCAudioRawdataSamplingRate audioRawSampleRate;
+
 
 @end
 
@@ -161,22 +182,22 @@
  * @brief Formatted HTML content string.
  * @note Formatting parameters in order are account owner URL, terms URL, and privacy policy URL.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * formattedHtmlContent;
+@property (nullable, nonatomic, copy, readwrite) NSString * formattedHtmlContent;
 
 /**
  * @brief Account owner URL in formatted HTML content.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * accountOwnerUrl;
+@property (nullable, nonatomic, copy, readwrite) NSString * accountOwnerUrl;
 
 /**
  *@brief Terms URL in formatted HTML content.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * termsUrl;
+@property (nullable, nonatomic, copy, readwrite) NSString * termsUrl;
 
 /**
  * @brief Privacy policy URL in formatted HTML content.
  */
-@property (nullable, nonatomic, retain, readwrite) NSString * privacyPolicyUrl;
+@property (nullable, nonatomic, copy, readwrite) NSString * privacyPolicyUrl;
 
 @end
 
@@ -213,14 +234,50 @@
 /**
  * @brief Meeting topic.
  */
-@property (nonatomic, retain) NSString * _Nullable meetingTopic;
+@property (nonatomic, copy) NSString * _Nullable meetingTopic;
 
 /**
  * @brief Meeting host.
  */
-@property (nonatomic, retain) NSString * _Nullable meetingHost;
+@property (nonatomic, copy) NSString * _Nullable meetingHost;
 
 @end
+
+
+@interface MobileRTCInputUserInfoHandler : NSObject
+
+/**
+ * @brief Get default display name.
+ */
+@property(nonatomic, copy, readonly) NSString * _Nullable defaultDisplayName;
+
+/**
+ * @brief Check whether the user can modify default display name.
+ */
+@property(nonatomic, assign, readonly) BOOL canModifyDefaultDisplayName;
+
+/**
+ * @brief Check whether the inputed email is a valid email format.
+ * @param email The email must meet the email format requirements. The email input by the logged-in user must be the email.
+ * @return YES means the email input is valid, otherwise not.
+ */
+- (BOOL)isValidEmail:(NSString *_Nonnull)email;
+
+/*！
+ @brief input user info.
+ @param name The display name to input.
+ @param email The email to input.
+ @return If the function succeeds, it will return MobileRTCSDKError_Success.
+ */
+- (MobileRTCSDKError)inputUserInfo:(NSString *_Nonnull)name email:(NSString *_Nonnull)email;
+
+/*！
+ @brief Cancel to join meeting.
+ */
+- (void)cancel;
+
+@end
+
 
 @protocol MobileRTCMeetingServiceDelegate;
 
@@ -233,12 +290,12 @@
 /**
  * @brief Callback to receive meeting events.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCMeetingServiceDelegate> delegate;
+@property (weak, nonatomic) id<MobileRTCMeetingServiceDelegate> _Nullable delegate;
 
 /**
  * @brief Callback for custom UI meeting events. Custom UI features enable you to customize the user interface instead of using the default client view.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCCustomizedUIMeetingDelegate> customizedUImeetingDelegate;
+@property (weak, nonatomic) id<MobileRTCCustomizedUIMeetingDelegate> _Nullable customizedUImeetingDelegate;
 
 /**
  * @brief Start a meeting with MobileRTCMeetingStartParam parameter.
@@ -285,7 +342,7 @@
 
 /**
  * @brief Set the customized invitation domain.
- * @param invitationDomain: Specify the customized invitation domain. For example, https://example.com.
+ * @param invitationDomain Specify the customized invitation domain. For example, https://example.com.
  * @return YES means success, otherwise it's not successful.
  * @warning This method can only be called after auth ready and before join or start meeting.
  */

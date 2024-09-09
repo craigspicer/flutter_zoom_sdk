@@ -28,5 +28,9 @@
  @brief meeting number
  */
 @property(nonatomic, assign, readonly) NSUInteger meetingNumber;
+/*!
+ @brief meeting id
+ */
+@property(nonatomic, copy, readonly) NSString * _Nullable meetingId;
 
 @end

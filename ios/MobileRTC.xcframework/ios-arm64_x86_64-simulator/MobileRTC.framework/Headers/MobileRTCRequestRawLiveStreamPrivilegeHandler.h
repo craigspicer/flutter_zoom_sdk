@@ -17,7 +17,7 @@
  @brief Get the request ID.
  @return If the function succeeds, the return value is the request ID.
  */
-- (NSString *)getRequestId;
+- (NSString * _Nullable)getRequestId;
 
 /*!
  @brief Get the user ID who requested privilege.
@@ -29,19 +29,19 @@
  @brief Get the user name who requested privilege.
  @return If the function succeeds, the return value is the user name.
  */
-- (NSString *)getRequesterName;
+- (NSString * _Nullable)getRequesterName;
 
 /*!
  @brief Get the broadcast Url.
  @return If the function succeeds, the return value is the broadcast url.
  */
-- (NSString *)getBroadcastUrl;
+- (NSString * _Nullable)getBroadcastUrl;
 
 /*!
  @brief Get the broadcast name.
  @return If the function succeeds, the return value is the broadcast name.
  */
-- (NSString *)getBroadcastName;
+- (NSString * _Nullable)getBroadcastName;
 
 /*!
  @brief Allows the user to start raw live stream and finally self-destroy.

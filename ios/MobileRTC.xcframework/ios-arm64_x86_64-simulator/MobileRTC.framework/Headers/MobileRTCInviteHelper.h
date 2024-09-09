@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
- @class MobileRTCInviteHelper
+ MobileRTCInviteHelper
  @brief Get/Set configurations in meeting.
  */
 @interface MobileRTCInviteHelper : NSObject

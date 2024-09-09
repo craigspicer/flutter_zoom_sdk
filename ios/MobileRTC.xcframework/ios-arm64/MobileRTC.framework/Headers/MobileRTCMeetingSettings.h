@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
- @class MobileRTCMeetingSettings
+ MobileRTCMeetingSettings
  @brief Set to modify the configurations of the meeting.
  */
 @interface MobileRTCMeetingSettings : NSObject
@@ -181,24 +181,19 @@
 @property (assign, nonatomic) BOOL proximityMonitoringDisable;
 
 /*!
- @brief Enable Custom In-Meeting UI in meeting.
- */
-@property (assign, nonatomic) BOOL enableCustomMeeting;
-
-/*!
  @brief hide feedback button on cloud whiteboard.
  */
-@property (assign, nonatomic) BOOL hideFeedbackButtonOnCloudWhiteboard;
+@property (assign, nonatomic) BOOL hideFeedbackButtonOnCloudWhiteboard DEPRECATED_MSG_ATTRIBUTE("Use hideFeedbackButtonOnCloudWhiteboard: in MeetingService instead");
 
 /*!
  @brief hide share button on cloud whiteboard.
  */
-@property (assign, nonatomic) BOOL hideShareButtonOnCloudWhiteboard;
+@property (assign, nonatomic) BOOL hideShareButtonOnCloudWhiteboard DEPRECATED_MSG_ATTRIBUTE("Use hideShareButtonOnCloudWhiteboard: in MeetingService instead");
 
 /*!
  @brief About button’s visibility on the cloud whiteboard. Default is displaying.
  */
-@property (assign, nonatomic) BOOL hideAboutButtonOnCloudWhiteboard;
+@property (assign, nonatomic) BOOL hideAboutButtonOnCloudWhiteboard DEPRECATED_MSG_ATTRIBUTE("Use hideAboutButtonOnCloudWhiteboard: in MeetingService instead");
 
 /*!
  @brief Query if the user joins meeting with audio device. 
@@ -244,7 +239,7 @@
 
 /*!
  @brief Set Touch up my appearance enable or not.
- @param muted YES means successful, otherwise not.
+ @param enable YES means successful, otherwise not.
  */
 - (void)setFaceBeautyEnabled:(BOOL)enable;
 
@@ -256,8 +251,7 @@
 
 /*!
  @brief Set to enable/disable mirror effect.
- @param enable YES means enabled, No disabled.
- @return If the function succeeds, it will return ZoomSDKError_Success. Otherwise failed. 
+ @param enable YES means enabled, No disabled
  */
 - (void)enableMirrorEffect:(BOOL)enable;
 
@@ -294,7 +288,7 @@
  @param disabled YES means disabled, otherwise not.
  @warning The function only for Zoom UI.
  */
-- (void)disableCloudWhiteboard:(BOOL)disabled;
+- (void)disableCloudWhiteboard:(BOOL)disabled DEPRECATED_MSG_ATTRIBUTE("Use disableCloudWhiteboard: in MeetingService instead");
 
 /*!
  @brief Query if it is disabled to call in.
@@ -359,7 +353,7 @@
 
 /*!
  @brief Set speaker off.  Default value is No, Need set to NO when not used.
- @param YES means speaker off, otherwise not.
+ @param speakerOff means speaker off, otherwise not.
  @warning The function only for Zoom UI.
  */
 - (void)setSpeakerOffWhenInMeeting:(BOOL)speakerOff;
@@ -449,8 +443,22 @@
 - (BOOL)hideRegisterWebinarInfoWindow;
 
 /*!
+@brief Set the webinar username input dialog to hide or display. if hide webinar user name input dialog, should handle
+{@link - (void)onWebinarNeedInputScreenName:(MobileRTCWebinarInputScreenNameHandler*_Nullable)handler;}
+{@link  MobileRTCWebinarInputScreenNameHandler#- (MobileRTCSDKError)inputName:(NSString *_Nonnull)name;}
+@param hide true  means hide the dialog. Otherwise, do not hide the dialog.
+*/
+- (void)setHideWebinarNameInputWindow:(BOOL)hide;
+
+/*!
+@brief Get the webinar username input dialog to hide or display.
+@return value of the setting value.
+*/
+- (BOOL)isHideWebinarNameInputWindow;
+
+/*!
 @brief Set to disable confidential watermark.
-@param disabled The option value.
+@param disable The option value.
 @return YES means confidential watermark is disable, otherwise not.
 @warning The function only for Zoom UI.
 */
@@ -523,4 +531,105 @@
  @param bHide YES indicates to display the tab. No not.
 */
 - (void)hideRequestRecordPrivilegeDialog:(BOOL)bHide;
+
+/*!
+ @brief Get the flag of auto enter Picture-in-Picture Mode for video calls.
+ */
+- (BOOL)videoCallPictureInPictureEnabled;
+
+/*!
+ @brief Set the flag of auto enter Picture-in-Picture Mode for video calls.
+ @param enable YES to follow Zoom VoIP Meeting Picture-in-Picture logic.
+ @warning only works in ZoomUI.
+ */
+- (void)enableVideoCallPictureInPicture:(BOOL)enable;
+
+/*!
+ @brief Set whether to close the current sharing of another user without prompt and directly beginning a new sharing content by the closer. Default value: FALSE(prompt).
+ @param enable YES indicates no prompt. FALSE not.
+ */
+- (void)enableGrabShareWithoutReminder:(BOOL)enable;
+
+/*!
+ @brief Set the meeting input user info dialog to hide or display.
+ @param hide YES means hide the dialog. Otherwise, do not hide the dialog.
+ */
+- (void)setHideMeetingInputUserInfoWindow:(BOOL)hide;
+
+/**
+ * @brief Get the meeting input user info dialog to hide or display.
+ * @return The value of the setting value.
+ */
+- (BOOL)isHideMeetingInputUserInfoWindow;
+
+/*!
+ @brief Call this method to enable or disable the auto adjust input of mic.
+ @param enable YES to enable auto adjust input or false to disable it.
+ */
+- (void)enableAutoAdjustMic:(BOOL)enable DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore");
+
+/*!
+ @brief Determine whether the original input of the microphone is enabled.
+ @return YES if auto adjust input  is enabled, otherwise false.
+ */
+- (BOOL)isAutoAdjustMicEnable DEPRECATED_MSG_ATTRIBUTE("Not maintain anymore");
+
+/*!
+ @brief Query if this device supports CenterStage Mode.
+ @return YES means supported, otherwise not.
+ @warning only iPad of os version above 14.5 can using this feature.
+ */
+- (BOOL)isCenterStageModeSupported;
+
+/*!
+ @brief Enable or disable CenterStage Mode. This is disable by default.
+ @param enable YES means enabled, otherwise not.
+ @return YES means supported, otherwise not.
+ */
+- (BOOL)enableCenterStageMode:(BOOL)enable;
+
+/*!
+ @brief Query if CenterStage Mode is enable by MobileRTC.
+ @return YES indicates enable. Otherwise not.
+ */
+- (BOOL)isEnabledCenterStageMode;
+/**
+ * @brief Enable echo cancellation.
+ * @param enable true means enabled, false disabled.
+ * @return error code {@link MobileRTCSDKError}
+ */
+- (MobileRTCSDKError)enableEchoCancellation:(BOOL)enable;
+
+/**
+ * @brief Determine if echo cancellation is enabled or not.
+ * @return true means supported, otherwise not.
+ */
+- (BOOL)isEchoCancellationOn;
+
+/**
+ * @brief Determine if the meeting supports echo cancellation.
+ * @return true means supported, otherwise not. Only using this feature when enabled original sound called: "enableMicOriginalInput:".
+ */
+- (BOOL)isSupportEchoCancellation;
+
+
+/**
+ * @brief Set the confirm start archive dialog to hide or display.
+ * @param hide true  means hide the dialog. Otherwise, do not hide the dialog.
+ * @warning if hide confirm start archive dialog when join meeting, should handle the 'MobileRTCArchiveConfrimHandle'.
+ */
+- (void)setHideConfirmStartArchiveDialog:(BOOL)hide;
+
+/**
+ * @brief Get the confirm start archive dialog whether hide or display.
+ * @return true means hide, false means display.
+ */
+- (BOOL)isHideConfirmStartArchiveDialog;
+
+/*!
+ @brief Whether to cancel the bandwidth limit, If YES is set, the network bandwidth is no longer limited, and better audio and video quality can be obtained. Bandwidth is not limited by default. If it is a wifi network, the bandwidth is not limited, and this setting is invalid.
+ @param enable a boolean flag to set up the behavoir.
+ */
+- (void)enable5GHighBandWidth:(BOOL)enable;
+
 @end

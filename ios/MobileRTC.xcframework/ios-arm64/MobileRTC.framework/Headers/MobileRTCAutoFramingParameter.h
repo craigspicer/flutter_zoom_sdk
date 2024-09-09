@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRTCConstants.h"
+#import <MobileRTC/MobileRTCConstants.h>
 
 /*!
  @brief The AutoFraming parameter.

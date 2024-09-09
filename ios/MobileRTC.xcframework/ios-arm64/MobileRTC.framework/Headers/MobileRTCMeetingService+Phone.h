@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MobileRTCMeetingService (Phone)
 
+/**
+ * @brief Determine if the user account supports calling out.
+ * @return YES means that the client supports the phone call-out feature. otherwise, phone call-out is not supported.
+ */
+-(BOOL)isSupportPhone;
+
 /*!
  @brief Query if user can dial out in the meeting.
  @return YES means able, No disable.
@@ -22,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Get the list of the countries which support to call out.
  * @return An NSArray contains ZoomSDKPhoneSupportCountryInfoList objects of all countries supporting to call out.  Otherwise nil.
  */
--(NSArray <MobileRTCCallCountryCode*>* )getSupportCountryInfo;
+-(NSArray <MobileRTCCallCountryCode*>* _Nullable)getSupportCountryInfo;
 
 /*!
  @brief Query if there is any outgoing call in process.

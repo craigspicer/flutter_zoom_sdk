@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
+    BOUserStatusUnknown      = 0,//the breakout meeting status is unknown.
     BOUserStatusUnassigned  = 1, //User is in main conference, not assigned to BO
     BOUserStatusNotJoin     = 2, //User is assigned to BO, but not join
     BOUserStatusInBO        = 3, //User is already in BO
 } MobileRTCBOUserStatus;
-
 
 @interface MobileRTCBOUser : NSObject
 /*!
@@ -26,10 +26,6 @@ typedef enum : NSUInteger {
 */
 - (NSString * _Nullable)getUserName;
 
-/*!
-@brief get bo meeting user status.
-*/
-- (MobileRTCBOUserStatus)getUserStatus;
 @end
 
 @interface MobileRTCBOMeeting : NSObject
@@ -47,6 +43,13 @@ typedef enum : NSUInteger {
 @brief get bo meeting user array.
 */
 - (NSArray <NSString *>* _Nullable)getBOMeetingUserList;
+
+/**
+ *@brief Get breakout meeting user status.
+ *@param userID The user's user ID.
+ *@return If the function succeeds,will return user status.
+ */
+-(MobileRTCBOUserStatus)getBOUserStatusWithUserID:(NSString *_Nonnull)userID;
 @end
 
 /*!
@@ -95,6 +98,32 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
  @warning when timerDuration is 0, it means that the BO duration is 30*60 seconds.
  */
 @property (nonatomic, assign) NSInteger timerDuration;
+
+//  WebinarBo
+/**
+ *@brief Enable or disable webinar attendee join webinar BO. When it changes, the BO data will be reset.
+ */
+@property(nonatomic,assign) BOOL isAttendeeContained;
+
+/**
+ @brief Enable or disable that panelist can choose breakout room.
+ */
+@property(nonatomic,assign) BOOL isPanelistCanChooseBO;
+
+/**
+ @brief Enable or disable that Attendee can choose breakout room, invalid when attendee is not contained.
+ */
+@property(nonatomic,assign) BOOL isAttendeeCanChooseBO;
+
+/**
+ @brief Enable or disable that max roomUser limits in BO room.
+ */
+@property(nonatomic,assign) BOOL isUserConfigMaxRoomUserLimitsEnabled;
+
+/**
+ @brief Numbers of max roomUser limits in BO room, default is 20.
+ */
+@property(nonatomic,assign)unsigned int nUserConfigMaxRoomUserLimits;
 
 @end
 
@@ -165,6 +194,13 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 */
 - (BOOL)createGroupBO:(NSArray<NSString*> * _Nonnull)boNameList;
 
+/**
+ *@brief Creator webinar breakout meeting.
+ *@param boNameList Breakout meeting name list，the element of nameList should less than 50 characters.
+ *@return If the function succeeds,will return YES.
+ */
+- (BOOL)createWebinarBO:(NSArray<NSString*> * _Nonnull)boNameList;
+
 /*!
 @brief update bo meeting name with bo id.
 @param boId the BO id.
@@ -196,7 +232,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 /*!
 @brief Set BO option.
-@param option, the option that you want to set.
+ @param option the option that you want to set.
 @return if success the return value is YES, otherwise NO.
 */
 - (BOOL)setBOOption:(MobileRTCBOOption *_Nonnull)option;
@@ -215,7 +251,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOStopCountDown) {
 
 /*!
 @brief Request web pre-assigned data and create those rooms.
-@return If the function succeeds, the return value is SDKErr_Success.Otherwise failed. To get extended error information, see [MobileRTCSDKError]
+@return If the function succeeds, the return value is MobileRTCSDKError_Success.Otherwise failed. To get extended error information, see [MobileRTCSDKError]
 */
 - (MobileRTCSDKError)requestAndUseWebPreAssignBOList;
 

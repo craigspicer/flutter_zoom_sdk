@@ -34,9 +34,9 @@ typedef enum {
 
 @interface MobileRTCRoomDevice : NSObject
 
-@property (nonatomic, copy) NSString *deviceName;
-@property (nonatomic, copy) NSString *ipAddress;
-@property (nonatomic, copy) NSString *e164num;
+@property (nonatomic, copy) NSString * _Nullable deviceName;
+@property (nonatomic, copy) NSString * _Nullable ipAddress;
+@property (nonatomic, copy) NSString * _Nullable e164num;
 @property (nonatomic, assign) MobileRTCDeviceType deviceType;
 @property (nonatomic, assign) MobileRTCDeviceEncryptType encryptType;
 

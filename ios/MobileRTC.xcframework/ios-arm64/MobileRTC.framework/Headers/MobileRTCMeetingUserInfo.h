@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
- @class MobileRTCVideoStatus
+ MobileRTCVideoStatus
  @brief The object of video status of the current user in the meeting.
  */
 @interface MobileRTCVideoStatus : NSObject
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioType) {
     MobileRTCAudioType_None,
 };
 /*!
- @class MobileRTCVideoStatus
+ MobileRTCVideoStatus
  @brief The object of the audio status of the current user in the meeting. 
  */
 @interface MobileRTCAudioStatus : NSObject
@@ -60,57 +60,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCAudioType) {
 
 @end
 
-typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
-	/*!
-	 @brief There is no feedback from user.
-	 */
-    MobileRTCFeedbackType_None    = 0,
-	/*!
-	 @brief User rises hand.
-	 */
-    MobileRTCFeedbackType_Hand,
-	/*!
-	 @brief YES.
-	 */
-    MobileRTCFeedbackType_Yes,
-	/*!
-	 @brief NO.
-	 */
-    MobileRTCFeedbackType_No,
-	/*!
-	 @brief faster.
-	 */
-    MobileRTCFeedbackType_Fast,
-	/*!
-	 @brief Slow/Slowly.
-	 */
-    MobileRTCFeedbackType_Slow,
-	/*!
-	 @brief Good.
-	 */
-    MobileRTCFeedbackType_Good,
-	/*!
-	 @brief Bad.
-	 */
-    MobileRTCFeedbackType_Bad,
-	/*!
-	 @brief Clap.
-	 */
-    MobileRTCFeedbackType_Clap,
-	/*!
-	 @brief Coffee.
-	 */
-    MobileRTCFeedbackType_Coffee,
-	/*!
-	 @brief Clock.
-	 */
-    MobileRTCFeedbackType_Clock,
-	/*!
-	 @brief Other expression.
-	 */
-    MobileRTCFeedbackType_Emoji,
-} DEPRECATED_MSG_ATTRIBUTE("Use MobileRTCEmojiFeedbackType instead");
-
 /*!
  @brief The information of the current user in the meeting.
  */
@@ -122,35 +71,39 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
 /*!
  @brief Get the user persistent ID matched with the current user information.This ID persists for the duration of the main meeting.Once the main meeting ends, the ID will be discarded.
  */
-@property (nonatomic, retain) NSString* _Nullable       persistentId;
+@property (nonatomic, copy) NSString* _Nullable       persistentId;
 /*!
  @brief Determine if the information corresponds to the current user.
  */
 @property (nonatomic, assign) BOOL             isMySelf;
 /*!
- @brief The value of customerKey.
+ @brief The customer key that need the app intergrated with sdk to specify. The SDK will set this value when the associated settings are turned on. The max length of customer_key is 35.
  */
-@property (nonatomic, retain) NSString* _Nullable       customerKey;
+@property (nonatomic, copy) NSString* _Nullable       customerKey;
 /*!
  @brief The screen name of user.
  */
-@property (nonatomic, retain) NSString* _Nonnull        userName;
+@property (nonatomic, copy) NSString* _Nullable        userName;
 /*!
  @brief The path to store the head portrait.
  */
-@property (nonatomic, retain) NSString* _Nonnull       avatarPath;
+@property (nonatomic, copy) NSString* _Nullable       avatarPath;
 /*!
  @brief User's video status in the meeting.
  */
-@property (nonatomic, retain) MobileRTCVideoStatus* _Nonnull videoStatus;
+@property (nonatomic, retain) MobileRTCVideoStatus* _Nullable videoStatus;
 /*!
  @brief User's audio status in the meeting.
  */
-@property (nonatomic, retain) MobileRTCAudioStatus* _Nonnull audioStatus;
+@property (nonatomic, retain) MobileRTCAudioStatus* _Nullable audioStatus;
 /*!
  @brief The user raised his hand.
  */
 @property (nonatomic, assign) BOOL             handRaised;
+/*!
+ @brief Query if the participant has a camera.
+ */
+@property (nonatomic, assign) BOOL             hasCamera;
 /*!
  @brief User enter the waiting room when joins the meeting.
  */
@@ -176,10 +129,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
  */
 @property (nonatomic, assign) BOOL             isSharingPureComputerAudio;
 /*!
- @brief The feedback type from the user.
- */
-@property (nonatomic, assign) MobileRTCFeedbackType  feedbackType DEPRECATED_MSG_ATTRIBUTE("Use emojiFeedbackType instead");
-/*!
  @brief The emoji feedback type from the user.
  */
 @property (nonatomic, assign) MobileRTCEmojiFeedbackType  emojiFeedbackType;
@@ -192,9 +141,32 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
  */
 @property (nonatomic, assign) BOOL             isInterpreter;
 /*!
+ @brief Determine whether the user specified by the current information is a sign language interpreter or not.
+ @return YES indicates that the specified user is a sign language  interpreter, otherwise false.
+ */
+@property (nonatomic, assign) BOOL             isSignLanguageInterpreter;
+/*!
  @brief Get interpreter active language.
  */
-@property (nonatomic, retain) NSString* _Nullable   interpreterActiveLanguage;
+@property (nonatomic, copy) NSString* _Nullable   interpreterActiveLanguage;
+
+/*!
+ @brief Determine whether the user has started a raw live stream.
+ @return YES indicates that the specified user has started a raw live stream, otherwise false.
+*/
+@property (nonatomic, assign) BOOL             isRawLiveStreaming;
+/*!
+ @brief Determine whether the user has raw live stream privilege.
+ @return YES indicates that the specified user has raw live stream privilege, otherwise false.
+*/
+@property (nonatomic, assign) BOOL             hasRawLiveStreamPrivilege;
+
+/*!
+ @brief  Determine whether the user corresponding to the current information is the sender of Closed Caption or not.
+ @return YES indicates that the user is the sender of Closed Caption.
+*/
+@property (nonatomic, assign) BOOL       isClosedCaptionSender;
+
 @end
 
 /*!
@@ -228,6 +200,6 @@ typedef NS_ENUM(NSUInteger, MobileRTCFeedbackType) {
 /*!
  @brief User's audio status in the webinar meeting.
  */
-@property (nonatomic, retain) MobileRTCAudioStatus* _Nonnull audioStatus;
+@property (nonatomic, retain) MobileRTCAudioStatus* _Nullable audioStatus;
 
 @end

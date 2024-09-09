@@ -43,6 +43,7 @@
     "availability" : {
       "macOS" : "10.13",
       "tvOS" : "11.0",
+      "visionOS" : "1.0",
       "watchOS" : "4.0",
       "iOS" : "11.0",
       "macCatalyst" : "11.0"
@@ -68,7 +69,7 @@
     "inputSchema" : [
       {
         "height" : "192",
-        "colorspace" : "BGR",
+        "colorspace" : "RGB",
         "isOptional" : "0",
         "width" : "320",
         "isColor" : "1",

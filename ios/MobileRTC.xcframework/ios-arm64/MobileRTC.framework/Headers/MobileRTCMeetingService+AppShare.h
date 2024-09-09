@@ -8,6 +8,60 @@
 
 #import <MobileRTC/MobileRTC.h>
 
+@protocol MobileRTCShareActionDelegate <NSObject>
+@optional
+/**
+ * @brief Callback event the moment the user receives the shared content.
+ */
+-(void)onSharingContentStartReceiving;
+/**
+ * @brief The callback is triggered before the shared action is destroyed.
+ * @param sharingID Specify the sharing ID.
+ * @remark The specified shared action is  destroyed once the function calls end. The user should complete the operations related to the shared action before the function calls end.
+ */
+-(void)onActionBeforeDestroyed:(NSUInteger)sharingID;
+
+@end
+
+@interface MobileRTCShareAction : NSObject
+/**
+ * @brief Set the share action delegate.
+*/
+
+- (void)setShareActionDelegate:(id<MobileRTCShareActionDelegate>_Nullable)delegate;
+
+/**
+ * @brief Get active share view from share action
+*/
+
+- (UIView *_Nullable)getActiveShareView;
+/**
+ * @brief Get the ID of the sharing ID.
+ * @return If the function succeeds, the return value is the sharing ID. Otherwise the function fails, and the return value is ZERO (0).
+ */
+
+- (NSUInteger)getShareID;
+/**
+ * @brief Get the name of the sharing user.
+ * @return If the function succeeds, the return value is the name. Otherwise the function fails, and the return value is nil.
+ */
+
+- (NSString*_Nullable)getSharingUserName;
+/**
+ * @brief Subscribe the sharing content.
+ * @return If the function succeeds, the return value is SDKErr_Success. Otherwise the function fails. To get extended error information, see \link MobileRTCSDKError \endlink enum.
+ */
+
+- (MobileRTCSDKError)subscribe;
+
+/**
+ * @brief Unsubscribe the sharing content.
+ * @return If the function succeeds, the return value is SDKErr_Success. Otherwise the function fails. To get extended error information, see \link MobileRTCSDKError \endlink enum.
+*/
+- (MobileRTCSDKError)unsubscribe;
+
+@end
+
 /*!
  @brief Starts an App share meeting.
  */
@@ -19,6 +73,11 @@
  */
 - (BOOL)isDirectAppShareMeeting;
 
+/*!
+ @brief Determine whether the current meeting can start sharing.
+ @return The reason that no one can start sharing. See [MobileRTCCannotShareReasonType].
+ */
+- (MobileRTCCannotShareReasonType)canStartShare;
 
 /*!
  @brief Share content with current view.
@@ -66,24 +125,6 @@
 - (BOOL)suspendSharing:(BOOL)suspend;
 
 /*!
- @brief Is whiteboard legal notice available.
- @return YES if notice is available, otherwise not.
- */
-- (BOOL)isWhiteboardLegalNoticeAvailable;
-
-/*!
- @brief Get whiteboard legal notices message.
- @return The whiteboard legal notices message as a string.
- */
-- (NSString *_Nullable)getWhiteboardLegalNoticesPrompt;
-
-/*!
- @brief Get whiteboard legal notices detailed description.
- @return Whiteboard legal notices detailed description.
- */
-- (NSString *_Nullable)getWhiteboardLegalNoticesExplained;
-
-/*!
  @brief Enable the sending of device audio.
  @param enableAudio - YES if device audio sharing should be enabled, otherwise disable.
  */
@@ -102,4 +143,16 @@
  */
 - (BOOL)isDeviceSharing;
 
+/**
+* Allow participant to share white board
+* @param allow YES: allow, NO: disallow
+* @return error {@link MobileRTCSDKError}
+*/
+- (MobileRTCSDKError)allowParticipantsToShareWhiteBoard:(BOOL)allow;
+
+/**
+* Query is allow participant to share white board
+* @return YES: allow, NO: disallow
+*/
+- (BOOL)isParticipantsShareWhiteBoardAllowed;
 @end

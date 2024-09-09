@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRTCConstants.h"
-#import "MobileRTCNotificationServiceHelper.h"
+#import <MobileRTC/MobileRTCConstants.h>
+#import <MobileRTC/MobileRTCNotificationServiceHelper.h>
 
 @protocol MobileRTCAuthDelegate;
 @class MobileRTCAccountInfo;
@@ -23,7 +23,7 @@
 /*!
  @brief The property to receive authentication/login events. 
  */
-@property (nullable, assign, nonatomic) id<MobileRTCAuthDelegate> delegate;
+@property (weak, nonatomic) id<MobileRTCAuthDelegate> _Nullable delegate;
 
 /*!
  @brief jwt auth token.
@@ -81,7 +81,7 @@
 - (nullable MobileRTCAccountInfo*)getAccountInfo;
 
 /*!
- @brief Enable or disable auto register notification service. This is enabled by default.
+ @brief Enable or disable auto register notification service. This is disabled by default.
  @param enable YES means enabled, otherwise not.
  */
 - (void)enableAutoRegisterNotificationServiceForLogin:(BOOL)enable;
@@ -127,7 +127,7 @@
 
 /*!
  @brief Specify to get the response of MobileRTC logs in.
- @param returnValue Notify the user when the login state has changed.
+ @param resultValue Notify the user when the login state has changed.
  @warning If the callback is implemented, the Zoom UI alert tips are no longer displayed.
  */
 - (void)onMobileRTCLoginResult:(MobileRTCLoginFailReason)resultValue;
@@ -140,9 +140,10 @@
 
 /*!
  @brief Notification service status changed callback.
- @param status The value of transfer meeting service. For more details, see [MobileRTCNotificationServiceStatus].
+ @param status The value of transfer meeting service. For more details, see {@link ZoomSDKNotificationServiceStatus}.
+ @param error Connection Notification service fail error code. For more details, see {@link ZoomSDKNotificationServiceError}.
  */
-- (void)onNotificationServiceStatus:(MobileRTCNotificationServiceStatus)status;
+- (void)onNotificationServiceStatus:(MobileRTCNotificationServiceStatus)status error:(MobileRTCNotificationServiceError)error;
 
 @end
 

@@ -132,6 +132,12 @@
  */
 - (BOOL)lowerAllHand:(BOOL)isWebinarAttendee;
 
+/**
+ * @brief Query whether the current user is the original host.
+ * @return TRUE means the current user is the original host. FALSE not.
+*/
+- (BOOL)isSelfOriginalHost;
+
 /*!
  @brief Query if the current user can claim to be a host
  @return YES means that the current user can claim to be a host, otherwise not.

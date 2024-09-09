@@ -1,0 +1,103 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "storagePrecision" : "Float32",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "MultiArray of shape (1, 1, 14, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shape" : "[]",
+        "name" : "bs",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "MultiArray of shape (1, 1, 672, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shape" : "[]",
+        "name" : "h_out",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "MultiArray of shape (1, 1, 672, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shape" : "[]",
+        "name" : "c_out",
+        "type" : "MultiArray"
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "specificationVersion" : 1,
+    "computePrecision" : "Float16",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "10.13",
+      "tvOS" : "11.0",
+      "visionOS" : "1.0",
+      "watchOS" : "4.0",
+      "iOS" : "11.0",
+      "macCatalyst" : "11.0"
+    },
+    "neuralNetworkLayerTypeHistogram" : {
+      "Concat" : 6,
+      "LoadConstant" : 16,
+      "Multiply" : 55,
+      "UnaryInverse" : 16,
+      "Add" : 70,
+      "ActivationTanh" : 26,
+      "Convolution" : 27,
+      "ActivationSigmoid" : 39,
+      "Slice" : 82
+    },
+    "modelType" : {
+      "name" : "MLModelType_neuralNetwork"
+    },
+    "userDefinedMetadata" : {
+
+    },
+    "generatedClassName" : "lip_sync",
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 15 × 1 × 1)",
+        "shortDescription" : "MultiArray of shape (1, 1, 15, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shape" : "[15, 1, 1]",
+        "name" : "viseme",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 672 × 1 × 1)",
+        "shortDescription" : "MultiArray of shape (1, 1, 672, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shape" : "[672, 1, 1]",
+        "name" : "h",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 672 × 1 × 1)",
+        "shortDescription" : "MultiArray of shape (1, 1, 672, 1, 1). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shape" : "[672, 1, 1]",
+        "name" : "c",
+        "type" : "MultiArray"
+      }
+    ],
+    "method" : "predict"
+  }
+]

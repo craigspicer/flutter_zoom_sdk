@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRTCMeetingDelegate.h"
+#import <MobileRTC/MobileRTCMeetingDelegate.h>
 
 @interface MobileRTCRenderer : NSObject
 

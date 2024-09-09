@@ -21,16 +21,16 @@ typedef enum
 
 /*!
  @brief It provides Remote Control Service.
- @brief 1.Be assigned be a remote control(Notify by "remoteControlPrivilegeChanged:" check with "isHaveRemoteControlRight").
- @brief 2.Need to grab the currently control(Call "grabRemoteControl:", check with "isRemoteController").
- @brief 3.Can do the remote action.
+ 1.Be assigned be a remote control(Notify by "remoteControlPrivilegeChanged:" check with "isHaveRemoteControlRight").
+ 2.Need to grab the currently control(Call "grabRemoteControl:", check with "isRemoteController").
+ 3.Can do the remote action.
  */
 @interface MobileRTCRemoteControlService : NSObject
 
 /*!
  @brief Callback event of receiving remote control. 
  */
-@property (assign, nonatomic) id<MobileRTCRemoteControlDelegate> _Nonnull delegate;
+@property (weak, nonatomic) id<MobileRTCRemoteControlDelegate> _Nullable delegate;
 
 /*!
  @brief Query if current user have control privilege. You can have this right after be assigned to the remote control.

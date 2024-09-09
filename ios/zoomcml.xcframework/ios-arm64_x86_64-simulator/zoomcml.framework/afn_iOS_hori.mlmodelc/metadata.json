@@ -8,7 +8,7 @@
         "isOptional" : "0",
         "dataType" : "Float32",
         "formattedType" : "MultiArray (Float32)",
-        "shortDescription" : "MultiArray of shape (1, 1, 2, 144, 256). The first and second dimensions correspond to sequence and batch size, respectively",
+        "shortDescription" : "MultiArray of shape (1, 1, 64, 24, 32). The first and second dimensions correspond to sequence and batch size, respectively",
         "shape" : "[]",
         "name" : "output",
         "type" : "MultiArray"
@@ -23,21 +23,17 @@
     "availability" : {
       "macOS" : "10.13",
       "tvOS" : "11.0",
+      "visionOS" : "1.0",
       "watchOS" : "4.0",
       "iOS" : "11.0",
       "macCatalyst" : "11.0"
     },
     "neuralNetworkLayerTypeHistogram" : {
+      "Convolution" : 49,
+      "ActivationSigmoid" : 1,
       "Concat" : 1,
-      "LoadConstant" : 1,
-      "Multiply" : 1,
       "ActivationReLU" : 39,
-      "UnaryInverse" : 1,
-      "Add" : 9,
-      "Deconvolution" : 1,
-      "Crop" : 1,
-      "Convolution" : 52,
-      "ActivationSigmoid" : 1
+      "Add" : 9
     },
     "modelType" : {
       "name" : "MLModelType_neuralNetwork"
@@ -48,36 +44,36 @@
     "generatedClassName" : "afn_iOS_hori",
     "inputSchema" : [
       {
-        "height" : "144",
+        "height" : "192",
         "colorspace" : "RGB",
         "isOptional" : "0",
         "width" : "256",
         "isColor" : "1",
-        "formattedType" : "Image (Color 256 × 144)",
+        "formattedType" : "Image (Color 256 × 192)",
         "hasSizeFlexibility" : "0",
         "type" : "Image",
         "shortDescription" : "",
         "name" : "input1"
       },
       {
-        "height" : "144",
+        "height" : "192",
         "colorspace" : "RGB",
         "isOptional" : "0",
         "width" : "256",
         "isColor" : "1",
-        "formattedType" : "Image (Color 256 × 144)",
+        "formattedType" : "Image (Color 256 × 192)",
         "hasSizeFlexibility" : "0",
         "type" : "Image",
         "shortDescription" : "",
         "name" : "input2"
       },
       {
-        "height" : "144",
+        "height" : "192",
         "colorspace" : "Grayscale",
         "isOptional" : "0",
         "width" : "256",
         "isColor" : "0",
-        "formattedType" : "Image (Grayscale 256 × 144)",
+        "formattedType" : "Image (Grayscale 256 × 192)",
         "hasSizeFlexibility" : "0",
         "type" : "Image",
         "shortDescription" : "",

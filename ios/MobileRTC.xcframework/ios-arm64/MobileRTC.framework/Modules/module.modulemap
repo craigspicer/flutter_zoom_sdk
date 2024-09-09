@@ -1,6 +1,11 @@
 framework module MobileRTC {
   umbrella header "MobileRTC.h"
-
   export *
+
   module * { export * }
+}
+
+module MobileRTC.Swift {
+  header "MobileRTC-Swift.h"
+  requires objc
 }

@@ -7,8 +7,6 @@
 //
 
 #import <MobileRTC/MobileRTC.h>
-#import <MobileRTC/MobileRTCMeetingUserInfo.h>
-#import <MobileRTC/MobileRTCMeetingChat.h>
 #import <MobileRTC/MobileRTCRawLiveStreamInfo.h>
 
 /*!
@@ -42,6 +40,66 @@
 - (MobileRTCSDKError)denyLocalRecordingPrivilege;
 
 @end
+
+/*!
+@brief Object to handle a user's request to start cloud recording.
+@remarks If current user can control web setting for smart recording, they will get MobileRTCRequestStartCloudRecordingPrivilegeHandler when attendee request to start cloud recording or start cloud recording by self.
+ */
+@interface MobileRTCRequestStartCloudRecordingPrivilegeHandler : NSObject
+
+/*!
+ @brief Get the user ID who requested host  start cloud recording.
+ @return If the function succeeds, the return value is the user ID. Otherwise, this returns 0.
+ */
+- (NSInteger)getRequesterId;
+/*!
+ @brief Get the user name who requested host start cloud recording.
+ @return If the function succeeds, the return value is the user name.
+ */
+- (NSString * _Nullable)getRequesterName;
+/*!
+ @brief Accept the request to start cloud recording and then destroys the MobileRTCRequestStartCloudRecordingPrivilegeHandler instance
+ */
+- (MobileRTCSDKError)grant;
+/*!
+ @brief Deny the request to start cloud recording and then destroys the MobileRTCRequestStartCloudRecordingPrivilegeHandler instance.
+ @param denyAll YES indicates to deny all requests. Participants can't send requests again until the host change the setting.
+ @return the result of it.
+ */
+- (MobileRTCSDKError)deny:(BOOL)denyAll;
+
+@end
+
+@interface MobileRTCIndicatorHandler : NSObject
+/*!
+ @return the indicator item id.
+*/
+- (NSString *_Nullable)getIndicatorItemId;
+/**
+ @return the indicator name.
+*/
+- (NSString *_Nullable)getIndicatorName;
+/**
+ @return the indicator icon url.
+*/
+- (NSString *_Nullable)getIndicatorIcon;
+/**
+ @brief show dicator panel window
+ @param containerView the view container to show app signaling pannel.
+ @param originXY the origin position of app signaling pannel in container view.
+ @return MobileRTCSDKError_Success means the operation succeed, otherwise not
+ @warning originXY only take effect on iPad device, behavior of iphone always pop up from the bottom with the device width.
+ 
+*/
+- (MobileRTCSDKError)showIndicatorPane:(UIView *_Nullable)containerView originPoint:(CGPoint)originXY;
+/**
+ @brief Hide Indicator panel window
+ @return If invoke succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
+*/
+- (MobileRTCSDKError)hideIndicatorPanel;
+
+@end
+
 
 /*!
  @brief Set to provide interfaces for meeting events
@@ -86,7 +144,7 @@
  */
 - (BOOL)isShareLocked;
 
-#pragma mark CMR Related
+#pragma mark - CMR Related
 /*!
  @brief Notify if the cloud recording is enabled.
  @return YES means enabled, otherwise not.
@@ -122,6 +180,19 @@
  @return return If the function succeeds, the return value is recording status.
  */
 - (MobileRTCRecordingStatus)getCloudRecordingStatus;
+
+/*!
+ @brief Send a request to ask the host to start cloud recording.
+ @return If the function succeeds, the return value is SDKErr_Success and the SDK  send the request. Otherwise it fails and the request is not  sent. To get extended error information, see \link SDKError \endlink enum.
+ */
+- (MobileRTCSDKError)requestStartCloudRecording;
+
+/*!
+ @brief Determine if the smart recording feature is enabled in the meeting.
+ @return true means that the feature enabled, false means that the feature isn't enabled.
+*/
+- (BOOL)isSmartRecordingEnabled;
+
 
 #pragma mark Meeting Info Related
 /*!
@@ -161,7 +232,7 @@
 /*!
  @brief Check in-meeting network status.
  @param type Meeting component types, now we can only query three components network status: MobileRTCComponentType_AUDIO, MobileRTCComponentType_VIDEO and MobileRTCComponentType_AS
- @param sending, if YES means that query sending data; if NO means that query receiving data
+ @param sending if YES means that query sending data; if NO means that query receiving data
  @return the level of network quality.
  @warning The method is optional, you can query the network quality of audio, video and sharing.
  */
@@ -236,26 +307,12 @@
 
 /*
  @brief Send a request to enable the SDK to start a raw live stream.
- @return If the function succeeds, the return value is MobileRTCSDKError_Success and the SDK will send the request.
- Otherwise it fail and the request will not be sent. To get extended error information, see [MobileRTCSDKError] enum.
- */
-- (MobileRTCSDKError)requestRawLiveStream:(nonnull NSString *)broadcastURL DEPRECATED_MSG_ATTRIBUTE("Use -requestRawLiveStreaming: broadcastName: instead");
-
-/*
- @brief Send a request to enable the SDK to start a raw live stream.
  @param broadcastURL The broadcast URL of the live-stream.
  @param broadcastName The broadcast name of the live-stream.
  @return If the function succeeds, the return value is MobileRTCSDKError_Success and the SDK will send the request.
  Otherwise it fail and the request will not be sent. To get extended error information, see [MobileRTCSDKError] enum.
  */
 - (MobileRTCSDKError)requestRawLiveStreaming:(nonnull NSString *)broadcastURL broadcastName:(NSString *_Nullable)broadcastName ;
-
-/*!
- @brief Start a rawData live stream.
- @param broadcastURL Everyone who uses this link can watch the live broadcast.
- @return If the function succeeds, it will return the MobileRTCSDKError_Success, otherwise failed.
- */
-- (MobileRTCSDKError)startRawLiveStream:(nonnull NSString *)broadcastURL DEPRECATED_MSG_ATTRIBUTE("Use -startRawLiveStreaming: broadcastName: instead");
 
 /*
  @brief Start a rawData live stream.
@@ -275,7 +332,7 @@
 /*!
  @brief Remove the raw live stream privilege.
  @param userId Specify the ID of the user whose privilege will be removed.
- @return If the function succeeds, the return value is SDKErr_Success. Otherwise it fails. To get extended error information, see [MobileRTCSDKError] enum.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise it fails. To get extended error information, see [MobileRTCSDKError] enum.
  */
 - (MobileRTCSDKError)removeRawLiveStreamPrivilege:(NSUInteger)userId;
 
@@ -352,20 +409,19 @@
  */
 - (MobileRTCANNError)hideAANPanel;
 
-
-#pragma mark - Q&A Related
 /*!
- @brief Query if Q&A is enabled.
- @return YES means that Q&A is enabled, otherwise not.
+ * @brief Show the dynamic notice for the AI Companion panel view.
+ * @param containerView Show the AI Companion panel's dynamic notice in this view.
+ * @param originXY the origin point which the panel placed in the containerView.
+ * @return If invoke succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
  */
-- (BOOL)isQAEnabled;
+- (MobileRTCSDKError)showDynamicNoticeForAICompanionPanel:(UIView *_Nullable)containerView originPoint:(CGPoint)originXY;
 
 /*!
- @brief Set to present Zoom original Q&A ViewController.
- @param parentVC which use to present ViewController
- @return YES means that the method is called successfully, otherwise not.
+ * @brief Hide dynamic notice for AI Companion panel view.
+ * @return If invoke succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
  */
-- (BOOL)presentQAViewController:(nonnull UIViewController*)parentVC;
+- (MobileRTCSDKError)hideDynamicNoticeForAICompanionPanel;
 
 /*!
  @brief Get current meeting's password
@@ -427,20 +483,6 @@
 */
 - (BOOL)isParticipantsStartVideoAllowed;
 
-/**
-* Allow participant to share white board
-*
-* @param allow YES: allow, NO: disallow
-* @return error {@link MobileRTCSDKError}
-*/
-- (MobileRTCSDKError)allowParticipantsToShareWhiteBoard:(BOOL)allow;
-
-/**
-* Query is allow   participant to share white board
-*
-* @return YES: allow, NO: disallow
-*/
--(BOOL)isParticipantsShareWhiteBoardAllowed;
 /*!
  @brief Is live transcript legal notice available.
  @return available or not.
@@ -474,6 +516,25 @@
 - (MobileRTCSDKError)allowParticipantsToRequestLocalRecording:(BOOL)allow;
 
 /*!
+ @brief Determine if the current user can enable participant request clould recording.
+ @return If allows participants to send request, the return value is true.
+ */
+- (BOOL)canEnableParticipantRequestCloudRecording;
+
+/*!
+ @brief Toggle whether  attendees can send requests for the host to start a cloud recording. This can only be used in regular meeetings.
+ @return If allows participants to send request, the return value is true.
+ */
+- (BOOL)isParticipantRequestCloudRecordingEnabled;
+
+/*!
+ @brief Allowing the regular attendees to send cloud recording privilege request, This can only be used in regular meeetings and webinar (no breakout rooms).
+ @param allow TRUE indicates that participantsthe are allowed  the regular attendees to send cloud recording privilege request.
+ @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise the function fails. To get extended error information, see  {@link MobileRTCSDKError}
+ */
+- (MobileRTCSDKError)allowParticipantsToRequestCloudRecording:(BOOL)allow;
+
+/*!
  @brief Check whether the current meeting auto-grants participants’ local recording privilege requests. It can only be used in regular meetings (not webinar or breakout room).
  @return YES: allow, NO: disallow
 */
@@ -488,15 +549,69 @@
 - (MobileRTCSDKError)autoAllowLocalRecordingRequest:(BOOL)allow;
 
 /**
- * Whether the current user is able to suspend all participant activities
+ * @brief Whether the current user is able to suspend all participant activities
  * @return YES means user can  suspend participant activities,
  */
 
 - (BOOL)canSuspendParticipantsActivities;
+
 /**
- * Suspend all participant activities
+ * @brief Suspend all participant activities
  * @return MobileRTCANNError_Success means the operation succeed, otherwise no
- * @warning Audio,Video,Share,Chat,Wihteboard funcation will be suspended,that need to call allowParticipantsToUnmuteSelf.allowParticipantsToStartVideo.lockShare.changeAttendeeChatPriviledge and allowParticipantsToShareWhiteBoard interfaces to resume
+ * @warning  Audio,Video,Share,Chat,Wihteboard funcation will be suspended,that need to call allowParticipantsToUnmuteSelf.allowParticipantsToStartVideo.lockShare.changeAttendeeChatPriviledge and allowParticipantsToShareWhiteBoard interfaces to resume
  */
 - (MobileRTCSDKError)suspendParticipantsActivites;
+
+/**
+ * @brief Query if the current user can hide participant profile pictures.
+ * @Note: This feature is influenced by focus mode change.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
+ */
+- (MobileRTCSDKError)canHideParticipantProfilePictures;
+
+/**
+ * @brief Hide/Show participant profile pictures.
+ * @param hide true means hide participant profile pictures, false means show participant pictures.
+ * @return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed, for more details, see {@link MobileRTCSDKError}.
+ */
+- (MobileRTCSDKError)hideParticipantProfilePictures:(BOOL)hide;
+
+/**
+ * Query if the current meeting hides participant pictures.
+ * @return true means hide participant pictures, false means show participant pictures
+ */
+- (BOOL)isParticipantProfilePicturesHidden;
+
+#pragma mark - focus mode -
+/**
+ * @brief Get the focus mode enabled or not by web portal.
+ * @return YES Means focus mode enabled. Otherwise NO.
+ */
+- (BOOL)isFocusModeEnabled;
+
+/**
+ * @brief Turn focus mode on or off. Focus mode on means Participants will only be able to see hosts' videos and shared content, and videos of spotlighted participants.
+ * @param on Yes means to turen on, No means to turn off.
+ * @return Success means enable/disable success. Otherwise false.
+ */
+- (MobileRTCSDKError)turnFocusModeOn:(BOOL)on;
+
+/**
+ * @brief Get the focus mode on or off.
+ * @return YES Means focus mode on. Otherwise NO.
+ */
+- (BOOL)isFocusModeOn;
+
+/**
+ * @brief Get share focus mode  type indicating who can see the shared content which is controlled by host or co-host.
+ * @return return the current share focus mode type.
+ */
+- (MobileRTCFocusModeShareType)getFocusModeShareType;
+
+/**
+ * @brief Set focus mode type indicating who can see the shared content which is controlled by host or co-host.
+ * @param shareType The type of focus mode share type.
+ * @return Success means interface all success.
+ */
+- (MobileRTCSDKError)setFocusModeShareType:(MobileRTCFocusModeShareType)shareType;
 @end

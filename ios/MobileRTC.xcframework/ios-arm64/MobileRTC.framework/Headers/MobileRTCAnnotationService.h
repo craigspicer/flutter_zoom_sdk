@@ -11,52 +11,41 @@
 /*!
  @brief An enumeration of annotation tool types in meeting. 
  */
-typedef enum {
-	/*!
-	 White board.
-	 */
-    MobileRTCAnnoTool_Whiteboard = 1,
-	/*!
-	 Laser pointer.
-	 */
-    MobileRTCAnnoTool_Spotlight = 2,
-	/*!
-	 Pen.
-	 */
-    MobileRTCAnnoTool_Pen = 3,
-	/*!
-	 Highlighter.
-	 */
-    MobileRTCAnnoTool_Highligher = 4,
-	/*!
-	 A straight line changes automatically in pace with the mouse cursor.
-	 */
-    MobileRTCAnnoTool_Line = 8,
-	/*!
-	 An arrow.
-	 */
-    MobileRTCAnnoTool_Arrow = 9,
-	/*!
-	 An arrow changes automatically in pace with the mouse cursor.
-	 */
-    MobileRTCAnnoTool_Arrow2 = 10,
-	/*!
-	 A rectangle.
-	 */
-    MobileRTCAnnoTool_Rectangle = 11,
-	/*!
-	 A circle.  
-	 */
-    MobileRTCAnnoTool_Ellipse = 12,
-	/*!
-	 Input text.
-	 */
-    MobileRTCAnnoTool_Text = 13,
-	/*!
-	 An eraser to clear annotations.
-	 */
-    MobileRTCAnnoTool_Eraser = 15,
-} MobileRTCAnnoTool;
+typedef NS_ENUM(NSUInteger, MobileRTCAnnoTool) {
+    MobileRTCAnnoTool_None = 0,
+    MobileRTCAnnoTool_Pen,
+    MobileRTCAnnoTool_HighLighter,
+    MobileRTCAnnoTool_AutoLine,
+    MobileRTCAnnoTool_AutoRectangle,
+    MobileRTCAnnoTool_AutoEllipse,
+    MobileRTCAnnoTool_AutoArrow,
+    MobileRTCAnnoTool_AutoArrow2,
+    MobileRTCAnnoTool_AutoRectangleFill,
+    MobileRTCAnnoTool_AutoEllipseFill,
+    MobileRTCAnnoTool_SpotLight,
+    MobileRTCAnnoTool_Arrow,
+    MobileRTCAnnoTool_ERASER,
+    MobileRTCAnnoTool_Picker,
+    MobileRTCAnnoTool_AutoRectangleSemiFill,
+    MobileRTCAnnoTool_AutoEllipseSemiFill,
+    MobileRTCAnnoTool_AutoDoubleArrow,
+    MobileRTCAnnoTool_AutoDiamond,
+    MobileRTCAnnoTool_AutoStampArrow,
+    MobileRTCAnnoTool_AutoStampCheck,
+    MobileRTCAnnoTool_AutoStampX,
+    MobileRTCAnnoTool_AutoStampStar,
+    MobileRTCAnnoTool_AutoStampHeart,
+    MobileRTCAnnoTool_AutoStampQm,
+};
+
+/*!
+ @brief An enumeration of clear annotation tool types in meeting.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCAnnoClearType) {
+    MobileRTCAnnoClearType_All = 0, ///<Clear all annotations. Hosts, managers and shared meeting owners can use.
+    MobileRTCAnnoClearType_My,      ///<Clear only your own annotations. Everyone can use.
+    MobileRTCAnnoClearType_Others,  ///<Clear only the others' annotations. Only shared meeting owners can use.
+};
 
 /*!
  @brief The method is used to provide annotate service. 
@@ -65,7 +54,7 @@ typedef enum {
 
 @class MobileRTCAnnotationService;
 /*!
- @class MobileRTCAnnotationServiceDelegate
+MobileRTCAnnotationServiceDelegate
  @brief the share sender will disable the annotation, this delegate will notify the status change to viewer #only for custom UI#.
  */
 @protocol MobileRTCAnnotationServiceDelegate <NSObject>
@@ -78,7 +67,7 @@ typedef enum {
 /*!
  @brief Callback of receiving meeting events.
  */
-@property (nullable, assign, nonatomic) id<MobileRTCAnnotationServiceDelegate> delegate;
+@property (weak, nonatomic) id<MobileRTCAnnotationServiceDelegate> _Nullable delegate;
 
 /*!
  @brief Set to start annotations on the shared view. 
@@ -101,16 +90,22 @@ typedef enum {
 
 /*!
  @brief This method is used to get current Anno Tool Color.
- @return Get Color by tool type.
+ @return Get color by tool type.
  */
-- (nullable UIColor *)getToolColor:(MobileRTCAnnoTool)tooltype;
+- (nullable UIColor *)getToolColor;
 
 /*!
  @brief Set the types of annotation tools.  
- @return The result of operation.  
- @warning Check firstly if the tool is supported via getSupportedToolType. 
+ @return The result of operation.
+ @warning The tool type MobileRTCAnnoTool_Picker and MobileRTCAnnoTool_SpotLight are not support for viewer.
  */
 - (MobileRTCAnnotationError)setToolType:(MobileRTCAnnoTool)type;
+
+/*!
+ @brief Get the annotation tool type.
+ @return The current tool type.
+ */
+- (MobileRTCAnnoTool)getToolType;
 
 /*!
  @brief Set the line width of annotation tools.  
@@ -119,10 +114,17 @@ typedef enum {
 - (MobileRTCAnnotationError)setToolWidth:(NSUInteger)width;
 
 /*!
- @brief Set to clear the annotations.  
- @return The result of operation.
+ @brief Get the annotation tool width.
+ @return The current tool width.
  */
-- (MobileRTCAnnotationError)clear;
+- (NSUInteger)getToolWidth;
+
+/*!
+ @brief Clears the annotation content.
+ @param type the specify clear type.
+ @return The result of it.
+ */
+- (MobileRTCAnnotationError)clear:(MobileRTCAnnoClearType)type;
 
 /*!
  @brief Undo the last annotation.  
@@ -146,19 +148,19 @@ typedef enum {
  @brief Check if support to disable viewer's annotation item.
  @return Yes if support.
  */
-- (BOOL)canDisableViewerAnnoataion;
+- (BOOL)canDisableViewerAnnotation;
 
 /*!
  @brief Check currently sender disabled the viewer's annotation or not.
  @return Yes if disabled viewer's annotation.
  */
-- (BOOL)isViewerAnnoataionDisabled;
+- (BOOL)isViewerAnnotationDisabled;
 
 /*!
  @brief disable viewer's annotation.
  @return MobileRTCAnnotationError_Successed if disabled the viewer's annotation success.
  */
-- (MobileRTCAnnotationError)disableViewerAnnoataion:(BOOL)isDisable;
+- (MobileRTCAnnotationError)disableViewerAnnotation:(BOOL)isDisable;
 
 /*!
  @brief Check can do annotation or not.

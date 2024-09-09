@@ -16,6 +16,13 @@
  */
 - (MobileRTCAudioType)myAudioType;
 
+
+/**
+ * @brief Determine if the meeting has third party telephony audio enabled.
+ * @return YES means enabled, otherwise it is not enabled.
+ */
+ - (BOOL)is3rdPartyTelephonyAudioOn;
+
 /*!
  @brief Set whether to connect the audio in the meeting.
  @param on YES means to connect, otherwise not.
@@ -42,6 +49,21 @@
 - (BOOL)canUnmuteMyAudio;
 
 /*!
+@brief Check if the host/cohost can enable mute on entry.
+@return YES  indicates that the host/cohost can enable mute on entry. Otherwise not.
+@remarks Valid for both ZOOM style and user custom interface mode.
+*/
+- (BOOL)canEnableMuteOnEntry;
+/*!
+@brief Mute or umute the user after joining the meeting.
+@param bEnable YES  indicates to mute the user after joining the meeting.
+@param allowUnmuteBySelf YES means allow to mute self
+@return If the function succeeds, the return value is MobileRTCSDKError_Success. Otherwise failed. To get extended error information, see \link MobileRTCSDKError \endlink enum.
+@remarks Valid for both ZOOM style and user custom interface mode.
+ */
+- (MobileRTCSDKError)enableMuteOnEntry:(BOOL)bEnable allowUnmuteBySelf:(BOOL)allowUnmuteBySelf;
+
+/*!
  @brief Query if is enabled to mute attendees when they join the meeting. 
  @return YES means enabled, otherwise not.
  */
@@ -52,7 +74,7 @@
  @return YES means muted, otherwise not.
  @warning Only meeting host/co-host can run the function.
  */
-- (BOOL)muteOnEntry:(BOOL)on;
+- (BOOL)muteOnEntry:(BOOL)on DEPRECATED_MSG_ATTRIBUTE("Use enableMuteOnEntry:allowUnmuteBySelf: instead");
 
 /*!
  @brief Query if the user's audio is muted.
@@ -143,5 +165,5 @@
 @brief Get the audio type supported by the current meeting. See [MobileRTCInMeetingSupportAudioType].
 @return If the function succeeds, it will return the type. The value is the 'bitwise OR' of each supported audio type.
 */
-- (int)getSupportedMeetingAudioType;
+- (NSInteger)getSupportedMeetingAudioType;
 @end
