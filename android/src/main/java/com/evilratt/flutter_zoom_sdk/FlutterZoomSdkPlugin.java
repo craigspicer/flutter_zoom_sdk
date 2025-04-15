@@ -428,6 +428,11 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
+            public void onChatMessageEditNotification(InMeetingChatMessage inMeetingChatMessage) {
+
+            }
+
+            @Override
             public void onShareMeetingChatStatusChanged(boolean b) {
 
             }
@@ -448,7 +453,7 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
             }
 
             @Override
-            public void onSinkAttendeeChatPriviledgeChanged(int i) {
+            public void onSinkAttendeeChatPrivilegeChanged(int i) {
 
             }
 
@@ -649,6 +654,36 @@ public class FlutterZoomSdkPlugin implements FlutterPlugin, MethodChannel.Method
 
             @Override
             public void onMeetingTopicChanged(String s) {
+
+            }
+
+            @Override
+            public void onMeetingFullToWatchLiveStream(String s) {
+
+            }
+
+            @Override
+            public void onBotAuthorizerRelationChanged(long l) {
+
+            }
+
+            @Override
+            public void onVirtualNameTagStatusChanged(boolean b, long l) {
+
+            }
+
+            @Override
+            public void onVirtualNameTagRosterInfoUpdated(long l) {
+
+            }
+
+            @Override
+            public void onCreateCompanionRelation(long l, long l1) {
+
+            }
+
+            @Override
+            public void onRemoveCompanionRelation(long l) {
 
             }
         });

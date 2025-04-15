@@ -68,7 +68,7 @@ Future<void> checkAndDownloadSDK(String location) async {
   if (!exists) {
     await downloadFile(
         Uri.parse(
-            'https://www.dropbox.com/scl/fi/5innd2hwmxu95v4yaycy0/mobilertc.aar?rlkey=4iw9hbg6icjbcon6xopeuig3b&st=px8bfsdh&dl=1'),
+            'https://www.dropbox.com/scl/fi/g7i1odidzu5csbw1mqvw8/mobilertc.aar?rlkey=ciisw76zskpxj07n9psmjnren&st=s3kll6xl&dl=1'),
         androidRTCLibFile);
   }
 }
